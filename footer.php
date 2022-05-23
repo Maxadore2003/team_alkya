@@ -4,7 +4,7 @@
 
     <div class="social-networks">
 
-        <a href="#" target="_blank">
+        <a href="https://www.instagram.com/teamalkya/" target="_blank">
             <img src="img/instagram.png" alt="Logo Instagram" width="50">
         </a>
         <a href="https://twitter.com/teamalkya" target="_blank">
