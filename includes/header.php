@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="css/header.css">
-
 <nav class="d-flex">
     <div class='logo-navbar'>
         <a href='./index.php' class="logo">

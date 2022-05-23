@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="css/footer.css">
-
 <footer class="footer">
 
     <div class="social-networks">
@@ -30,7 +28,7 @@
 
     <div class="informations">
 
-        <a href="#">CGU</a>
+        <a href="./includes/database.php">CGU</a>
         <a href="#">Mentions légales</a>
         <a href="#">Politique de confidentialité</a>
 
