@@ -1,0 +1,30 @@
+footer.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2%;
+}
+
+footer.footer div.social-networks a img {
+    margin: 10px;
+}
+
+footer.footer div.about, div.informations {
+    display: flex;
+    flex-direction: column;
+}
+
+footer.footer div.about p.text-about {
+    text-decoration: none;
+    color: #000;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/*
+    footer.footer div a:hover {
+        color: #FB8500;
+        cursor: pointer;
+    }
+*/
