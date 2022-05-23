@@ -1,0 +1,23 @@
+header.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header.header a.logo img {
+    width: 100px;
+}
+
+header.header nav.nav ul {
+    display: flex;
+}
+
+header.header nav.nav ul li {
+    list-style-type: none;
+    margin: 50px;
+}
+
+header.header nav.nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
