@@ -1,17 +1,19 @@
+<link rel="stylesheet" href="css/footer.css">
+
 <footer class="footer">
 
     <div class="social-networks">
 
-        <a href="#">
+        <a href="#" target="_blank">
             <img src="img/instagram.png" alt="Logo Instagram" width="50">
         </a>
-        <a href="#">
+        <a href="https://twitter.com/teamalkya" target="_blank">
             <img src="img/twitter.png" alt="Logo Twitter" width="50">
         </a>
-        <a href="#">
+        <a href="https://www.twitch.tv/teamalkya" target="_blank">
             <img src="img/twitch.png" alt="Logo Twitch" width="50">
         </a>
-        <a href="#">
+        <a href="#" target="_blank">
             <img src="img/facebook.png" alt="Logo Facebook" width="50">
         </a>
 
