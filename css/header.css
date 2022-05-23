@@ -3,10 +3,6 @@ header nav.nav ul li a {
     color: #000;
 }
 
-nav {
-    /* background-image: url('../img/navbar-fond.png'); */
-}
-
 nav ul {
     list-style-type: none;
 }
