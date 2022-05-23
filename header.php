@@ -3,7 +3,7 @@
 <nav class="d-flex">
     <div class='logo-navbar'>
         <a href='./index.php' class="logo">
-            <img src="img/logo-color-alkya.png" alt="Logo">
+            <img src="img/logo-black-alkya.png" alt="Logo">
         </a>
     </div>
     <div class='button-navbar'>

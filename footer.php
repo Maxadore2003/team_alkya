@@ -22,17 +22,17 @@
     <div class="about">
 
         <p class="text-about">About</p>
-        <a>Actus</a>
-        <a>Teams</a>
-        <a>Qui sommes-nous ?</a>
+        <a href="#">Actus</a>
+        <a href="#">Teams</a>
+        <a href="#">Qui sommes-nous ?</a>
 
     </div>
 
     <div class="informations">
 
-        <a>CGU</a>
-        <a>Mentions légales</a>
-        <a>Politique de confidentialité</a>
+        <a href="#">CGU</a>
+        <a href="#">Mentions légales</a>
+        <a href="#">Politique de confidentialité</a>
 
     </div>
 

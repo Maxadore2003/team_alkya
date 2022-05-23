@@ -4,7 +4,7 @@ header nav.nav ul li a {
 }
 
 nav {
-    background-image: url('../img/navbar-fond.png');
+    /* background-image: url('../img/navbar-fond.png'); */
 }
 
 nav ul {
@@ -22,6 +22,9 @@ nav li a {
     color: black;
     font-size: 36px;
 }
+nav li a:hover {
+    color: #FB8500;
+}
 
 div.logo-navbar {
     margin-left: 5%;
@@ -35,7 +38,8 @@ div.logo-navbar a.logo img {
 div.button-navbar {
     width: 70%;
     align-items: center;
-    border-bottom: solid #126782 4px;
+    border-bottom: solid #000000 4px;
+    /* border-bottom: solid #126782 4px; */
 }
 
 li.navbutton {

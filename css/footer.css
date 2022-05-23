@@ -15,16 +15,18 @@ footer.footer div.about, div.informations {
 }
 
 footer.footer div.about p.text-about {
-    text-decoration: none;
-    color: #000;
+    color: #000000;
     font-size: 25px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-/*
-    footer.footer div a:hover {
-        color: #FB8500;
-        cursor: pointer;
-    }
-*/
+footer.footer div a {
+    color: #000000;
+    text-decoration: none;
+}
+
+footer.footer div a:hover {
+    color: #FB8500;
+    cursor: pointer;
+}
