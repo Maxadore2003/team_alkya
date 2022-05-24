@@ -1,0 +1,12 @@
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 1%;
+    padding: 3%;
+    font-size: 60px;
+}
+
+div.content {
+    margin-left: 9%;
+    margin-right: 9%;
+}

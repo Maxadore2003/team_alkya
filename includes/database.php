@@ -14,7 +14,7 @@
 
     // Vérifie s'il existe deja dans la base de donnée
     //
-    // $request = $db->prepare("SELECT * FROM users WHERE email = :email");
+    // $request = $db->prepare("SELECT * FROM users WHERE-email = :email");
     // $request->execute([
     //     "email" => $_POST['email'],
     // ]);
