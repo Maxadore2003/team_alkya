@@ -13,30 +13,25 @@
 
     <body>
 
-        <?php
-            
-            // include "./includes/header.php";
-            // include "./includes/footer.php";
-        
-        ?>
+        <?php include "./includes/header.php"; ?>
 
         <h1>Actualités</h1>
 
         <div class="illustrations">
             <div class="first-column">
-                <img src="img/illustration-news.png" alt="Illustration 1" width="300">
+                <a href="./article.php"><img src="img/illustration-news.png" alt="Illustration 1" width="300"></a>
                 <p>La rentabilité dans l'esport</p>
-                <img src="img/illustration-news.png" alt="Illustration 2" width="300">
+                <a href="./article.php"><img src="img/illustration-news.png" alt="Illustration 2" width="300"></a>
                 <p>La rentabilité dans l'esport</p>
-                <img src="img/illustration-news.png" alt="Illustration 3" width="300">
+                <a href="./article.php"><img src="img/illustration-news.png" alt="Illustration 3" width="300"></a>
                 <p>La rentabilité dans l'esport</p>
             </div>
             <div class="second-column">
-                <img src="img/illustration-news.png" alt="Illustration 4" width="300">
+                <a href="./article.php"><img src="img/illustration-news.png" alt="Illustration 4" width="300"></a>
                 <p>La rentabilité dans l'esport</p>
-                <img src="img/illustration-news.png" alt="Illustration 5" width="300">
+                <a href="./article.php"><img src="img/illustration-news.png" alt="Illustration 5" width="300"></a>
                 <p>La rentabilité dans l'esport</p>
-                <img src="img/illustration-news.png" alt="Illustration 6" width="300">
+                <a href="./article.php"><img src="img/illustration-news.png" alt="Illustration 6" width="300"></a>
                 <p>La rentabilité dans l'esport</p>
             </div>
         </div>
@@ -59,6 +54,8 @@
             </div>
         </div>
         
+        <?php include "./includes/footer.php"; ?>
+
     </body>
 
 </html>

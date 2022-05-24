@@ -7,13 +7,13 @@
     <div class='button-navbar'>
         <ul class="">
             <li class="navbutton">
-                <a href="#">ACTUS</a>
+                <a class='text-uppercase' href="./news.php">actus</a>
             </li>
             <li class="navbutton">
-                <a href="#">ABOUT US</a>
+                <a class='text-uppercase' href="#">about us</a>
             </li>
             <li class="navbutton">
-                <a href="#">ÉQUIPES</a>
+                <a class='text-uppercase' href="#">équipes</a>
             </li>
             <!-- <li class="navbutton">
                 <a href="#">SHOP</a>

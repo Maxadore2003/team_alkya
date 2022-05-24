@@ -9,18 +9,16 @@
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/footer.css">
         <link rel="stylesheet" href="css/header.css">
-        <link rel="stylsheet" href='css/description-home-page.css'>
+        <link rel="stylesheet" href="css/home-page.css">
         <title>Document</title>
     </head>
 
     <body>
 
         <?php include "includes/header.php"; ?>
+
         <div class='content'>
-            <?php
-                include "includes/description-home-page.php";
-                include "includes/description-home-page.php";
-            ?>
+            <?php include "includes/home-page.php"; ?>
 
         </div>
 

@@ -1,3 +1,7 @@
+footer {
+    margin-bottom: 10%;
+}
+
 footer.footer {
     display: flex;
     justify-content: space-around;
