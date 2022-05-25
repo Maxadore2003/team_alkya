@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 23 mai 2022 à 15:25
+-- Généré le : mer. 25 mai 2022 à 09:48
 -- Version du serveur : 10.4.22-MariaDB
 -- Version de PHP : 7.3.33
 
@@ -108,6 +108,16 @@ CREATE TABLE `staff` (
   `title` char(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Déchargement des données de la table `staff`
+--
+
+INSERT INTO `staff` (`id`, `name`, `firstname`, `image`, `title`) VALUES
+(0, 'Anthony', 'Test', 'anthony.png', 'Head of Staff / ADMIN'),
+(1, 'Diani', 'Jean-Michel', 'jean-michel.png', 'Secrétaire / Head of FPS'),
+(2, 'Anthony', 'Test', 'anthony.png', 'Head of Staff / ADMIN'),
+(3, 'Anthony', 'Test', 'anthony.png', 'Head of Staff / ADMIN');
+
 -- --------------------------------------------------------
 
 --
@@ -118,8 +128,22 @@ CREATE TABLE `text` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` char(30) NOT NULL,
   `description` text NOT NULL,
-  `place` char(30) NOT NULL
+  `type` char(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `text`
+--
+
+INSERT INTO `text` (`id`, `name`, `description`, `type`) VALUES
+(0, 'description-home-page', 'alkya', 'title'),
+(1, 'description-home-page', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'description'),
+(2, 'game-home-page', 'nos équipes', 'title'),
+(3, 'game-home-page', 'toutes nos équipes', 'button'),
+(4, 'actuality-home-page', 'dernières actualitées', 'title'),
+(5, 'actuality-home-page', 'en savoir plus', 'button'),
+(6, 'sponsors', 'sponsors majeurs', 'title'),
+(7, 'partenaires', 'partenaires officiels', 'title');
 
 -- --------------------------------------------------------
 
