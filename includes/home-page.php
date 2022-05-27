@@ -100,7 +100,7 @@
             ?>
         </div>
         <div class='actualityButton text-center'>
-            <a class='linkActuality' href="./news.php"><?php echo $data_game_button['description']?></a>
+            <a class='linkActuality' href="./news.php"><?php echo $data_actuality_button['description']?></a>
         </div>
     </div>
 </div>
