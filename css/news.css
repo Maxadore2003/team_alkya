@@ -1,34 +1,5 @@
-h1 {
-    text-align: center;
-    text-transform: uppercase;
-}
-
-div.illustrations {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-div.illustrations img {
-    margin-top: 45px;
-}
-
-div.illustrations p {
-    text-align: center;
-}
-
-
-div.illustrations div.first-column,  div.illustrations div.second-column {
-    display: flex;
-    flex-direction: column;
-}
-
-div.illustrations div.first-column {
-    margin-right: 50px;
-}
-
-div.illustrations div.second-column {
-    margin-left: 50px;
+div.newsImage img {
+    width: 40%;
 }
 
 div.squares {
