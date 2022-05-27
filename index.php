@@ -19,7 +19,7 @@
 
         <div class='content'>
             <?php include "includes/home-page.php"; ?>
-
+            <?php include "includes/sponsors.php"; ?>
         </div>
 
         <?php include "includes/footer.php"; ?>

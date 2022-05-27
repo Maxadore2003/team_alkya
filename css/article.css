@@ -1,19 +1,10 @@
-div.illustration img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-div.content h2 {
-    text-align: center;
+div.artcicle-description h2 {
     margin-top: 30px;
     font-size: 30px;
 }
 
-div.content p {
-    text-align: center;
-    text-align: justify;
+div.artcicle-description p {
     margin-left: 400px;
     margin-right: 400px;
-    font-size: 20px;
+    font-size: 200px;
 }

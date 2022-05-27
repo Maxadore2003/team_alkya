@@ -1,0 +1,21 @@
+/* div.partnersCard {
+    width: 12%;
+} */
+
+/* div.sponsorsCard {
+    width: 18%;
+} */
+
+div.sponsorsCard a img{
+    width: 260px;
+}
+
+div.sponsorsCard, div.partnersCard {
+    text-align: center;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+img.partnersImage {
+    width: 220px;
+}
