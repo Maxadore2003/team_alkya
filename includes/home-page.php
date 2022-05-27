@@ -65,11 +65,22 @@
     <!-- Caroussel des jeux -->
     <div class="game">
         <h2 class='gameTitle text-center'><?php echo $data_game_title['description']?></h2>
-        <div class="gameImage text-center">
-            <img src="img/valorant.png" alt="jeux, Alkya, team esport, structure esport"></img>
-        </div>
-        <div class='gameButton text-center'>
-            <a class='linkTeam' href="./team.php"><?php echo $data_game_button['description']?></a>
+        <div class="slideshow-content">
+            <div class="gameImage text-center">
+                <img src="img/valorant.png" alt="jeux, Alkya, team esport, structure esport"></img>
+            </div>
+            <div class="gameImage text-center">
+                <img src="img/team-lol.png" alt="jeux, Alkya, team esport, structure esport"></img>
+            </div>
+            <div class="gameImage text-center">
+                <img src="img/team-rocket-league.png" alt="jeux, Alkya, team esport, structure esport"></img>
+            </div>
+            <div class="gameImage text-center">
+                <img src="img/team-rainbow-siege.png" alt="jeux, Alkya, team esport, structure esport"></img>
+            </div>
+            <div class='gameButton text-center'>
+                <a class='linkTeam' href="./team.php"><?php echo $data_game_button['description']?></a>
+            </div>
         </div>
     </div>
 

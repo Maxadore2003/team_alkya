@@ -27,11 +27,6 @@
             $request_news_title->execute();
             $data_news_title = $request_news_title -> fetch();
 
-            // Demander à la base de donnée la description des images de la pages actus
-            $request_description_image = $db->prepare("SELECT `description` FROM `text` WHERE `type` = 'description' AND `name` = 'description-image'");
-            $request_description_image->execute();
-            $data_description_image = $request_description_image -> fetch();
-
             // Demander à la base de donnée toutes les pages actualités
             $request_news = $db->prepare("SELECT * FROM `actuality`");
             $request_news->execute();
@@ -62,11 +57,6 @@
                     $news_count += 1;
                     }
                 ?> 
-            </div>
-
-            <!-- Description Images -->
-            <div class='description-image'> 
-                <p><?php echo $data_description_image['description']?></p>
             </div>
 
             <div class="squares">
