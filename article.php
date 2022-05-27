@@ -1,4 +1,12 @@
 <?php
+
+    include './includes/database.php';
+    $article_id = $_GET['id'];
+    $request_article = $db->prepare("SELECT * FROM `actuality` WHERE `id` = $article_id");
+    $request_article->execute();
+    $data_article = $request_article->fetch();
+
+
 ?>
 
 <!DOCTYPE html>
@@ -18,17 +26,20 @@
 
     <body>
 
-        <?php include 'includes/header.php'?>
+        <?php include 'includes/header.php'; ?>
+
 
         <div class="content">
             <div class="illustration text-center">
-                <img src="img/illustration-article.png" alt="Illustration" width="1000px">
+                <img src="./img/<?php echo $data_article["image"]; ?>" alt="Illustration <?php echo $data_article["image"]?>">
             </div>
             
-            <div class="text-center">
-                <h2>La rentabilité de l'esport</h2>
-                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
+            <div class="article-description text-center">
+                <h2><?php echo $data_article["title"]; ?></h2>
+                <p><?php echo $data_article["description"]; ?></p>
             </div>
+
+            <?php include 'includes/sponsors.php' ?>
         </div>
         
         <?php include 'includes/footer.php'?>

@@ -16,7 +16,6 @@ div.teams a {
 }
 
 div.teams a.logo-lol {
-    background-image: url(../img/team-lol.png);
     background-size: 100%;
     padding-left: 10%;
     padding-right: 10%;

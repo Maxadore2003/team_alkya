@@ -21,16 +21,16 @@
         </div>
 
         <div class="teams d-flex flex-wrap text-center">
-            <a class="logo-lol" href="">
+            <a class="logo-lol" href="./teams_sheet.php" background-image = "url(../img/team-lol.png)">
                 <img src="img/logo-lol.png" alt="Logo LOL">
             </a>
-            <a class="logo-valorant" href="">
+            <a class="logo-valorant" href="./teams_sheet.php">
                 <img src="img/logo-valorant.png" alt="Logo Valorant">
             </a>
-            <a class="logo-rainbow-siege" href="">
+            <a class="logo-rainbow-siege" href="./teams_sheet.php">
                 <img src="img/logo-rainbow-siege.png" alt="Logo Rainbow Siege">
             </a>
-            <a class="logo-rocket-league" href="">
+            <a class="logo-rocket-league" href="./teams_sheet.php">
                 <img src="img/logo-rocket-league.png" alt="Logo Rocket League">
             </a>
         </div>

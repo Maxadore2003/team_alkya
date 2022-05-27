@@ -13,7 +13,7 @@
                 <a class='text-uppercase' href="#">about us</a>
             </li>
             <li class="navbutton">
-                <a class='text-uppercase' href="#">équipes</a>
+                <a class='text-uppercase' href="./teams.php">équipes</a>
             </li>
             <!-- <li class="navbutton">
                 <a href="#">SHOP</a>

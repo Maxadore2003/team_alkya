@@ -32,9 +32,10 @@
             $request_description_image->execute();
             $data_description_image = $request_description_image -> fetch();
 
-            // Demander à la base de donnée les 6 images de la page actualités
+            // Demander à la base de donnée toutes les pages actualités
             $request_news = $db->prepare("SELECT * FROM `actuality`");
             $request_news->execute();
+            $count_news = $request_news->rowCount();
 
         ?>
 
@@ -47,14 +48,15 @@
             <!-- Titre -->
             <div class='title'> 
                 <h1><?php echo $data_news_title['description']?></h1>
+                <h1><?php echo ((int)($count_news / 6 ) + 1 ) ?></h1>
             </div>
 
-            <!-- Les 6 images de la page actualités -->
-            <div class='d-flex gap-3 text-center flex-wrap news'>
+            <div class='d-flex text-center flex-wrap news'>
                 <?php
                     while($data_news = $request_news -> fetch() and $news_count < 6 ) {?>
-                    <div class='newsImage'>
+                    <div class='newsDetails'>
                         <a href="./article.php?id=<?php echo $data_news["id"] ?>"><img src='img/<?php echo $data_news['image']?>' alt='actus, <?php echo $data_news['image']?>'></a>
+                        <h2><?php echo $data_news["title"] ?></h2>
                     </div>
                 <?php
                     $news_count += 1;
@@ -68,21 +70,11 @@
             </div>
 
             <div class="squares">
-                <div class="square">
-                    <p>1</p>
-                </div>
-                <div class="square">
-                    <p>2</p>
-                </div>
-                <div class="square">
-                    <p>3</p>
-                </div>
-                <div class="square">
-                    <p>4</p>
-                </div>
-                <div class="square">
-                    <p>5</p>
-                </div>
+                <?php for ($i=0; $i < (int)($count_news / 6 ) + 1; $i++) { ?>
+                    <div class="square text-center">
+                        <a href="./news.php?id=<?php echo $i ?>" ><?php echo $i + 1 ?></a>
+                    </div>
+                <?php } ?>
             </div>
 
             <?php include "./includes/sponsors.php" ?>

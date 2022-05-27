@@ -19,3 +19,8 @@ div.sponsorsCard, div.partnersCard {
 img.partnersImage {
     width: 220px;
 }
+
+div.sponsorsPartners {
+    border-top: solid #C7C7C7 2px;
+    border-bottom: solid #C7C7C7 2px;
+}
