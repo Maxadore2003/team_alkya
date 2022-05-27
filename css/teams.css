@@ -1,0 +1,56 @@
+div.title h3 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 50px;
+    border: solid #126782 2px;
+    border-radius: 15%;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 0.5%;
+    font-size: 96px;
+}
+
+div.teams a {
+    width: 45%;
+    margin: 2.5%;
+}
+
+div.teams a.logo-lol {
+    background-image: url(../img/team-lol.png);
+    background-size: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 21%;
+    background-repeat: no-repeat;
+}
+
+div.teams a.logo-valorant {
+    background-image: url(../img/team-valorant.png);
+    background-size: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 21%;
+    background-repeat: no-repeat;
+}
+
+div.teams a.logo-rainbow-siege {
+    background-image: url(../img/team-rainbow-siege.png);
+    background-size: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 21%;
+    background-repeat: no-repeat;
+}
+
+div.teams a.logo-rocket-league {
+    background-image: url(../img/team-rocket-league.png);
+    background-size: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 21%;
+    background-repeat: no-repeat;
+}
+
+div.teams a img {
+    max-width: 118px;
+}

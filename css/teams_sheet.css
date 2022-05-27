@@ -1,0 +1,49 @@
+div.illustration {
+    text-align: center;
+    margin-top: 5%;
+}
+
+div.illustration img {
+    width: 90%;
+}
+
+div.illustration p {
+    text-transform: uppercase;
+    font-size: 100px;
+    position: relative;
+}
+
+div.illustration p::before {
+    content: "";
+    position: absolute;
+    background-color: #DFCB7D;
+    width: 40%;
+    height: 5px;
+    left: 30%;
+    bottom: 0;
+}
+
+div.players-title p, div.coach-title p {
+    font-size: 90px;
+    margin-left: 10%;
+    text-transform: uppercase;
+    position: relative;
+}
+
+div.players-title p::before, div.coach-title p::before {
+    content: "";
+    position: absolute;
+    background-color: #135066;
+    width: 25%;
+    height: 5px;
+    bottom: 0;
+}
+
+/* div.players a.images-player {
+    background-image: url(../img/martin-larsson.png);
+    background-size: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 21%;
+    background-repeat: no-repeat;
+} */
