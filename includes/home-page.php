@@ -78,6 +78,14 @@
             <div class="gameImage text-center">
                 <img src="img/team-rainbow-siege.png" alt="jeux, Alkya, team esport, structure esport"></img>
             </div>
+            <div class="buttons">
+                <button class="nav-button left">
+                    <img src="img/carousel-button-left.png" alt="Flêche Gauche Carrousel">
+                </button>
+                <button class="nav-button right">
+                    <img src="img/carousel-button-right.png" alt="Flêche Droite Carrousel">
+                </button>
+            </div>
             <div class='gameButton text-center'>
                 <a class='linkTeam' href="./team.php"><?php echo $data_game_button['description']?></a>
             </div>

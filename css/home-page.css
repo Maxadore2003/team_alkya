@@ -21,8 +21,13 @@ div.description, div.game {
     margin-bottom: 5%;
 }
 
-div.gameImage img{
-    max-width: 1187px;
+div.gameImage img {
+    max-width: 1000px;
+}
+
+div.buttons {
+    display: flex;
+    justify-content: space-around;
 }
 
 div.game a.linkTeam:hover, div.actuality a.linkActuality:hover{

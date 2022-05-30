@@ -23,3 +23,6 @@ function showSlides() {
     // on recommence avec 8 secondes de délai
     setTimeout(showSlides, 8000);
 }
+
+const button = document.querySelector('button');
+button.addEventListener('click', showSlides);
