@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 30 mai 2022 à 17:24
+-- Généré le : lun. 30 mai 2022 à 17:30
 -- Version du serveur : 10.4.22-MariaDB
 -- Version de PHP : 7.3.33
 
@@ -20,6 +20,26 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `team-alkya`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `about-us`
+--
+
+CREATE TABLE `about-us` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` char(50) NOT NULL,
+  `image` char(100) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `about-us`
+--
+
+INSERT INTO `about-us` (`id`, `name`, `image`) VALUES
+(0, 'board', 'board-about-us.png'),
+(1, 'tree', 'tree-about-us.png');
 
 -- --------------------------------------------------------
 
@@ -209,6 +229,13 @@ CREATE TABLE `users` (
 --
 
 --
+-- Index pour la table `about-us`
+--
+ALTER TABLE `about-us`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `name` (`name`);
+
+--
 -- Index pour la table `actuality`
 --
 ALTER TABLE `actuality`
@@ -250,6 +277,16 @@ ALTER TABLE `text`
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `pseudo` (`pseudo`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `about-us`
+--
+ALTER TABLE `about-us`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
