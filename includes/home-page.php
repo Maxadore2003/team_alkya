@@ -65,7 +65,12 @@
     <!-- Caroussel des jeux -->
     <div class="game">
         <h2 class='gameTitle text-center'><?php echo $data_game_title['description']?></h2>
-        <div class="slideshow-content">
+        <div class="slideshow-content d-flex">
+            <div class="buttons">
+                <button onclick='removeSlidesIndex()' id='left' class="nav-button">
+                    <img src="img/carousel-button-left.png" alt="Flêche Gauche Carrousel">
+                </button>
+            </div>
             <div class="gameImage text-center">
                 <img src="img/valorant.png" alt="jeux, Alkya, team esport, structure esport"></img>
             </div>
@@ -79,16 +84,13 @@
                 <img src="img/team-rainbow-siege.png" alt="jeux, Alkya, team esport, structure esport"></img>
             </div>
             <div class="buttons">
-                <button class="nav-button left">
-                    <img src="img/carousel-button-left.png" alt="Flêche Gauche Carrousel">
-                </button>
-                <button class="nav-button right">
+                <button onclick='addSlidesIndex()' id="right" class="nav-button">
                     <img src="img/carousel-button-right.png" alt="Flêche Droite Carrousel">
                 </button>
             </div>
-            <div class='gameButton text-center'>
-                <a class='linkTeam' href="./team.php"><?php echo $data_game_button['description']?></a>
-            </div>
+        </div>
+        <div class='gameButton text-center'>
+            <a class='linkTeam' href="./team.php"><?php echo $data_game_button['description']?></a>
         </div>
     </div>
 
@@ -112,3 +114,5 @@
         </div>
     </div>
 </div>
+
+<script src="js/carrousel-homepage.js"></script>

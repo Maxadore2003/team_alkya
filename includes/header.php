@@ -10,7 +10,7 @@
                 <a class='text-uppercase' href="./news.php?page=0">actus</a>
             </li>
             <li class="navbutton">
-                <a class='text-uppercase' href="#">about us</a>
+                <a class='text-uppercase' href="./about-us.php">about us</a>
             </li>
             <li class="navbutton">
                 <a class='text-uppercase' href="./teams.php">équipes</a>

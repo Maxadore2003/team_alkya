@@ -22,9 +22,7 @@
         </div>
         
         <?php include "includes/sponsors.php"; ?>
-        <?php include "includes/footer.php"; ?>  
-        
-        <script src="js/script.js"></script>
+        <?php include "includes/footer.php"; ?>
         
     </body>
 

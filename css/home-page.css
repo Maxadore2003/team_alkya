@@ -68,3 +68,20 @@ div.actualityButton {
 h3.actualitySmallTitle {
     margin-top: 1%;
 }
+
+div.slideshow-content {
+    width: 100%;
+}
+
+div.slideshow-content div.buttons{
+    width: 5%;
+}
+
+div.slideshow-content div.gameImage{
+    width: 90%;
+}
+
+div.slideshow-content button {
+    background: none;
+    border: 0;
+}

@@ -28,7 +28,7 @@
             $data_news_title = $request_news_title -> fetch();
 
             // Demander à la base de donnée toutes les pages actualités
-            $request_news = $db->prepare("SELECT * FROM `actuality`");
+            $request_news = $db->prepare("SELECT * FROM `actuality` ORDER BY `date` DESC");
             $request_news->execute();
             $count_news = $request_news->rowCount();
 
