@@ -7,7 +7,7 @@
     <div class='button-navbar'>
         <ul class="">
             <li class="navbutton">
-                <a class='text-uppercase' href="./news.php">actus</a>
+                <a class='text-uppercase' href="./news.php?page=0">actus</a>
             </li>
             <li class="navbutton">
                 <a class='text-uppercase' href="#">about us</a>

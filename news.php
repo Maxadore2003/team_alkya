@@ -32,6 +32,11 @@
             $request_news->execute();
             $count_news = $request_news->rowCount();
 
+            // Passer x fois 6 news pour aller a la page correspondante
+            for ($i=0; $i < $_GET['page'] * 6; $i++) { 
+                $request_news->fetch();
+            }
+
         ?>
 
         <?php include "./includes/header.php"; ?>
@@ -43,7 +48,6 @@
             <!-- Titre -->
             <div class='title'> 
                 <h1><?php echo $data_news_title['description']?></h1>
-                <h1><?php echo ((int)($count_news / 6 ) + 1 ) ?></h1>
             </div>
 
             <div class='d-flex text-center flex-wrap news'>
@@ -62,7 +66,7 @@
             <div class="squares">
                 <?php for ($i=0; $i < (int)($count_news / 6 ) + 1; $i++) { ?>
                     <div class="square text-center">
-                        <a href="./news.php?id=<?php echo $i ?>" ><?php echo $i + 1 ?></a>
+                        <a href="./news.php?page=<?php echo $i ?>" ><?php echo $i + 1 ?></a>
                     </div>
                 <?php } ?>
             </div>
