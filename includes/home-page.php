@@ -41,6 +41,10 @@
     // Demander à la base de donnée les actualités dans la plus rescente à la plus vielle
     $request_actuality = $db->prepare("SELECT * FROM `actuality` ORDER BY `date` DESC");
     $request_actuality->execute();
+
+    // Demander à la base de donnée tous les jeux avec les team
+    $request_games = $db->prepare("SELECT * FROM `game`");
+    $request_games->execute();
 ?>
 <div>
     <!-- Description rapide   -->
@@ -71,18 +75,19 @@
                     <img src="img/carousel-button-left.png" alt="Flêche Gauche Carrousel">
                 </button>
             </div>
+
+
+            <?php 
+                while ($data_games = $request_games->fetch()) {
+            ?>
             <div class="gameImage text-center">
-                <img src="img/valorant.png" alt="jeux, Alkya, team esport, structure esport"></img>
+                <a href="./teams_sheet.php?game=<?php echo $data_games['name'] ?>"><img src="img/<?php echo $data_games['global-image'] ?>" alt="jeux, Alkya, team esport, structure esport, <?php echo $data_games['image'] ?>"></img></a>
             </div>
-            <div class="gameImage text-center">
-                <img src="img/team-lol.png" alt="jeux, Alkya, team esport, structure esport"></img>
-            </div>
-            <div class="gameImage text-center">
-                <img src="img/team-rocket-league.png" alt="jeux, Alkya, team esport, structure esport"></img>
-            </div>
-            <div class="gameImage text-center">
-                <img src="img/team-rainbow-siege.png" alt="jeux, Alkya, team esport, structure esport"></img>
-            </div>
+            <?php 
+            }
+            ?>
+
+
             <div class="buttons">
                 <button onclick='addSlidesIndex()' id="right" class="nav-button">
                     <img src="img/carousel-button-right.png" alt="Flêche Droite Carrousel">
