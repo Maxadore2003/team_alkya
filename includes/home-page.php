@@ -91,7 +91,7 @@
             <?php
                 while($data_actuality = $request_actuality -> fetch() and $actuality_count < 2) {?>
                     <div class='actualityDiv text-center'>
-                        <img src='img/<?php echo $data_actuality['image']?>' alt='staff, Alkya, team esport, structure esport, <?php echo $data_actuality['image']?>'>
+                        <a href="./article.php?id=<?php echo $data_actuality["id"] ?>"><img src='img/<?php echo $data_actuality['image']?>' alt='staff, Alkya, team esport, structure esport, <?php echo $data_actuality['image']?>'></a>
                         <h3 class='actualitySmallTitle'><?php echo $data_actuality['title']?></h3>
                     </div>
                     <?php
