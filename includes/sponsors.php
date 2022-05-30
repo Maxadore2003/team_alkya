@@ -27,12 +27,12 @@
 
     <div class="sponsors text-center">
         <h2 class="sponsorsTitle text-uppercase"><?php echo $data_sponsors_title['description']?></h2>
-        <div class="sponsorsImages d-flex flex-wrap text-center gap-1">
+        <div class="sponsorsImages d-flex flex-wrap align-content-center">
             <?php 
                 while($data_sponsors = $request_sponsors->fetch()) {
             ?>
-            <div class="sponsorsCard align-content-center">
-                <a href=""><img class="sonsorsImage" src="./img/<?php echo $data_sponsors['image']?>" alt="<?php echo $data_sponsors['name']?>"></a>
+            <div class="sponsorsCard">
+                <a href="#"><img class="sonsorsImage" src="./img/<?php echo $data_sponsors['image']?>" alt="<?php echo $data_sponsors['name']?>"></a>
             </div>
             <?php
                 }
@@ -42,12 +42,12 @@
 
     <div class="partners text-center">
         <h2 class="partnersTitle text-uppercase"><?php echo $data_partners_title['description']?></h2>
-        <div class="partenrsImages d-flex flex-wrap text-center gap-1">
+        <div class="partnersImages d-flex flex-wrap align-content-center">
             <?php 
                 while($data_partners = $request_partners->fetch()) {
             ?>
-                <div class="partnersCard align-content-center">
-                    <a href=""><img class='partnersImage' src="./img/<?php echo $data_partners['image']?>" alt="<?php echo $data_partners['name']?>"></a>
+                <div class="partnersCard">
+                    <a href="#"><img class='partnersImage' src="./img/<?php echo $data_partners['image']?>" alt="<?php echo $data_partners['name']?>"></a>
                 </div>
             <?php
                 }

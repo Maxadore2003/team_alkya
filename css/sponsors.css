@@ -1,26 +1,31 @@
-/* div.partnersCard {
-    width: 12%;
-} */
-
-/* div.sponsorsCard {
-    width: 18%;
-} */
-
 div.sponsorsCard a img{
-    width: 260px;
+    width: 100%;
+}
+
+img.partnersImage {
+    width: 100%;
+}
+
+div.sponsorsImages, div.partnersImages {
+    align-items: center;
 }
 
 div.sponsorsCard, div.partnersCard {
     text-align: center;
-    padding-left: 1%;
-    padding-right: 1%;
+    margin: 2%;
 }
 
-img.partnersImage {
-    width: 220px;
+div.sponsorsCard {
+    width: 20%;
+}
+
+div.partnersCard {
+    width: 12.65%;
 }
 
 div.sponsorsPartners {
     border-top: solid #C7C7C7 2px;
     border-bottom: solid #C7C7C7 2px;
+    padding-left: 9%;
+    padding-right: 9%;
 }

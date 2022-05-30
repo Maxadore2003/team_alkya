@@ -4,6 +4,7 @@
     $article_id = $_GET['id'];
     $request_article = $db->prepare("SELECT * FROM `actuality` WHERE `id` = $article_id");
     $request_article->execute();
+    $article_count = $request_article->rowCount();
     $data_article = $request_article->fetch();
 
 
@@ -29,19 +30,34 @@
         <?php include 'includes/header.php'; ?>
 
 
+
         <div class="content">
+            <?php
+            if( $article_count <= 0 )
+            {
+                ?>
+                <div class="article-description text-center">
+                    <p class='error-text text-center'>Sorry, the news doesn't exist...</p>
+                    <p class='text-center'>Désolé, L'article n'existe pas...</p>
+                </div>
+                <?php
+            }
+            else {
+            ?>
             <div class="illustration text-center">
-                <img src="./img/<?php echo $data_article["image"]; ?>" alt="Illustration <?php echo $data_article["image"]?>">
+                <img src="./img/<?php echo $data_article["image"]; ?>" alt="Article, News, Alkya, team esport, structure esport, <?php echo $data_article["image"]?>">
             </div>
             
             <div class="article-description text-center">
                 <h2><?php echo $data_article["title"]; ?></h2>
                 <p><?php echo $data_article["description"]; ?></p>
             </div>
-
-            <?php include 'includes/sponsors.php' ?>
+            <?php
+            }
+            ?>
         </div>
-        
+
+        <?php include 'includes/sponsors.php' ?>
         <?php include 'includes/footer.php'?>
     </body>
 
