@@ -1,0 +1,28 @@
+div.about-us-desc-what p, div.about-us-desc-why p {
+    margin-top: 5%;
+    text-align: justify;
+    font-size: 24px;
+}
+
+div.images {
+    justify-content: center;
+    align-items: center;
+}
+
+div.about-us-images img {
+    width: 50%;
+}
+
+div.d-flex.gap-3.text-center.staff {
+    margin-bottom: 5%;
+    align-items: center;
+}
+
+div.staffImage {
+    width: 25%;
+}
+
+div.staffImage img {
+    max-width: 183px;
+    border-radius: 50%;
+}
