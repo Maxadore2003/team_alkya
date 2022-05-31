@@ -1,0 +1,10 @@
+div.content {
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+    text-align: center;
+}
+
+div.content div.website-elements button {
+    margin-left: 30%;
+}

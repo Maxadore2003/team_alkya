@@ -1,0 +1,42 @@
+nav {
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    float: left;
+    padding: 2%;
+    width: 50%;
+    text-align: center;
+}
+
+nav li a {
+    text-decoration: none;
+    display: block;
+    color: black;
+    font-size: 36px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+nav li a:hover {
+    color: #FB8500;
+}
+
+div.logo-navbar {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+div.logo-navbar a.logo img {
+    max-width: 82px;
+}
+
+div.button-navbar {
+    width: 70%;
+    align-items: center;
+    border-bottom: solid #000000 4px;
+    /* border-bottom: solid #126782 4px; */
+}
