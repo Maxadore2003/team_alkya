@@ -25,18 +25,25 @@ div.illustration p::before {
 
 div.players-title p, div.coach-title p {
     font-size: 90px;
-    margin-left: 10%;
+    margin-left: 5%;
     text-transform: uppercase;
     position: relative;
 }
 
-div.players-title p::before, div.coach-title p::before {
+/* div.players-title p::before, div.coach-title p::before {
     content: "";
     position: absolute;
     background-color: #135066;
     width: 25%;
     height: 5px;
     bottom: 0;
+} */
+
+div.players-title, div.coach-title {
+    border-bottom: solid #135066 5px;
+    width: 30%;
+    text-align: left;
+    margin-left: 5%;
 }
 
 div.name p {
@@ -57,7 +64,7 @@ div.name p.firstname, div.name p.name{
 }
 
 div.coach-title {
-    margin-top: 28%;
+    margin-top: 10%;
 }
 
 div.player, div.coach {

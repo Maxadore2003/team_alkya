@@ -28,13 +28,12 @@
             <img src="img/team-lol.png" alt="Équipe LOL">
             <p>Notre Line-Up</p>
         </div>
-
-        <div class="content">
-            
-            <div class="players-title">
-                <p>Joueurs</p>
-            </div>
-            
+        
+        <div class="players-title text-right">
+            <p>Joueurs</p>
+        </div>
+        
+        <div class="content">            
             <div class="players d-flex flex-wrap">
                 <div class="player" style="background-image: url(./img/martin-larsson.png);">
                     <div class="flag">
@@ -120,12 +119,13 @@
                     </div>
                 </div>
             </div>
+        </div>
             
-            <div class="coach-title">
-                <p>Coach</p>
-            </div>
+        <div class="coach-title">
+            <p>Coach</p>
+        </div>
 
-            
+        <div class="content">
             <div class="coachs d-flex flex-wrap">
                 <div class="coach" style="background-image: url(./img/martin-larsson.png);">
                     <div class="flag">
@@ -140,10 +140,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-
         </div>
             
             <?php include "includes/sponsors.php"; ?>
