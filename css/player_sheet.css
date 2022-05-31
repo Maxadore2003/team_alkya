@@ -1,0 +1,54 @@
+div.martin-rekkles-larsson {
+    align-items: center;
+    margin-top: 5%;
+}
+
+div.martin-rekkles-larsson div.image {
+    margin-left: 5%;
+}
+
+div.martin-rekkles-larsson div.presentation {
+    margin-left: 3%;
+}
+
+div.martin-rekkles-larsson div.presentation h1 {
+    font-size: 96px;
+}
+
+div.martin-rekkles-larsson div.presentation p {
+    font-size: 36px;
+}
+
+div.martin-rekkles-larsson div.presentation div.place-of-birth {
+    align-items: center;
+}
+
+div.martin-rekkles-larsson div.presentation div.place-of-birth img {
+    width: 5%;
+    height: 5%;
+    margin-left: 2%;
+}
+
+div.career div.career-button {
+    align-items: center;
+}
+
+div.career div.career-button a {
+    align-items: center;
+    margin-top: 2%;
+    margin-left: 25%;
+}
+
+div.career div.career-button p {
+    font-size: 36px;
+    margin-top: 2%;
+    margin-left: 1%;
+}
+
+div.career div.content div.rekkles {
+    margin: 5%;
+}
+
+div.career div.content div.rekkles h2 {
+    font-size: 96px;
+}
