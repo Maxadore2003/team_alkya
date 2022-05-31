@@ -39,31 +39,62 @@ div.players-title p::before, div.coach-title p::before {
     bottom: 0;
 }
 
+div.name p {
+    font-size: 45px;
+}
+
+div.name p {
+    margin: 0;
+    height: 50px;
+}
+
+div.name p.nickname {
+    color: #126782;
+}
+
+div.name p.firstname, div.name p.name{
+    color: #ffffff;
+}
+
 div.coach-title {
     margin-top: 28%;
 }
 
-#players {
-    position: relative;
-}
-
-.image {
-    position: absolute;
-}
-
-#image1 {
+div.player, div.coach {
+    padding-top: 1.5%;
+    margin: 5% 5% 0 5%;
     width: 20%;
-    left: 13%;
+    background: no-repeat;
+    background-size: 100%;
 }
 
-#image2 {
-    width: 10%;
-    left: 14%;
-    /* top: 50%; */
+div.player div.description, div.coach div.description{
+    align-items: center;
 }
 
-#image3 {
-    width: 5%;
-    left: 27%;
-    /* top: 50%; */
+div.flag {
+    margin-right: 5%;
+}
+
+div.poste, div.flag {
+    text-align: right;
+}
+
+div.name, div.poste {
+    width: 50%;
+}
+
+div.flag img  {
+    max-width: 67px;
+}
+
+div.poste img {
+    height: 100px;
+}
+
+div.description {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 40%;
+    padding-bottom: 10%;
 }

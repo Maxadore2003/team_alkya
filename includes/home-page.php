@@ -95,7 +95,7 @@
             </div>
         </div>
         <div class='gameButton text-center'>
-            <a class='linkTeam' href="./team.php"><?php echo $data_game_button['description']?></a>
+            <a class='linkTeam' href="./teams.php"><?php echo $data_game_button['description']?></a>
         </div>
     </div>
 
@@ -115,7 +115,7 @@
             ?>
         </div>
         <div class='actualityButton text-center'>
-            <a class='linkActuality' href="./news.php"><?php echo $data_actuality_button['description']?></a>
+            <a class='linkActuality' href="./news.php?page=0"><?php echo $data_actuality_button['description']?></a>
         </div>
     </div>
 </div>
