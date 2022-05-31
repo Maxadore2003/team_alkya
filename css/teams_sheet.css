@@ -39,11 +39,31 @@ div.players-title p::before, div.coach-title p::before {
     bottom: 0;
 }
 
-/* div.players a.images-player {
-    background-image: url(../img/martin-larsson.png);
-    background-size: 100%;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 21%;
-    background-repeat: no-repeat;
-} */
+div.coach-title {
+    margin-top: 28%;
+}
+
+#players {
+    position: relative;
+}
+
+.image {
+    position: absolute;
+}
+
+#image1 {
+    width: 20%;
+    left: 13%;
+}
+
+#image2 {
+    width: 10%;
+    left: 14%;
+    /* top: 50%; */
+}
+
+#image3 {
+    width: 5%;
+    left: 27%;
+    /* top: 50%; */
+}
