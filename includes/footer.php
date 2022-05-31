@@ -20,15 +20,15 @@
     <div class="about">
 
         <p class="text-about">About</p>
-        <a href="#">Actus</a>
-        <a href="#">Teams</a>
-        <a href="#">Qui sommes-nous ?</a>
+        <a href="./news.php?page=0">Actus</a>
+        <a href="./teams.php">Teams</a>
+        <a href="./about-us.php">Qui sommes-nous ?</a>
 
     </div>
 
     <div class="informations">
 
-        <a href="./includes/database.php">CGU</a>
+        <a href="#">CGU</a>
         <a href="#">Mentions légales</a>
         <a href="#">Politique de confidentialité</a>
 
