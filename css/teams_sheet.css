@@ -64,13 +64,13 @@ div.name p.firstname, div.name p.name{
 }
 
 div.coach-title {
-    margin-top: 10%;
+    margin-top: 7%;
 }
 
 div.player, div.coach {
     padding-top: 1.5%;
     margin: 5% 5% 0 5%;
-    width: 20%;
+    width: 23.3%;
     background: no-repeat;
     background-size: 100%;
 }
@@ -102,6 +102,6 @@ div.poste img {
 div.description {
     margin-left: 5%;
     margin-right: 5%;
-    padding-top: 40%;
+    padding-top: 50%;
     padding-bottom: 10%;
 }
