@@ -1,6 +1,6 @@
 <nav class="d-flex">
     <div class='logo-navbar'>
-        <a href='./index.php' class="logo">
+        <a href='admin.php' class="logo">
             <img src="../img/logo-black-alkya.png" alt="Logo">
         </a>
     </div>

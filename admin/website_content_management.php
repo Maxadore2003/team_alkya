@@ -15,55 +15,107 @@
 
         <?php include "header_admin.php"; ?>
 
+        <!-- <div class="d-flex">
+            <div class="text">
+                <p>Article</p>
+            </div>
+            <div class="button">
+                <a href="#">Ajouter</a>
+                <a href="#">Modifier</a>
+                <a href="#">Supprimer</a>
+            </div>
+            <div class="text">
+                <p>Article</p>
+            </div>
+            <div class="button">
+                <a href="#">Ajouter</a>
+                <a href="#">Modifier</a>
+                <a href="#">Supprimer</a>
+            </div>
+        </div> -->
+
+
         <div class="content d-flex">
             <div class="website-elements">
                 <div class="article d-flex">
-                    <p>Article</p>
-                    <button>Ajouter</button>
-                    <button>Modifier</button>
-                    <button>Supprimer</button>
+                    <div class="text">
+                        <p>Article</p>
+                    </div>
+                    <div class="links">
+                        <a href="#">Ajouter</a>
+                        <a href="#">Modifier</a>
+                        <a href="#">Supprimer</a>
+                    </div>
                 </div>
                 <div class="team d-flex">
-                    <p>Équipe</p>
-                    <button>Ajouter</button>
-                    <button>Modifier</button>
-                    <button>Supprimer</button>
+                    <div class="text">
+                        <p>Équipe</p>
+                    </div>
+                    <div class="links">
+                        <a href="#">Ajouter</a>
+                        <a href="#">Modifier</a>
+                        <a href="#">Supprimer</a>
+                    </div>
                 </div>
                 <div class="player d-flex">
-                    <p>Joueur</p>
-                    <button>Ajouter</button>
-                    <button>Modifier</button>
-                    <button>Supprimer</button>
+                    <div class="text">
+                        <p>Joueur</p>
+                    </div>
+                    <div class="links">
+                        <a href="#">Ajouter</a>
+                        <a href="#">Modifier</a>
+                        <a href="#">Supprimer</a>
+                    </div>
                 </div>
                 <div class="coach d-flex">
-                    <p>Coach</p>
-                    <button>Ajouter</button>
-                    <button>Modifier</button>
-                    <button>Supprimer</button>
+                    <div class="text">
+                        <p>Coach</p>
+                    </div>
+                    <div class="links">
+                        <a href="#">Ajouter</a>
+                        <a href="#">Modifier</a>
+                        <a href="#">Supprimer</a>
+                    </div>
                 </div>
                 <div class="alkya-staff d-flex">
-                    <p>Staff d'Alkya</p>
-                    <button>Ajouter</button>
-                    <button>Modifier</button>
-                    <button>Supprimer</button>
+                    <div class="text">
+                        <p>Staff d'Alkya</p>
+                    </div>
+                    <div class="links">
+                        <a href="#">Ajouter</a>
+                        <a href="#">Modifier</a>
+                        <a href="#">Supprimer</a>
+                    </div>
                 </div>
                 <div class="texts-zone d-flex">
-                    <p>Zone de Texte</p>
-                    <button>Ajouter</button>
-                    <button>Modifier</button>
-                    <button>Supprimer</button>
+                    <div class="text">
+                        <p>Zone de Texte</p>
+                    </div>
+                    <div class="links">
+                        <a href="#">Ajouter</a>
+                        <a href="#">Modifier</a>
+                        <a href="#">Supprimer</a>
+                    </div>
                 </div>
                 <div class="links-social-networks d-flex">
-                    <p>Liens des Réseaux Sociaux</p>
-                    <button>Ajouter</button>
-                    <button>Modifier</button>
-                    <button>Supprimer</button>
+                    <div class="text">
+                        <p>Liens des Réseaux Sociaux</p>
+                    </div>
+                    <div class="links">
+                        <a href="#">Ajouter</a>
+                        <a href="#">Modifier</a>
+                        <a href="#">Supprimer</a>
+                    </div>
                 </div>
                 <div class="sponsors d-flex">
-                    <p>Sponsors / Partenaires</p>
-                    <button>Ajouter</button>
-                    <button>Modifier</button>
-                    <button>Supprimer</button>
+                    <div class="text">
+                        <p>Sponsors / Partenaires</p>
+                    </div>
+                    <div class="links">
+                        <a href="#">Ajouter</a>
+                        <a href="#">Modifier</a>
+                        <a href="#">Supprimer</a>
+                    </div>
                 </div>
             </div>
         </div>

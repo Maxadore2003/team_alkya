@@ -1,10 +1,23 @@
-div.content {
-    justify-content: center;
-    align-items: center;
-    margin: 5%;
-    text-align: center;
+/* div.p {
+    width: 25%;
 }
 
-div.content div.website-elements button {
-    margin-left: 30%;
+div.button {
+    width: 25%;
+}
+
+div.button a {
+    text-decoration: none;
+    color: #000;
+} */
+
+
+div.content {
+    margin: 5%;
+    justify-content: center;
+}
+
+div.content div.website-elements div.links a {
+    text-decoration: none;
+    color: #000;
 }

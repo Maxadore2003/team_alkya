@@ -1,0 +1,17 @@
+form h1 {
+    font-size: 50px;
+    margin-top: 8%;
+}
+
+form div.content {
+    margin-top: 2%;
+}
+
+form div.content div.form-group {
+    text-align: center;
+    margin: 1%;
+}
+
+form div.content div.form-group input {
+    margin-left: 2%;
+}
