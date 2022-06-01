@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 30 mai 2022 à 17:30
+-- Généré le : mer. 01 juin 2022 à 14:46
 -- Version du serveur : 10.4.22-MariaDB
 -- Version de PHP : 7.3.33
 
@@ -106,7 +106,7 @@ CREATE TABLE `player` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` char(30) NOT NULL,
   `firstname` char(30) NOT NULL,
-  `pseudo` char(30) NOT NULL,
+  `nickname` char(30) NOT NULL,
   `nationality` char(50) NOT NULL,
   `birthday` date NOT NULL,
   `city` char(50) NOT NULL,
@@ -116,10 +116,10 @@ CREATE TABLE `player` (
   `game-id` int(10) UNSIGNED NOT NULL,
   `image` char(30) NOT NULL,
   `type` char(30) NOT NULL DEFAULT 'player',
-  `twitter` char(30) NOT NULL,
-  `instagram` char(30) NOT NULL,
-  `twitch` char(30) NOT NULL,
-  `game-stats` char(30) NOT NULL
+  `twitter` char(100) NOT NULL,
+  `instagram` char(100) NOT NULL,
+  `twitch` char(100) NOT NULL,
+  `game-stats` char(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -132,24 +132,25 @@ CREATE TABLE `sponsors` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` char(30) NOT NULL,
   `image` char(30) NOT NULL,
-  `type` char(11) NOT NULL DEFAULT 'sponsors'
+  `type` char(11) NOT NULL DEFAULT 'sponsors',
+  `link` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `sponsors`
 --
 
-INSERT INTO `sponsors` (`id`, `name`, `image`, `type`) VALUES
-(0, 'Gaming Campus', 'gamingcampus.png', 'sponsors'),
-(1, 'adidas', 'adidas.png', 'sponsors'),
-(2, 'adidas', 'adidas.png', 'partners'),
-(3, 'adidas', 'adidas.png', 'partners'),
-(4, 'Gaming Campus', 'gamingcampus.png', 'sponsors'),
-(5, 'adidas', 'adidas.png', 'sponsors'),
-(6, 'adidas', 'adidas.png', 'partners'),
-(7, 'adidas', 'adidas.png', 'partners'),
-(8, 'adidas', 'adidas.png', 'partners'),
-(9, 'adidas', 'adidas.png', 'partners');
+INSERT INTO `sponsors` (`id`, `name`, `image`, `type`, `link`) VALUES
+(0, 'Gaming Campus', 'gamingcampus.png', 'sponsors', 'https://gamingcampus.fr'),
+(1, 'adidas', 'adidas.png', 'sponsors', 'https://www.adidas.fr'),
+(2, 'adidas', 'adidas.png', 'partners', 'https://www.adidas.fr'),
+(3, 'adidas', 'adidas.png', 'partners', 'https://www.adidas.fr'),
+(4, 'Gaming Campus', 'gamingcampus.png', 'sponsors', 'https://gamingcampus.fr'),
+(5, 'adidas', 'adidas.png', 'sponsors', 'https://www.adidas.fr'),
+(6, 'adidas', 'adidas.png', 'partners', 'https://www.adidas.fr'),
+(7, 'adidas', 'adidas.png', 'partners', 'https://www.adidas.fr'),
+(8, 'adidas', 'adidas.png', 'partners', 'https://www.adidas.fr'),
+(9, 'adidas', 'adidas.png', 'partners', 'https://www.adidas.fr');
 
 -- --------------------------------------------------------
 
@@ -174,6 +175,19 @@ INSERT INTO `staff` (`id`, `name`, `firstname`, `image`, `title`) VALUES
 (1, 'Diani', 'Jean-Michel', 'jean-michel-diani.png', 'Secrétaire / Head of FPS'),
 (2, 'Gonnet', 'Anthony', 'anthony-gonnet.png', 'Head of marketing'),
 (3, 'Lux', 'Damien', 'damien-lux.png', 'Directeur esportif');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `test`
+--
+
+CREATE TABLE `test` (
+  `id` int(11) NOT NULL,
+  `name` int(11) NOT NULL,
+  `image` int(11) NOT NULL,
+  `pseudo` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -207,7 +221,11 @@ INSERT INTO `text` (`id`, `name`, `description`, `type`, `link`) VALUES
 (10, 'about-us-desc-what', 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.', 'description', ''),
 (11, 'about-us-why', 'Pourquoi Alkya ?', 'title', ''),
 (12, 'about-us-desc-why', 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.', 'description', ''),
-(13, 'staff', 'staff', 'title', '');
+(13, 'staff', 'staff', 'title', ''),
+(14, 'teams', 'nos équipes', 'title', ''),
+(15, 'teams-sheet-title', 'notre line-up', 'title', ''),
+(16, 'teams-sheet-player', 'joueurs', 'title', ''),
+(17, 'teams-sheet-coach', 'coachs', 'title', '');
 
 -- --------------------------------------------------------
 
