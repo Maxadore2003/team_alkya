@@ -32,7 +32,7 @@
                 while($data_sponsors = $request_sponsors->fetch()) {
             ?>
             <div class="sponsorsCard">
-                <a href="#"><img class="sonsorsImage" src="./img/<?php echo $data_sponsors['image']?>" alt="<?php echo $data_sponsors['name']?>"></a>
+                <a href="<?php echo $data_sponsors['link']?>" target="_blank"><img class="sonsorsImage" src="./img/<?php echo $data_sponsors['image']?>" alt="<?php echo $data_sponsors['name']?>"></a>
             </div>
             <?php
                 }
@@ -47,7 +47,7 @@
                 while($data_partners = $request_partners->fetch()) {
             ?>
                 <div class="partnersCard">
-                    <a href="#"><img class='partnersImage' src="./img/<?php echo $data_partners['image']?>" alt="<?php echo $data_partners['name']?>"></a>
+                    <a href="<?php echo $data_partners['link']?>" target="_blank"><img class='partnersImage' src="./img/<?php echo $data_partners['image']?>" alt="<?php echo $data_partners['name']?>"></a>
                 </div>
             <?php
                 }

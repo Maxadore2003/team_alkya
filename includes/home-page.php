@@ -81,7 +81,7 @@
                 while ($data_games = $request_games->fetch()) {
             ?>
             <div class="gameImage text-center">
-                <a href="./teams_sheet.php?game=<?php echo $data_games['name'] ?>"><img src="img/<?php echo $data_games['global-image'] ?>" alt="jeux, Alkya, team esport, structure esport, <?php echo $data_games['global-image'] ?>"></img></a>
+                <a href="./teams_sheet.php?game=<?php echo $data_games['id'] ?>"><img src="img/<?php echo $data_games['global-image'] ?>" alt="jeux, Alkya, team esport, structure esport, <?php echo $data_games['global-image'] ?>"></img></a>
             </div>
             <?php 
             }
