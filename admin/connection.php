@@ -15,21 +15,12 @@
 
         <?php include "header_admin.php"; ?>
 
+        <h1>Connexion</h1>
+
         <form action="login.php" method="post">
-            <h1 class="text-center">Connexion</h1>
-            <div class="content">
-                <div class="form-group">
-                    <label>Pseudo</label>
-                    <input type="text" name="pseudo" placeholder="Pseudo" required="required">
-                </div>
-                <div class="form-group">
-                    <label>Mot de Passe</label>
-                    <input type="password" name="password" placeholder="Mot de Passe" required="required">
-                </div>
-                <div class="submit">
-                    <button type="submit">Valider</button>
-                </div>
-            </div>
+            <input type="text" name="pseudo" id="pseudo" placeholder="Votre Pseudo" required> <br>
+            <input type="password" name="password" id="password" placeholder="Votre Mot de Passe" required> <br>
+            <input type="submit" name="send" id="send" value="Connexion">
         </form>
         
     </body>

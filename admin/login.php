@@ -1,26 +1,29 @@
 <?php
 
-    include "../includes/database.php";
+    include '../includes/database.php';
 
-    extract($_POST);
+    if (isset($_POST['send'])) {
+        
+        extract($_POST);
 
-    if (!empty($pseudo) && !empty($password)) {
-        $request = $db->prepare("SELECT * FROM users WHERE pseudo = :pseudo AND password = :password");
-        $request->execute([
-            "pseudo" => $pseudo,
-            "password" => sha1($password),
-        ]);
-        $result = $request->rowCount();
-        if ($result == 1) {
-            session_start();
-            $_SESSION["connected"] = 1;
-            $_SESSION["pseudo"] = $pseudo;
+        if (!empty($pseudo) && !empty($password)) {
+            
+            $request = $db->prepare("SELECT * FROM users WHERE pseudo = :pseudo AND password = :password");
+            $request->execute([
+                'pseudo' => $pseudo,
+                'password' => $password,
+            ]);
+            $result = $request->fetch();
+            
+            if ($result == true) {
+                echo "Connexion Réussie !";
+            }
+            else {
+                echo "Connexion Échouée !";
+            }
+        
         }
-        else {
-            $redMessageConnetion = "Connexion échouée !";
-            include "connection.php";
-            exit();
-        }
+    
     }
 
 ?>
