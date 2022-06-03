@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 01 juin 2022 à 14:46
+-- Généré le : ven. 03 juin 2022 à 17:09
 -- Version du serveur : 10.4.22-MariaDB
 -- Version de PHP : 7.3.33
 
@@ -238,9 +238,17 @@ CREATE TABLE `users` (
   `name` char(30) NOT NULL,
   `firstname` char(30) NOT NULL,
   `pseudo` char(30) NOT NULL,
-  `password` int(30) NOT NULL,
+  `password` char(30) NOT NULL,
   `admin-level` int(11) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `firstname`, `pseudo`, `password`, `admin-level`) VALUES
+(0, 'admin', 'admin', ' admin', 'admin', 2),
+(1, 'Callewaert', 'Ilan', 'ManTh3Bus', 'test', 2);
 
 --
 -- Index pour les tables déchargées
