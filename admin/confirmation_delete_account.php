@@ -3,8 +3,10 @@
     include '../includes/database.php';
 
     // Demander à la base de donnée tous les utilisateurs
-    $request_users = $db->prepare("SELECT * FROM `users`");
-    $request_users->execute();
+    $request_user = $db->prepare("SELECT * FROM `users` WHERE `id` = :id");
+    $request_user->bindParam(":id", $_GET["id"], PDO::PARAM_INT);
+    $request_user->execute();
+    $data_user = $request_user -> fetch()
 ?>
 
 
@@ -18,35 +20,40 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <link rel="stylesheet" href="../css/header_admin.css">
         <link rel="stylesheet" href="../css/admin_account_management.css">
-        <title>Gestion Comptes</title>
+        <title>Confirmation suppression compte</title>
     </head>
 
     <body>
 
         <?php include "header_admin.php"; ?>
 
+
         <div class="account-management d-flex text-center">
             <p>ID du compte</p>
             <p>Identifiant du compte</p>
-            <p>Modifier un compte</p>
-            <p>Supprimer un compte</p>
+            <p>Nom</p>
+            <p>Prénom</p>
+            <p>Mot de passe</p>
+            <p>Niveau d'administration</p>
         </div>
 
-        <?php
-            while($data_users = $request_users -> fetch()){
-        ?>
         <div class="account-management d-flex text-center">
-            <p><?php echo $data_users['id'] ?></p>
-            <p><?php echo $data_users['pseudo'] ?></p>
-            <a href='./confirmation_edit_account.php?id=<?php echo $data_users['id'] ?>'>Modifier</a>
-            <a href='./confirmation_delete_account.php?id=<?php echo $data_users['id'] ?>'>Supprimer</a>
+            <p><?php echo $data_user['id'] ?></p>
+            <p><?php echo $data_user['pseudo'] ?></p>
+            <p><?php echo $data_user['name'] ?></p>
+            <p><?php echo $data_user['firstname'] ?></p>
+            <p><?php echo $data_user['password'] ?></p>
+            <p><?php echo $data_user['admin-level'] ?></p>
         </div>
-        <?php
-            }
-        ?>
+
         <div class="confirmation text-center">
-            <a href="./confirmation_add_account.php">Ajouter</a>
+            <p>Êtes vous sur de vouloir supprimer ce compte. Il sera impossible de le récupérer.</p>
         </div>
+        <div class="account-management d-flex text-center">
+            <a class="yes" href="./delete_account.php?awnser=yes&id=1">Oui</a>
+            <a class="no" href="./delete_account.php?awnser=no&id=1">Non</a>
+        </div>
+
     </body>
 
 </html>

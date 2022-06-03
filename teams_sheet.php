@@ -2,8 +2,6 @@
 
     include './includes/database.php';
 
-    $game_id = $_GET['game'];
-
     // Demander à la base de donnée le titre de teams
     $request_teams_title = $db->prepare("SELECT `description` FROM `text` WHERE `name` = 'teams-sheet-title' AND `type` = 'title'");
     $request_teams_title->execute();
@@ -20,7 +18,8 @@
     $data_teams_coach = $request_teams_coach->fetch();
 
     // Demander à la base de donnée toutes les données des jeux
-    $request_games = $db->prepare("SELECT * FROM `game` WHERE `id` = $game_id");
+    $request_games = $db->prepare("SELECT * FROM `game` WHERE `id` = :game");
+    $request_games->bindParam(":game", $_GET["game"], PDO::PARAM_INT);
     $request_games->execute();
     $data_games = $request_games->fetch();
 

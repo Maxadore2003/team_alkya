@@ -2,6 +2,29 @@ div.account-management {
     justify-content: center;
 }
 
-div.account-management p {
-    margin: 3%;
+div.account-management p, div.account-management a, div.account-management input{
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 2%;
+    width: 10%;
+}
+
+div.submit {
+    margin-top: 5%;
+}
+
+div.account-management a.yes {
+    color: green;
+    border: solid green 1px;
+    text-decoration: none;
+}
+
+div.account-management a.no {
+    color: red;
+    border: solid red 1px;
+    text-decoration: none;
+}
+
+div.confirmation {
+    margin-top: 10%;
 }

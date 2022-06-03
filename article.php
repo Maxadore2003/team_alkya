@@ -1,8 +1,8 @@
 <?php
 
     include './includes/database.php';
-    $article_id = $_GET['id'];
-    $request_article = $db->prepare("SELECT * FROM `actuality` WHERE `id` = $article_id");
+    $request_article = $db->prepare("SELECT * FROM `actuality` WHERE `id` = :id");
+    $request_article->bindParam(":id", $_GET["id"], PDO::PARAM_INT);
     $request_article->execute();
     $article_count = $request_article->rowCount();
     $data_article = $request_article->fetch();
