@@ -49,7 +49,7 @@
                 <input class="text-center" type="text" name="name">
                 <input class="text-center" type="text" name="firstname">
                 <input class="text-center" type="password" name="password">
-                <input class="text-center" type="text" name="admin-level">
+                <input class="text-center" type="text" name="admin-level" value="1">
             </div>
             <div class="submit text-center">
                 <input type="submit">
