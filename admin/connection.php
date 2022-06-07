@@ -15,9 +15,9 @@
 
         <?php include "header_admin.php"; ?>
 
-        <h1>Connexion</h1>
+        <h1 class="text-center">Connexion</h1>
 
-        <form action="login.php" method="post">
+        <form class="text-center" action="login.php" method="post">
             <input type="text" name="pseudo" id="pseudo" placeholder="Votre Pseudo" required> <br>
             <input type="password" name="password" id="password" placeholder="Votre Mot de Passe" required> <br>
             <input type="submit" name="send" id="send" value="Connexion">
