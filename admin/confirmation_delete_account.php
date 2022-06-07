@@ -50,8 +50,8 @@
             <p>Êtes vous sur de vouloir supprimer ce compte. Il sera impossible de le récupérer.</p>
         </div>
         <div class="account-management d-flex text-center">
-            <a class="yes" href="./delete_account.php?awnser=yes&id=1">Oui</a>
-            <a class="no" href="./delete_account.php?awnser=no&id=1">Non</a>
+            <a class="yes" href="./delete_account.php?&id=<?php echo $_GET["id"] ?>">Oui</a>
+            <a class="no" href="./admin_account_management.php">Non</a>
         </div>
 
     </body>

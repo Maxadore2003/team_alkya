@@ -21,7 +21,6 @@
             include "./includes/database.php";
 
             $about_us_images_count = 0;
-            $staff_count = 0;
 
             // Demander à la base de donnée le titre de la page about us "Qu'est ce que Alkya"
             $request_about_us_what = $db->prepare("SELECT `description` FROM `text` WHERE `type` = 'title' AND `name` = 'about-us-what'");
@@ -105,15 +104,14 @@
             </div>
 
             <!-- Les 4 staff importants -->
-            <div class='d-flex gap-3 text-center staff'>
+            <div class='d-flex flex-wrap text-center staff'>
                 <?php
-                    while($data_staff_images = $request_staff_images -> fetch() and $data_staff_title = $request_staff_title -> fetch() and $staff_count < 4 ) {?>
+                    while($data_staff_images = $request_staff_images -> fetch() and $data_staff_title = $request_staff_title -> fetch()) {?>
                     <div class='staffImage'>
                         <img src='img/<?php echo $data_staff_images['image']?>' alt='staff, Alkya, team esport, structure esport, <?php echo $data_staff_images['image']?>'>
                         <p><?php echo $data_staff_title['title']?></p>
                     </div>
                 <?php
-                    $staff_count += 1;
                     }
                 ?> 
             </div>

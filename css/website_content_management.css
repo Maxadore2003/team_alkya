@@ -1,23 +1,22 @@
-/* div.p {
-    width: 25%;
-}
-
-div.button {
-    width: 25%;
-}
-
-div.button a {
-    text-decoration: none;
-    color: #000;
-} */
-
-
 div.content {
     margin: 5%;
-    justify-content: center;
 }
 
-div.content div.website-elements div.links a {
+div.content div.website-elements a {
     text-decoration: none;
     color: #000;
+}
+
+div.content div.website-elements a:hover {
+    text-decoration: underline;
+    color: #FB8500;
+}
+
+div.website-elements {
+    width: 100%;
+}
+
+div.website-elements div div{
+    width: 25%;
+    padding: 10px;
 }

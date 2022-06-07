@@ -37,83 +37,115 @@
 
         <div class="content d-flex">
             <div class="website-elements">
-                <div class="article d-flex">
+                <div class="article d-flex text-center">
                     <div class="text">
                         <p>Article</p>
                     </div>
-                    <div class="links">
+                    <div>
                         <a href="#">Ajouter</a>
+                    </div>
+                    <div>
                         <a href="#">Modifier</a>
+                    </div>
+                    <div>
                         <a href="#">Supprimer</a>
                     </div>
                 </div>
-                <div class="team d-flex">
+                <div class="team d-flex text-center">
                     <div class="text">
                         <p>Équipe</p>
                     </div>
-                    <div class="links">
+                    <div>
                         <a href="#">Ajouter</a>
+                    </div>
+                    <div>
                         <a href="#">Modifier</a>
+                    </div>
+                    <div>
                         <a href="#">Supprimer</a>
                     </div>
                 </div>
-                <div class="player d-flex">
+                <div class="player d-flex text-center">
                     <div class="text">
                         <p>Joueur</p>
                     </div>
-                    <div class="links">
+                    <div>
                         <a href="#">Ajouter</a>
+                    </div>
+                    <div>
                         <a href="#">Modifier</a>
+                    </div>
+                    <div>
                         <a href="#">Supprimer</a>
                     </div>
                 </div>
-                <div class="coach d-flex">
+                <div class="coach d-flex text-center">
                     <div class="text">
                         <p>Coach</p>
                     </div>
-                    <div class="links">
+                    <div>
                         <a href="#">Ajouter</a>
+                    </div>
+                    <div>
                         <a href="#">Modifier</a>
+                    </div>
+                    <div>
                         <a href="#">Supprimer</a>
                     </div>
                 </div>
-                <div class="alkya-staff d-flex">
+                <div class="alkya-staff d-flex text-center">
                     <div class="text">
                         <p>Staff d'Alkya</p>
                     </div>
-                    <div class="links">
+                    <div>
                         <a href="#">Ajouter</a>
+                    </div>
+                    <div>
                         <a href="#">Modifier</a>
+                    </div>
+                    <div>
                         <a href="#">Supprimer</a>
                     </div>
                 </div>
-                <div class="texts-zone d-flex">
-                    <div class="text">
+                <div class="texts-zone d-flex text-center">
+                    <div>
                         <p>Zone de Texte</p>
                     </div>
-                    <div class="links">
+                    <div>
                         <a href="#">Ajouter</a>
+                    </div>
+                    <div>
                         <a href="#">Modifier</a>
+                    </div>
+                    <div>
                         <a href="#">Supprimer</a>
                     </div>
                 </div>
-                <div class="links-social-networks d-flex">
+                <div class="links-social-networks d-flex text-center">
                     <div class="text">
                         <p>Liens des Réseaux Sociaux</p>
                     </div>
-                    <div class="links">
+                    <div>
                         <a href="#">Ajouter</a>
+                    </div>
+                    <div>
                         <a href="#">Modifier</a>
+                    </div>
+                    <div>
                         <a href="#">Supprimer</a>
                     </div>
                 </div>
-                <div class="sponsors d-flex">
+                <div class="sponsors d-flex text-center">
                     <div class="text">
                         <p>Sponsors / Partenaires</p>
                     </div>
-                    <div class="links">
+                    <div>
                         <a href="#">Ajouter</a>
+                    </div>
+                    <div>
                         <a href="#">Modifier</a>
+                    </div>
+                    <div>
                         <a href="#">Supprimer</a>
                     </div>
                 </div>
