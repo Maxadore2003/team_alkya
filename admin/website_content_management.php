@@ -42,13 +42,13 @@
                         <p>Article</p>
                     </div>
                     <div>
-                        <a href="#">Ajouter</a>
+                        <a href="./confirmation_add_article.php">Ajouter</a>
                     </div>
                     <div>
-                        <a href="#">Modifier</a>
+                        <a href="./list_article.php?mode=edit">Modifier</a>
                     </div>
                     <div>
-                        <a href="#">Supprimer</a>
+                        <a href="./list_article.php?mode=delete">Supprimer</a>
                     </div>
                 </div>
                 <div class="team d-flex text-center">
