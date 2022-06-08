@@ -43,15 +43,47 @@
                 <p>carriere du joueur</p>
             </div>
             <div class="content d-flex">
-                <div class="rekkles d-flex" id="rekkles">
-                    <h2>"rekkles"</h2>
+                <div class="rekkles" id="rekkles">
+                    <div class="flex d-flex">
+                        <h2>"rekkles"</h2>
+                        <div>
+                            <img src="img/flag.png" alt="Drapeau">
+                        </div>
+                    </div>
                     <div>
-                        <img src="img/flag.png" alt="Drapeau">
+                        <h3 class="text-center">parcours</h3>
+                        <div class="d-flex">
+                            <img src="img/career-first-illustration.png" alt="Illustration">
+                            <img class="arrow" src="img/arrow.png" alt="Flêche">
+                            <img src="img/career-second-illustration.png" alt="Illustration">
+                            <img class="arrow" src="img/arrow.png" alt="Flêche">
+                            <img src="img/logo-color-alkya.png" alt="Logo d'Alkya en couleur">
+                        </div>
+                        <div class="dates d-flex">
+                            <p>2015-2020</p>
+                            <p>2020-2021</p>
+                            <p>2021</p>
+                        </div>
+                    </div>
+                    <div class="palmares">
+                        <h4 class="text-center">palmares</h4>
                     </div>
                 </div>
                 <div class="image">
                     <img src="img/player.png" alt="Joueur">
                 </div>
+            </div>
+        </div>
+
+        <div class="networks text-uppercase">
+            <div class="title">
+                <h5 class="text-center">ses reseaux</h5>
+            </div>
+            <div class="images d-flex">
+                <img src="img/twitter-color.png" alt="Logo Twitter">
+                <img src="img/instagram-color.png" alt="Logo Instagram">
+                <img src="img/twitch-color.png" alt="Logo Twitch">
+                <img src="img/logo-lol.png" alt="Logo LOL">
             </div>
         </div>
 

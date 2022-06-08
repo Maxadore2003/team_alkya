@@ -45,10 +45,81 @@ div.career div.career-button p {
     margin-left: 1%;
 }
 
-div.career div.content div.rekkles {
-    margin: 5%;
+div.career div.content div.image img {
+    width: 600px;
+    height: 800px;
+}
+
+div.career div.content div.rekkles div.flex {
+    position: relative;
+}
+
+div.career div.content div.rekkles div.flex::before {
+    content: "";
+    position: absolute;
+    background-color: #135066;
+    width: 75%;
+    height: 5px;
+    bottom: 0;
 }
 
 div.career div.content div.rekkles h2 {
     font-size: 96px;
+}
+
+div.career div.content div.rekkles h3 {
+    font-size: 64px;
+}
+
+div.career div.content div.rekkles div {
+    margin: 25px;
+    justify-content: space-evenly;
+}
+
+div.career div.content div.rekkles div {
+    align-items: center;
+}
+
+div.career div.content div.rekkles div img {
+    width: 100px;
+}
+
+div.career div.content div.rekkles div img.arrow {
+    width: 50px;
+    height: 50px;
+}
+
+div.career div.content div.rekkles div div.dates {
+    justify-content: space-around;
+}
+
+div.career div.content div.rekkles div.palmares h4 {
+    font-size: 64px;
+}
+
+div.networks {
+    margin: 2%;
+}
+
+div.networks div.title h5 {
+    font-size: 96px;
+    position: relative;
+}
+
+div.networks div.title h5::before {
+    content: "";
+    position: absolute;
+    background-color: #135066;
+    width: 32.5%;
+    height: 5px;
+    bottom: 0;
+}
+
+div.networks div.images {
+    justify-content: space-around;
+    margin-top: 5%;
+}
+
+div.networks div.images img {
+    width: 10%;
 }
