@@ -17,6 +17,7 @@ div.martin-rekkles-larsson div.presentation h1 {
 
 div.martin-rekkles-larsson div.presentation p {
     font-size: 36px;
+    color: #136782;
 }
 
 div.martin-rekkles-larsson div.presentation div.place-of-birth {
@@ -43,6 +44,7 @@ div.career div.career-button p {
     font-size: 36px;
     margin-top: 2%;
     margin-left: 1%;
+    color: #136782;
 }
 
 div.career div.content div.image img {
@@ -65,10 +67,12 @@ div.career div.content div.rekkles div.flex::before {
 
 div.career div.content div.rekkles h2 {
     font-size: 96px;
+    color: #136782;
 }
 
 div.career div.content div.rekkles h3 {
     font-size: 64px;
+    color: #136782;
 }
 
 div.career div.content div.rekkles div {
@@ -93,8 +97,13 @@ div.career div.content div.rekkles div div.dates {
     justify-content: space-around;
 }
 
+div.career div.content div.rekkles div div.dates p {
+    color: #136782;
+}
+
 div.career div.content div.rekkles div.palmares h4 {
     font-size: 64px;
+    color: #136782;
 }
 
 div.networks {
@@ -103,6 +112,7 @@ div.networks {
 
 div.networks div.title h5 {
     font-size: 96px;
+    color: #136782;
     position: relative;
 }
 
