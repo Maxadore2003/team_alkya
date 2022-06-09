@@ -48,9 +48,13 @@ div.career div.career-button p {
     color: #136782;
 }
 
+div.career div.content {
+    justify-content: space-between;
+}
+
 div.career div.content div.image img {
-    width: 600px;
-    height: 800px;
+    width: 820px;
+    height: 1140px;
 }
 
 div.career div.content div.rekkles div.flex {
@@ -89,9 +93,14 @@ div.career div.content div.rekkles div img {
     width: 100px;
 }
 
+div.career div.content div.rekkles div div img.illustration {
+    width: 175px;
+    height: 175px;
+}
+
 div.career div.content div.rekkles div img.arrow {
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
 }
 
 div.career div.content div.rekkles div div.dates {
@@ -100,6 +109,7 @@ div.career div.content div.rekkles div div.dates {
 
 div.career div.content div.rekkles div div.dates p {
     color: #136782;
+    font-size: 36px;
 }
 
 div.career div.content div.rekkles div.palmares h4 {
@@ -132,5 +142,5 @@ div.networks div.images {
 }
 
 div.networks div.images img {
-    width: 10%;
+    width: 5%;
 }

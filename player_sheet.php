@@ -53,11 +53,11 @@
                     <div>
                         <h3 class="text-center">parcours</h3>
                         <div class="d-flex">
-                            <img src="img/career-first-illustration.png" alt="Illustration">
+                            <img class="illustration" src="img/career-first-illustration.png" alt="Illustration">
                             <img class="arrow" src="img/arrow.png" alt="Flêche">
-                            <img src="img/career-second-illustration.png" alt="Illustration">
+                            <img class="illustration" src="img/career-second-illustration.png" alt="Illustration">
                             <img class="arrow" src="img/arrow.png" alt="Flêche">
-                            <img src="img/logo-color-alkya.png" alt="Logo d'Alkya en couleur">
+                            <img class="illustration" src="img/logo-color-alkya.png" alt="Logo d'Alkya en couleur">
                         </div>
                         <div class="dates d-flex">
                             <p>2015-2020</p>
