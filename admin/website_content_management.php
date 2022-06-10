@@ -73,10 +73,10 @@
                         <a href="#">Ajouter</a>
                     </div>
                     <div>
-                        <a href="#">Modifier</a>
+                        <a href="./list_player_coach.php?mode=edit&type=player">Modifier</a>
                     </div>
                     <div>
-                        <a href="#">Supprimer</a>
+                        <a href="./list_player_coach.php?mode=delete&type=player">Supprimer</a>
                     </div>
                 </div>
                 <div class="coach d-flex text-center">
@@ -87,10 +87,10 @@
                         <a href="#">Ajouter</a>
                     </div>
                     <div>
-                        <a href="#">Modifier</a>
+                        <a href="./list_player_coach.php?mode=edit&type=coach">Modifier</a>
                     </div>
                     <div>
-                        <a href="#">Supprimer</a>
+                        <a href="./list_player_coach.php?mode=delete&type=coach">Supprimer</a>
                     </div>
                 </div>
                 <div class="alkya-staff d-flex text-center">
@@ -98,13 +98,13 @@
                         <p>Staff d'Alkya</p>
                     </div>
                     <div>
-                        <a href="#">Ajouter</a>
+                        <a href="./confirmation_add_staff.php">Ajouter</a>
                     </div>
                     <div>
-                        <a href="#">Modifier</a>
+                        <a href="./list_staff.php?mode=edit">Modifier</a>
                     </div>
                     <div>
-                        <a href="#">Supprimer</a>
+                        <a href="./list_staff.php?mode=delete">Supprimer</a>
                     </div>
                 </div>
                 <div class="texts-zone d-flex text-center">

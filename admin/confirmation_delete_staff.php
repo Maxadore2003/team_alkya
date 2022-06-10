@@ -2,11 +2,11 @@
 
     include '../includes/database.php';
 
-    // Demander à la base de donnée tous les utilisateurs
-    $request_news = $db->prepare("SELECT * FROM `actuality` WHERE `id` = :id");
-    $request_news->bindParam(":id", $_GET["id"], PDO::PARAM_INT);
-    $request_news->execute();
-    $data_news = $request_news -> fetch()
+    // Demander à la base de donnée tous les staff
+    $request_staff = $db->prepare("SELECT * FROM `staff` WHERE `id` = :id");
+    $request_staff->bindParam(":id", $_GET["id"], PDO::PARAM_INT);
+    $request_staff->execute();
+    $data_staff = $request_staff -> fetch()
 ?>
 
 
@@ -20,7 +20,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <link rel="stylesheet" href="../css/header_admin.css">
         <link rel="stylesheet" href="../css/admin_account_management.css">
-        <title>Confirmation suppression article</title>
+        <title>Confirmation suppression staff</title>
     </head>
 
     <body>
@@ -30,25 +30,25 @@
 
         <div class="account-management d-flex text-center">
             <p class="five">ID</p>
-            <p class="ten">Titre</p>
+            <p class="ten">Prénom</p>
+            <p class="ten">Nom</p>
             <p class="ten">Image</p>
-            <p class="twenty">Description</p>
-            <p class="five">Date</p>
+            <p class="ten">Titre</p>
         </div>
 
         <div class="account-management d-flex text-center">
-            <p class="five"><?php echo $data_news['id'] ?></p>
-            <p class="ten"><?php echo $data_news['title'] ?></p>
-            <p class="ten"><?php echo $data_news['image'] ?></p>
-            <p class="twenty"><?php echo $data_news['description'] ?></p>
-            <p class="five"><?php echo $data_news['date'] ?></p>
+            <p class="five"><?php echo $data_staff['id'] ?></p>
+            <p class="ten"><?php echo $data_staff['firstname'] ?></p>
+            <p class="ten"><?php echo $data_staff['name'] ?></p>
+            <p class="ten"><?php echo $data_staff['image'] ?></p>
+            <p class="ten"><?php echo $data_staff['title'] ?></p>
         </div>
 
         <div class="confirmation text-center">
-            <p>Êtes vous sur de vouloir supprimer cet article. Il sera impossible de le récupérer.</p>
+            <p>Êtes vous sur de vouloir supprimer ce membre du staff. Il sera impossible de le récupérer.</p>
         </div>
         <div class="account-management d-flex text-center">
-            <a class="yes" href="./delete_article.php?&id=<?php echo $_GET["id"] ?>">Oui</a>
+            <a class="yes" href="./delete_staff.php?&id=<?php echo $_GET["id"] ?>">Oui</a>
             <a class="no" href="./website_content_management.php">Non</a>
         </div>
 

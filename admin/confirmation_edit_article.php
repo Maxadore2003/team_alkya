@@ -28,28 +28,28 @@
         <?php include "header_admin.php"; ?>
 
         <div class="account-management d-flex text-center">
-            <p>ID</p>
-            <p>Titre</p>
-            <p>Image</p>
-            <p>Description</p>
-            <p>Date</p>
+            <p class="five">ID</p>
+            <p class="ten">Titre</p>
+            <p class="ten">Image</p>
+            <p class="twenty">Description</p>
+            <p class="five">Date</p>
         </div>
 
         <div class="account-management d-flex text-center">
-            <p><?php echo $data_news['id'] ?></p>
-            <p><?php echo $data_news['title'] ?></p>
-            <p><?php echo $data_news['image'] ?></p>
-            <p><?php echo $data_news['description'] ?></p>
-            <p><?php echo $data_news['date'] ?></p>
+            <p class="five"><?php echo $data_news['id'] ?></p>
+            <p class="ten"><?php echo $data_news['title'] ?></p>
+            <p class="ten"><?php echo $data_news['image'] ?></p>
+            <p class="twenty"><?php echo $data_news['description'] ?></p>
+            <p class="five"><?php echo $data_news['date'] ?></p>
         </div>
         
         <form method='post' action="edit_article.php?id=<?php echo $data_news['id'] ?>">
             <div class="account-management d-flex text-center">
-                <input class="text-center" type="text" name="id" value="<?php echo $data_news['id'] ?>">
-                <input class="text-center" type="text" name="title" value="<?php echo $data_news['title'] ?>">
-                <input class="text-center" type="text" name="image" value="<?php echo $data_news['image'] ?>">
-                <input class="text-center" type="text" name="description" value="<?php echo $data_news['description'] ?>">
-                <input class="text-center" type="date" name="date" value="<?php echo $data_news['date'] ?>">
+                <input class="five text-center" type="text" name="id" value="<?php echo $data_news['id'] ?>">
+                <input class="ten text-center" type="text" name="title" value="<?php echo $data_news['title'] ?>">
+                <input class="ten text-center" type="text" name="image" value="<?php echo $data_news['image'] ?>">
+                <input class="twenty text-center" type="text" name="description" value="<?php echo $data_news['description'] ?>">
+                <input class="five text-center" type="date" name="date" value="<?php echo $data_news['date'] ?>">
             </div>
             <div class="submit text-center">
                 <input type="submit">

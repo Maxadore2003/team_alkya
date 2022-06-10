@@ -1,6 +1,6 @@
 div.account-management {
     justify-content: center;
-    margin-bottom: 5%;
+    border-bottom: solid #a8a5a2 2px;
 }
 
 div.account-management a, div.confirmation a {
@@ -13,25 +13,49 @@ div.account-management a:hover, div.confirmation a:hover {
     text-decoration: underline;
 }
 
-div.account-management p, div.account-management a, div.account-management input{
+.three{
+    width: 3%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+div.account-management p.five, div.account-management a.five, div.account-management input.five{
     margin-left: 3%;
     margin-right: 3%;
+    width: 5%;
+}
+
+div.account-management p.ten, div.account-management a.ten, div.account-management input.ten{
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 10%;
+}
+
+div.account-management p.twenty , div.account-management a.twenty, div.account-management input.twenty {
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 20%;
+}
+
+div.account-management p, div.account-management a, div.account-management input{
     margin-top: 2%;
     width: 10%;
 }
 
 div.submit {
+    margin-bottom: 5%;
     margin-top: 5%;
 }
 
 div.account-management a.yes {
     color: green;
+    margin-bottom: 5%;
     border: solid green 1px;
     text-decoration: none;
 }
 
 div.account-management a.no {
     color: red;
+    margin-bottom: 5%;
     border: solid red 1px;
     text-decoration: none;
 }

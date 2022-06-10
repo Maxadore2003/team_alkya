@@ -15,7 +15,7 @@
         </ul>
     </div>
     <div class='logo-logout'>
-        <a href='#' class="logo-logout">
+        <a href='../' class="logo-logout">
             <img src="../img/logo-logout.png" alt="Logo Déconnexion">
         </a>
     </div>
