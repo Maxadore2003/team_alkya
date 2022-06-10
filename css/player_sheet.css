@@ -49,12 +49,12 @@ div.career div.career-button p {
 }
 
 div.career div.content {
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 div.career div.content div.image img {
-    width: 820px;
-    height: 1140px;
+    width: 500px;
+    height: 750px;
 }
 
 div.career div.content div.rekkles div.flex {
