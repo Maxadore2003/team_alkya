@@ -10,7 +10,7 @@
 
 
     // Demander à la base de donnée tous les utilisateurs
-    $update_news = $db->prepare("UPDATE `actuality` SET `id`= "$news_edit_id", `title`= "$news_edit_title",`image`= "$news_edit_image",`description`= "$news_edit_description", `date`= "$news_edit_date" WHERE `id` = :id");
+    $update_news = $db->prepare('UPDATE `actuality` SET `id`= "$news_edit_id", `title`= "$news_edit_title",`image`= "$news_edit_image",`description`= "$news_edit_description", `date`= "$news_edit_date" WHERE `id` = :id');
     $update_news->bindParam(":id", $_GET["id"], PDO::PARAM_INT);
     $update_news->execute();
 
