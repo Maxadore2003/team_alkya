@@ -17,10 +17,11 @@
     $player_coach_edit_twitter = $_POST['twitter'];
     $player_coach_edit_instagram = $_POST['instagram'];
     $player_coach_edit_twitch = $_POST['twitch'];
+    $player_coach_edit_stats = $_POST['game-stats'];
 
 
     // Demander à la base de donnée tous les utilisateurs
-    $update_player_coach = $db->prepare("UPDATE `player` SET `id`= '$player_coach_edit_id', `name`= '$player_coach_edit_name', `firstname`= '$player_coach_edit_firstname', `nickname`= '$player_coach_edit_nickname', `nationality`= '$player_coach_edit_nationality', `birthday`= '$player_coach_edit_birthday', `city`= '$player_coach_edit_city', `size`= '$player_coach_edit_size', `weight`= '$player_coach_edit_weight', `team-arrival`= '$player_coach_edit_team_arrival', `game-id`= '$player_coach_edit_game_id', `image`= '$player_coach_edit_image', `twitter`= '$player_coach_edit_twitter', `instagram`= '$player_coach_edit_instagram', `twitch`= '$player_coach_edit_twitch' WHERE `id` = :id");
+    $update_player_coach = $db->prepare("UPDATE `player` SET `id`= '$player_coach_edit_id', `name`= '$player_coach_edit_name', `firstname`= '$player_coach_edit_firstname', `nickname`= '$player_coach_edit_nickname', `nationality`= '$player_coach_edit_nationality', `birthday`= '$player_coach_edit_birthday', `city`= '$player_coach_edit_city', `size`= '$player_coach_edit_size', `weight`= '$player_coach_edit_weight', `team-arrival`= '$player_coach_edit_team_arrival', `game-id`= '$player_coach_edit_game_id', `image`= '$player_coach_edit_image', `twitter`= '$player_coach_edit_twitter', `instagram`= '$player_coach_edit_instagram', `twitch`= '$player_coach_edit_twitch', `game-stats` = '$player_coach_edit_stats' WHERE `id` = :id");
     $update_player_coach->bindParam(":id", $_GET["id"], PDO::PARAM_INT);
     $update_player_coach->execute();
 

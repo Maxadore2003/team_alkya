@@ -70,7 +70,7 @@
                         <p>Joueur</p>
                     </div>
                     <div>
-                        <a href="#">Ajouter</a>
+                        <a href="./confirmation_add_player.php">Ajouter</a>
                     </div>
                     <div>
                         <a href="./list_player_coach.php?mode=edit&type=player">Modifier</a>
@@ -84,7 +84,7 @@
                         <p>Coach</p>
                     </div>
                     <div>
-                        <a href="#">Ajouter</a>
+                        <a href="./confirmation_add_coach.php">Ajouter</a>
                     </div>
                     <div>
                         <a href="./list_player_coach.php?mode=edit&type=coach">Modifier</a>

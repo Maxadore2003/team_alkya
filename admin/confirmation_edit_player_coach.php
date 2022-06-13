@@ -70,7 +70,7 @@
                 <input class="text-center" type="text" name="twitch" value="<?php echo $data_player['twitch'] ?>">
                 <?php
                 if($_GET['type'] == "player") {
-                    ?><input class="text-center" value="<?php echo $data_player['game-stats'] ?>">
+                    ?><input class="text-center" type="text" name="game-stats" value="<?php echo $data_player['game-stats'] ?>">
                 <?php
                 }
                 ?>
