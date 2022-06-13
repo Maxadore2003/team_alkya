@@ -18,7 +18,7 @@
             if ($result == true) {
                 session_start();
                 $_SESSION['connected'] = true;
-                header('Location: http://localhost/team_alkya/');
+                header('Location: http://localhost/team_alkya/admin/admin.php');
             }
             else {
                 echo "Connexion Échouée !";
