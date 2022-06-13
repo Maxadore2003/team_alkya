@@ -140,13 +140,13 @@
                         <p>Sponsors / Partenaires</p>
                     </div>
                     <div>
-                        <a href="#">Ajouter</a>
+                        <a href="./confirmation_add_sponsors_partners.php">Ajouter</a>
                     </div>
                     <div>
-                        <a href="#">Modifier</a>
+                        <a href="./list_sponsors_partners.php?mode=edit">Modifier</a>
                     </div>
                     <div>
-                        <a href="#">Supprimer</a>
+                        <a href="./list_sponsors_partners.php?mode=delete">Supprimer</a>
                     </div>
                 </div>
             </div>
