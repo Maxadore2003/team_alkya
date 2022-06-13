@@ -13,8 +13,6 @@
 
     <body>
 
-        <?php include "header_admin.php"; ?>
-
         <h1 class="text-center">Connexion</h1>
 
         <form class="text-center" action="login.php" method="post">

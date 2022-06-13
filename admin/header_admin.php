@@ -1,3 +1,13 @@
+<?php
+
+    session_start();
+
+    if (!$_SESSION['connected']) {
+        header('Location: http://localhost/team_alkya/');
+    }
+
+?>
+
 <nav class="d-flex">
     <div class='logo-navbar'>
         <a href='admin.php' class="logo">
@@ -15,7 +25,7 @@
         </ul>
     </div>
     <div class='logo-logout'>
-        <a href='../' class="logo-logout">
+        <a href='logout.php' class="logo-logout">
             <img src="../img/logo-logout.png" alt="Logo Déconnexion">
         </a>
     </div>

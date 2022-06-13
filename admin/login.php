@@ -16,7 +16,9 @@
             $result = $request->fetch();
             
             if ($result == true) {
-                echo "Connexion Réussie !";
+                session_start();
+                $_SESSION['connected'] = true;
+                header('Location: http://localhost/team_alkya/');
             }
             else {
                 echo "Connexion Échouée !";
