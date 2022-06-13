@@ -16,9 +16,14 @@
             $result = $request->fetch();
             
             if ($result == true) {
-                session_start();
-                $_SESSION['connected'] = true;
-                header('Location: ./admin.php');
+                if ($result['admin-level'] >= 2) {
+                    session_start();
+                    $_SESSION['connected'] = true;
+                    header('Location: ./admin.php');
+                }
+                else {
+                    echo "Le level admin n'est pas assez haut";
+                }
             }
             else {
                 echo "Connexion Échouée !";
