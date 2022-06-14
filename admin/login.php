@@ -22,11 +22,13 @@
                     header('Location: ./admin.php');
                 }
                 else {
-                    echo "Le level admin n'est pas assez haut";
+                    echo "Votre niveau d'administrateur n'est pas assez haut.";
                 }
             }
             else {
-                echo "Connexion Échouée !";
+                $ConnexionError = "Pseudo ou Mot de Passe incorrect !";
+                include 'connection.php';
+                exit();
             }
         
         }

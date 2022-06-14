@@ -19,6 +19,7 @@
             <input type="text" name="pseudo" id="pseudo" placeholder="Votre Pseudo" required> <br>
             <input type="password" name="password" id="password" placeholder="Votre Mot de Passe" required> <br>
             <input type="submit" name="send" id="send" value="Connexion">
+            <?php if (isset($ConnexionError)) echo "<div style='color: red; font-weight: bold'>$ConnexionError</div>" ?>
         </form>
         
     </body>
