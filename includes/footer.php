@@ -1,10 +1,23 @@
+<?php
+
+    $request_social_network = $db->prepare("SELECT * FROM `social-network`");
+    $request_social_network->execute();
+
+?>
+
 <footer class="footer">
 
     <div class="social-networks">
 
-        <a href="https://www.instagram.com/teamalkya/" target="_blank">
-            <img src="img/instagram.png" alt="Logo Instagram" width="50">
-        </a>
+    <?php while ($data_social_network = $request_social_network->fetch()) { ?>
+            <a href=<?php echo $data_social_network['link'] ?> target="_blank">
+                <img src="./img/<?php echo $data_social_network['image'] ?>" alt="reseaux sociaux, Alkya, team esport, structure esport, <?php echo $data_social_network['name'] ?>" width="50">
+            </a>
+        <?php } ?>
+
+        <!-- <a href="https://www.instagram.com/teamalkya/" target="_blank">
+                <img src="img/instagram.png" alt="Logo Instagram" width="50">
+            </a>
         <a href="https://twitter.com/teamalkya" target="_blank">
             <img src="img/twitter.png" alt="Logo Twitter" width="50">
         </a>
@@ -13,7 +26,7 @@
         </a>
         <a href="#" target="_blank">
             <img src="img/facebook.png" alt="Logo Facebook" width="50">
-        </a>
+        </a> -->
 
     </div>
 

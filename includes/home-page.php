@@ -72,7 +72,7 @@
         <div class="slideshow-content d-flex">
             <div class="buttons">
                 <button onclick='removeSlidesIndex()' id='left' class="nav-button">
-                    <img src="img/carousel-button-left.png" alt="Flêche Gauche Carrousel">
+                    <img src="img/carousel-button-left.png" alt="fleche carrousel, Alkya, team esport, structure esport, carousel-button-left.png">
                 </button>
             </div>
 
@@ -90,7 +90,7 @@
 
             <div class="buttons">
                 <button onclick='addSlidesIndex()' id="right" class="nav-button">
-                    <img src="img/carousel-button-right.png" alt="Flêche Droite Carrousel">
+                    <img src="img/carousel-button-right.png" alt="fleche carrousel, Alkya, team esport, structure esport, carousel-button-right.png">
                 </button>
             </div>
         </div>

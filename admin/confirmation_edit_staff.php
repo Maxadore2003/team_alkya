@@ -27,6 +27,10 @@
 
         <?php include "header_admin.php"; ?>
 
+        <div class="text-center">
+            <a href="https://www.graphorama.net/Caracteres-speciaux-codes-ASCII-et-HTML-Alt-codes.html">Les caractères ASCII</a>
+        </div>
+
         <div class="account-management d-flex text-center">
             <p class="five">ID</p>
             <p class="ten">Prénom</p>

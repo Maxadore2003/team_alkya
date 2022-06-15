@@ -10,7 +10,7 @@
 
 
     // Demander à la base de donnée tous les utilisateurs
-    $add_sponsors_partners = $db->prepare("INSERT INTO `sponsors` (`id`, `name`,`image`,`type`, `link`) VALUES ("$sponsors_partners_add_id", "$sponsors_partners_add_name", "$sponsors_partners_add_image", "$sponsors_partners_add_type", "$sponsors_partners_add_link")");
+    $add_sponsors_partners = $db->prepare("INSERT INTO `sponsors` (`id`, `name`,`image`,`type`, `link`) VALUES ('$sponsors_partners_add_id', '$sponsors_partners_add_name', '$sponsors_partners_add_image', '$sponsors_partners_add_type', '$sponsors_partners_add_link')");
     $add_sponsors_partners->execute();
 
     header("location: website_content_management.php");

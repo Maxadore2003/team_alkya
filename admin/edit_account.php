@@ -11,7 +11,7 @@
 
 
     // Demander à la base de donnée tous les utilisateurs
-    $update_user = $db->prepare("UPDATE `users` SET `id`= "$user_edit_id", `name`= "$user_edit_name",`firstname`= "$user_edit_firstname",`pseudo`= "$user_edit_pseudo", `password`= "$user_edit_password", `admin-level`= "$user_edit_admin_level" WHERE `id` = :id");
+    $update_user = $db->prepare("UPDATE `users` SET `id`= '$user_edit_id', `name`= '$user_edit_name',`firstname`= '$user_edit_firstname',`pseudo`= '$user_edit_pseudo', `password`= '$user_edit_password', `admin-level`= '$user_edit_admin_level' WHERE `id` = :id");
     $update_user->bindParam(":id", $_GET["id"], PDO::PARAM_INT);
     $update_user->execute();
 

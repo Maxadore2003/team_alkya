@@ -54,7 +54,7 @@
                 <?php
                     while($data_news = $request_news -> fetch() and $news_count < 6 ) {?>
                     <div class='newsDetails'>
-                        <a href="./article.php?id=<?php echo $data_news["id"] ?>"><img src='img/<?php echo $data_news['image']?>' alt='actus, <?php echo $data_news['image']?>'></a>
+                        <a href="./article.php?id=<?php echo $data_news["id"] ?>"><img src='img/<?php echo $data_news['image']?>' alt='actualité, Alkya, team esport, structure esport, <?php echo $data_news['image']?>'></a>
                         <h2><?php echo $data_news["title"] ?></h2>
                     </div>
                 <?php

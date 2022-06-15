@@ -85,7 +85,7 @@
                 <?php
                     while($data_about_us_images = $request_about_us_images -> fetch() and $about_us_images_count < 2 ) {?>
                     <div class='about-us-images'>
-                        <img src='img/<?php echo $data_about_us_images['image']?>' alt='Images About Us, <?php echo $data_about_us_images['image']?>'>
+                        <img src='img/<?php echo $data_about_us_images['image']?>' alt='a propos, Alkya, team esport, structure esport, <?php echo $data_about_us_images['image']?>'>
                     </div>
                 <?php
                     $about_us_images_count += 1;

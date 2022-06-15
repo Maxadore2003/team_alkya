@@ -40,6 +40,7 @@
             <b>Les dates ont la forme : yyyy-mm-dd </b>
             <b>La taille se fait en cm</b>
             <b>Le poids se fait en kb</b>
+            <a href="https://www.graphorama.net/Caracteres-speciaux-codes-ASCII-et-HTML-Alt-codes.html">Les caractères ASCII</a>
         </div>
 
 

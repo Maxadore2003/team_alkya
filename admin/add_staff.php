@@ -10,7 +10,7 @@
 
 
     // Demander à la base de donnée tous les utilisateurs
-    $insert_staff = $db->prepare("INSERT INTO `staff` (`id`, `firstname`,`name`,`image`, `title`) VALUES ("$staff_add_id", "$staff_add_firstname", "$staff_add_name", "$staff_add_image", "$staff_add_title")");
+    $insert_staff = $db->prepare("INSERT INTO `staff` (`id`, `firstname`,`name`,`image`, `title`) VALUES ('$staff_add_id', '$staff_add_firstname', '$staff_add_name', '$staff_add_image', '$staff_add_title')");
     $insert_staff->execute();
 
     header("location: website_content_management.php");

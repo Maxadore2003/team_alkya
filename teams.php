@@ -38,7 +38,7 @@
             <?php while ($data_games = $request_games->fetch()) {
             ?>
             <a class="team" href="./teams_sheet.php?game=<?php echo $data_games['id']?>" style="background-image: url(./img/<?php echo $data_games['team-image']?>)">
-                <img src="img/<?php echo $data_games['logo-image']?>" alt="Logo LOL">
+                <img src="img/<?php echo $data_games['logo-image']?>" alt="Logo <?php echo $data_games['name']?>, Alkya, team esport, structure esport, <?php echo $data_games['logo-image']?>">
             </a>
             <?php
             }
