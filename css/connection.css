@@ -1,17 +1,40 @@
-/* form h1 {
-    font-size: 50px;
-    margin-top: 8%;
+body {
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-form div.content {
-    margin-top: 2%;
+form {
+    background-color: #FFFFFF;
+    margin-top: 20px;
+    padding: 40px 60px;
+    min-width: 300px;
+    border-radius: 10px;
 }
 
-form div.content div.form-group {
+form h1 {
+    font-weight: bold;
     text-align: center;
-    margin: 1%;
 }
 
-form div.content div.form-group input {
-    margin-left: 2%;
-} */
+form div.inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+form div.inputs input[type="text"], input[type="password"] {
+    background-color: #F2F2F2;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+form div.button button {
+    font-size: 15px;
+    padding: 15px 25px;
+    border-radius: 5px;
+    border: none;
+}
