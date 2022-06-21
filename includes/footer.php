@@ -14,20 +14,6 @@
                 <img src="./img/<?php echo $data_social_network['image'] ?>" alt="reseaux sociaux, Alkya, team esport, structure esport, <?php echo $data_social_network['name'] ?>" width="50">
             </a>
         <?php } ?>
-
-        <!-- <a href="https://www.instagram.com/teamalkya/" target="_blank">
-                <img src="img/instagram.png" alt="Logo Instagram" width="50">
-            </a>
-        <a href="https://twitter.com/teamalkya" target="_blank">
-            <img src="img/twitter.png" alt="Logo Twitter" width="50">
-        </a>
-        <a href="https://www.twitch.tv/teamalkya" target="_blank">
-            <img src="img/twitch.png" alt="Logo Twitch" width="50">
-        </a>
-        <a href="#" target="_blank">
-            <img src="img/facebook.png" alt="Logo Facebook" width="50">
-        </a> -->
-
     </div>
 
     <div class="about">

@@ -129,10 +129,10 @@
                         <a href="./confirmation_add_social_network.php">Ajouter</a>
                     </div>
                     <div>
-                        <a href="/list_social_network.php?mode=edit">Modifier</a>
+                        <a href="./list_social_network.php?mode=edit">Modifier</a>
                     </div>
                     <div>
-                        <a href="/list_social_network.php?mode=delete">Supprimer</a>
+                        <a href="./list_social_network.php?mode=delete">Supprimer</a>
                     </div>
                 </div>
                 <div class="sponsors d-flex text-center">
