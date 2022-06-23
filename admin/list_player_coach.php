@@ -41,9 +41,8 @@
                 ?><p><?php echo $data_game["id"]?> : <?php echo $data_game["name"]?></p><?php
             }
             ?>
-            <b>Les dates ont la forme : yyyy-mm-dd </b>
-            <b>La taille se fait en cm</b>
-            <b>Le poids se fait en kb</b>
+            <b>La taille se fait en cm</b> <br>
+            <b>Le poids se fait en kg</b>
         </div>
 
         <div class="account-management d-flex text-center">
