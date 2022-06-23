@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 15 juin 2022 à 19:32
+-- Généré le : jeu. 23 juin 2022 à 12:40
 -- Version du serveur : 10.4.22-MariaDB
 -- Version de PHP : 7.3.33
 
@@ -143,7 +143,9 @@ CREATE TABLE `social-network` (
 --
 
 INSERT INTO `social-network` (`id`, `name`, `image`, `link`) VALUES
-(0, 'Instagram', 'instagram.png', 'https://www.instagram.com/teamalkya/');
+(0, 'Instagram', 'instagram.png', 'https://www.instagram.com/teamalkya/'),
+(1, 'Twitter', 'twitter.png', 'https://twitter.com/teamalkya'),
+(2, 'Twitch', 'twitch.png', 'https://www.twitch.tv/teamalkya');
 
 -- --------------------------------------------------------
 

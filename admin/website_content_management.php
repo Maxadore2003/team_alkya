@@ -15,26 +15,6 @@
 
         <?php include "header_admin.php"; ?>
 
-        <!-- <div class="d-flex">
-            <div class="text">
-                <p>Article</p>
-            </div>
-            <div class="button">
-                <a href="#">Ajouter</a>
-                <a href="#">Modifier</a>
-                <a href="#">Supprimer</a>
-            </div>
-            <div class="text">
-                <p>Article</p>
-            </div>
-            <div class="button">
-                <a href="#">Ajouter</a>
-                <a href="#">Modifier</a>
-                <a href="#">Supprimer</a>
-            </div>
-        </div> -->
-
-
         <div class="content d-flex">
             <div class="website-elements">
                 <div class="article d-flex text-center">
@@ -56,13 +36,13 @@
                         <p>Équipe</p>
                     </div>
                     <div>
-                        <a href="#">Ajouter</a>
+                        <a href="./confirmation_add_team.php">Ajouter</a>
                     </div>
                     <div>
-                        <a href="#">Modifier</a>
+                        <a href="./list_team.php">Modifier</a>
                     </div>
                     <div>
-                        <a href="#">Supprimer</a>
+                        <a href="./list_team.php">Supprimer</a>
                     </div>
                 </div>
                 <div class="player d-flex text-center">
