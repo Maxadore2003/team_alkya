@@ -1,11 +1,12 @@
 <?php
 
     include '../includes/database.php';
-    // Demander à la base de donnée tous les utilisateurs
-    $request_team = $db->prepare("SELECT * FROM `game`");
-    $request_team->execute();
-    $count_team = $request_team->rowCount();
 
+    // Demander à la base de donnée tous les utilisateurs
+    $request_team = $db->prepare("SELECT * FROM `game` WHERE `id` = :id");
+    $request_team->bindParam(":id", $_GET["id"], PDO::PARAM_INT);
+    $request_team->execute();
+    $data_team = $request_team -> fetch()
 ?>
 
 
@@ -19,7 +20,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <link rel="stylesheet" href="../css/header_admin.css">
         <link rel="stylesheet" href="../css/admin_account_management.css">
-        <title>Ajouter une Equipe</title>
+        <title>Confirmation modification Equipe</title>
     </head>
 
     <body>
@@ -37,14 +38,22 @@
             <p class="ten">Image Logo du jeu</p>
             <p class="ten">Image de l'équipe</p>
         </div>
+
+        <div class="account-management d-flex text-center">
+            <p class="five"><?php echo $data_team['id'] ?></p>
+            <p class="ten"><?php echo $data_team['name'] ?></p>
+            <p class="ten"><?php echo $data_team['global-image'] ?></p>
+            <p class="ten"><?php echo $data_team['logo-image'] ?></p>
+            <p class="ten"><?php echo $data_team['team-image'] ?></p>
+        </div>
         
-        <form method='post' action="./add_team.php">
+        <form method='post' action="edit_team.php?id=<?php echo $data_team['id'] ?>">
             <div class="account-management d-flex text-center">
-                <input class="five text-center" type="text" name="id" value="<?php echo $count_team ?>">
-                <input class="ten text-center" type="text" name="name">
-                <input class="ten text-center" type="text" name="global-image">
-                <input class="ten text-center" type="text" name="logo-image">
-                <input class="ten text-center" type="texte" name="team-image">
+                <input class="five text-center" type="text" name="id" value="<?php echo $data_team['id'] ?>">
+                <input class="ten text-center" type="text" name="name" value="<?php echo $data_team['name'] ?>">
+                <input class="ten text-center" type="text" name="global-image" value="<?php echo $data_team['global-image'] ?>">
+                <input class="ten text-center" type="text" name="logo-image" value="<?php echo $data_team['logo-image'] ?>">
+                <input class="ten text-center" type="text" name="team-image" value="<?php echo $data_team['team-image'] ?>">
             </div>
             <div class="submit text-center">
                 <input type="submit">

@@ -39,10 +39,10 @@
                         <a href="./confirmation_add_team.php">Ajouter</a>
                     </div>
                     <div>
-                        <a href="./list_team.php">Modifier</a>
+                        <a href="./list_team.php?mode=edit">Modifier</a>
                     </div>
                     <div>
-                        <a href="./list_team.php">Supprimer</a>
+                        <a href="./list_team.php?mode=delete">Supprimer</a>
                     </div>
                 </div>
                 <div class="player d-flex text-center">

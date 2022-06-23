@@ -53,7 +53,7 @@
                 <input class="ten text-center" type="text" name="firstname" value="<?php echo $data_staff['firstname'] ?>">
                 <input class="ten text-center" type="text" name="name" value="<?php echo $data_staff['name'] ?>">
                 <input class="ten text-center" type="text" name="image" value="<?php echo $data_staff['image'] ?>">
-                <input class="ten text-center" type="texte" name="title" value="<?php echo $data_staff['title'] ?>">
+                <input class="ten text-center" type="text" name="title" value="<?php echo $data_staff['title'] ?>">
             </div>
             <div class="submit text-center">
                 <input type="submit">
