@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 23 juin 2022 à 12:40
+-- Généré le : jeu. 23 juin 2022 à 12:49
 -- Version du serveur : 10.4.22-MariaDB
 -- Version de PHP : 7.3.33
 
@@ -192,19 +192,6 @@ INSERT INTO `staff` (`id`, `name`, `firstname`, `image`, `title`) VALUES
 (1, 'Diani', 'Jean-Michel', 'jean-michel-diani.png', 'Secrétaire / Head of FPS'),
 (2, 'Gonnet', 'Anthony', 'anthony-gonnet.png', 'Head of marketing'),
 (3, 'Lux', 'Damien', 'damien-lux.png', 'Directeur esportif');
-
--- --------------------------------------------------------
-
---
--- Structure de la table `test`
---
-
-CREATE TABLE `test` (
-  `id` int(11) NOT NULL,
-  `name` int(11) NOT NULL,
-  `image` int(11) NOT NULL,
-  `pseudo` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
