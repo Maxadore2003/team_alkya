@@ -9,6 +9,6 @@
         $db = new PDO('mysql:host=' . HOST . ';dbname=' . DB_NAME . ';charset=utf8', USER, PASS);
     }
     catch(PDOException $error) {
-        echo $error;
+        echo '';
     }
 ?>

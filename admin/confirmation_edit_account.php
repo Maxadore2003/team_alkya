@@ -49,7 +49,7 @@
 
         <div class="account-management d-flex text-center">
             <p><?php echo $data_user['id'] ?></p>
-            <p><?php echo $data_user['pseudo'] ?></p>
+            <p><?php echo htmlspecialchars($data_user['pseudo'], ENT_QUOTES) ?></p>
             <p><?php echo $data_user['name'] ?></p>
             <p><?php echo $data_user['firstname'] ?></p>
             <p><?php echo $data_user['password'] ?></p>
