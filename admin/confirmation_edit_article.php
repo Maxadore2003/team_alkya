@@ -40,11 +40,11 @@
         </div>
 
         <div class="account-management d-flex text-center">
-            <p class="five"><?php echo $data_news['id'] ?></p>
-            <p class="ten"><?php echo $data_news['title'] ?></p>
-            <p class="ten"><?php echo $data_news['image'] ?></p>
-            <p class="twenty"><?php echo $data_news['description'] ?></p>
-            <p class="five"><?php echo $data_news['date'] ?></p>
+            <p class="five"><?php echo htmlspecialchars($data_news['id'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_news['title'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_news['image'], ENT_QUOTES) ?></p>
+            <p class="twenty"><?php echo htmlspecialchars($data_news['description'], ENT_QUOTES) ?></p>
+            <p class="five"><?php echo htmlspecialchars($data_news['date'], ENT_QUOTES) ?></p>
         </div>
         
         <form method='post' action="edit_article.php?id=<?php echo $data_news['id'] ?>">

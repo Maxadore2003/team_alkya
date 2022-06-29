@@ -11,4 +11,5 @@
     catch(PDOException $error) {
         echo '';
     }
+
 ?>

@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1
--- Généré le : jeu. 23 juin 2022 à 12:49
--- Version du serveur : 10.4.22-MariaDB
--- Version de PHP : 7.3.33
+-- Hôte : 127.0.0.1:3308
+-- Généré le : mar. 28 juin 2022 à 07:48
+-- Version du serveur : 5.7.36
+-- Version de PHP : 7.4.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -27,11 +27,14 @@ SET time_zone = "+00:00";
 -- Structure de la table `about-us`
 --
 
-CREATE TABLE `about-us` (
-  `id` int(10) UNSIGNED NOT NULL,
+DROP TABLE IF EXISTS `about-us`;
+CREATE TABLE IF NOT EXISTS `about-us` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` char(50) NOT NULL,
-  `image` char(100) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `image` char(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `about-us`
@@ -47,12 +50,14 @@ INSERT INTO `about-us` (`id`, `name`, `image`) VALUES
 -- Structure de la table `actuality`
 --
 
-CREATE TABLE `actuality` (
+DROP TABLE IF EXISTS `actuality`;
+CREATE TABLE IF NOT EXISTS `actuality` (
   `id` int(10) UNSIGNED NOT NULL,
   `title` char(100) NOT NULL,
   `image` char(100) NOT NULL,
   `description` text NOT NULL,
-  `date` date NOT NULL
+  `date` date NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -75,12 +80,14 @@ INSERT INTO `actuality` (`id`, `title`, `image`, `description`, `date`) VALUES
 -- Structure de la table `game`
 --
 
-CREATE TABLE `game` (
+DROP TABLE IF EXISTS `game`;
+CREATE TABLE IF NOT EXISTS `game` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` char(30) NOT NULL,
   `global-image` char(30) NOT NULL,
   `logo-image` char(30) NOT NULL,
-  `team-image` char(30) NOT NULL
+  `team-image` char(30) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -97,7 +104,8 @@ INSERT INTO `game` (`id`, `name`, `global-image`, `logo-image`, `team-image`) VA
 -- Structure de la table `player`
 --
 
-CREATE TABLE `player` (
+DROP TABLE IF EXISTS `player`;
+CREATE TABLE IF NOT EXISTS `player` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` char(30) NOT NULL,
   `firstname` char(30) NOT NULL,
@@ -114,7 +122,8 @@ CREATE TABLE `player` (
   `twitter` char(100) NOT NULL,
   `instagram` char(100) NOT NULL,
   `twitch` char(100) NOT NULL,
-  `game-stats` char(100) NOT NULL
+  `game-stats` char(100) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -131,11 +140,13 @@ INSERT INTO `player` (`id`, `name`, `firstname`, `nickname`, `nationality`, `bir
 -- Structure de la table `social-network`
 --
 
-CREATE TABLE `social-network` (
+DROP TABLE IF EXISTS `social-network`;
+CREATE TABLE IF NOT EXISTS `social-network` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` char(30) NOT NULL,
   `image` char(100) NOT NULL,
-  `link` text NOT NULL
+  `link` text NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -153,12 +164,14 @@ INSERT INTO `social-network` (`id`, `name`, `image`, `link`) VALUES
 -- Structure de la table `sponsors`
 --
 
-CREATE TABLE `sponsors` (
+DROP TABLE IF EXISTS `sponsors`;
+CREATE TABLE IF NOT EXISTS `sponsors` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` char(30) NOT NULL,
   `image` char(30) NOT NULL,
   `type` char(11) NOT NULL DEFAULT 'sponsors',
-  `link` text NOT NULL
+  `link` text NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -175,12 +188,15 @@ INSERT INTO `sponsors` (`id`, `name`, `image`, `type`, `link`) VALUES
 -- Structure de la table `staff`
 --
 
-CREATE TABLE `staff` (
+DROP TABLE IF EXISTS `staff`;
+CREATE TABLE IF NOT EXISTS `staff` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` char(30) NOT NULL,
   `firstname` char(30) NOT NULL,
   `image` char(30) NOT NULL,
-  `title` char(50) NOT NULL
+  `title` char(50) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -199,12 +215,14 @@ INSERT INTO `staff` (`id`, `name`, `firstname`, `image`, `title`) VALUES
 -- Structure de la table `text`
 --
 
-CREATE TABLE `text` (
+DROP TABLE IF EXISTS `text`;
+CREATE TABLE IF NOT EXISTS `text` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` char(30) NOT NULL,
   `description` text NOT NULL,
   `type` char(30) NOT NULL,
-  `link` char(100) NOT NULL
+  `link` char(100) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -237,13 +255,16 @@ INSERT INTO `text` (`id`, `name`, `description`, `type`, `link`) VALUES
 -- Structure de la table `users`
 --
 
-CREATE TABLE `users` (
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` char(30) NOT NULL,
   `firstname` char(30) NOT NULL,
   `pseudo` char(30) NOT NULL,
   `password` char(30) NOT NULL,
-  `admin-level` int(11) NOT NULL DEFAULT 1
+  `admin-level` int(11) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `pseudo` (`pseudo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -253,77 +274,6 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `name`, `firstname`, `pseudo`, `password`, `admin-level`) VALUES
 (0, 'admin', 'admin', 'admin', 'admin', 2),
 (1, 'ManTh3Bus', 'Ilan', 'ManTh3Bus', '', 1);
-
---
--- Index pour les tables déchargées
---
-
---
--- Index pour la table `about-us`
---
-ALTER TABLE `about-us`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `name` (`name`);
-
---
--- Index pour la table `actuality`
---
-ALTER TABLE `actuality`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `game`
---
-ALTER TABLE `game`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `player`
---
-ALTER TABLE `player`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `social-network`
---
-ALTER TABLE `social-network`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `sponsors`
---
-ALTER TABLE `sponsors`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `staff`
---
-ALTER TABLE `staff`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id` (`id`);
-
---
--- Index pour la table `text`
---
-ALTER TABLE `text`
-  ADD PRIMARY KEY (`id`);
-
---
--- Index pour la table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `pseudo` (`pseudo`);
-
---
--- AUTO_INCREMENT pour les tables déchargées
---
-
---
--- AUTO_INCREMENT pour la table `about-us`
---
-ALTER TABLE `about-us`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

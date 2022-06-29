@@ -40,11 +40,11 @@
         </div>
 
         <div class="account-management d-flex text-center">
-            <p class="five"><?php echo $data_staff['id'] ?></p>
-            <p class="ten"><?php echo $data_staff['firstname'] ?></p>
-            <p class="ten"><?php echo $data_staff['name'] ?></p>
-            <p class="ten"><?php echo $data_staff['image'] ?></p>
-            <p class="ten"><?php echo $data_staff['title'] ?></p>
+            <p class="five"><?php echo htmlspecialchars($data_staff['id'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_staff['firstname'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_staff['name'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_staff['image'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_staff['title'], ENT_QUOTES) ?></p>
         </div>
         
         <form method='post' action="edit_staff.php?id=<?php echo $data_staff['id'] ?>">

@@ -39,10 +39,10 @@
         </div>
 
         <div class="account-management d-flex text-center">
-            <p class="five"><?php echo $data_social_network['id'] ?></p>
-            <p class="ten"><?php echo $data_social_network['name'] ?></p>
-            <p class="ten"><?php echo $data_social_network['image'] ?></p>
-            <p class="ten"><?php echo $data_social_network['link'] ?></p>
+            <p class="five"><?php echo htmlspecialchars($data_social_network['id'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_social_network['name'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_social_network['image'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_social_network['link'], ENT_QUOTES) ?></p>
         </div>
         
         <form method='post' action="edit_social_network.php?id=<?php echo $data_social_network['id'] ?>">

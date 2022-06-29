@@ -40,11 +40,11 @@
         </div>
 
         <div class="account-management d-flex text-center">
-            <p class="five"><?php echo $data_sponsors_partners['id'] ?></p>
-            <p class="ten"><?php echo $data_sponsors_partners['name'] ?></p>
-            <p class="ten"><?php echo $data_sponsors_partners['image'] ?></p>
-            <p class="ten"><?php echo $data_sponsors_partners['type'] ?></p>
-            <p class="ten"><?php echo $data_sponsors_partners['link'] ?></p>
+            <p class="five"><?php echo htmlspecialchars($data_sponsors_partners['id'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_sponsors_partners['name'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_sponsors_partners['image'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_sponsors_partners['type'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_sponsors_partners['link'], ENT_QUOTES) ?></p>
         </div>
         
         <form method='post' action="edit_sponsors_partners.php?id=<?php echo $data_sponsors_partners['id'] ?>">
