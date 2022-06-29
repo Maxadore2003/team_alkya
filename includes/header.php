@@ -1,7 +1,7 @@
 <nav class="d-flex">
     <div class='logo-navbar'>
         <a href='./' class="logo">
-            <img src="img/logo-black-alkya.png" alt="Logo, Alkya, team esport, structure esport, logo-black-alkya.png">
+            <img src="img/logo-black-alkya.png" alt="Logo, Alkya, team esport, structure esport, logo-black-alkya.png" title="Logo Black Alkya">
         </a>
     </div>
     <div class='button-navbar'>
@@ -20,4 +20,4 @@
             </li> -->
         </ul>
     </div>
-</nav>  
+</nav>

@@ -35,7 +35,7 @@
 
     <div class="logo-black-alkya">
 
-        <img src="img/logo-black-alkya.png" alt="Logo Black Alkya" width="100">
+        <img src="img/logo-black-alkya.png" alt="Logo Black Alkya" title="Logo Black Alkya" width="100">
 
     </div>
 

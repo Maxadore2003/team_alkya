@@ -11,7 +11,7 @@
 <nav class="d-flex">
     <div class='logo-navbar'>
         <a href='admin.php' class="logo">
-            <img src="../img/logo-black-alkya.png" alt="Logo">
+            <img src="../img/logo-black-alkya.png" alt="Logo" title="Logo Black Alkya">
         </a>
     </div>
     <div class='button-navbar'>

@@ -1,6 +1,9 @@
 p.homePageDescription {
     font-size: 18px;
     font-weight: bold;
+    padding-left: 70px;
+    padding-right: 70px;
+    text-align: center;
 }
 
 div.d-flex.gap-3.text-center.staff {
