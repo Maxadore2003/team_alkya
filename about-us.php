@@ -72,7 +72,7 @@
 
             <!-- Description de la page about us "Qu'est ce que Alkya" -->
             <div class='about-us-desc-what'> 
-                <p><?php echo $data_about_us_desc_what['description']?></p>
+                <p class="text-center"><?php echo $data_about_us_desc_what['description']?></p>
             </div>
 
             <!-- Titre de la page about us "Pourquoi Alkya" -->
@@ -95,7 +95,7 @@
 
             <!-- Description de la page about us "Pourquoi Alkya" -->
             <div class='about-us-desc-why'> 
-                <p><?php echo $data_about_us_desc_why['description']?></p>
+                <p class="text-center"><?php echo $data_about_us_desc_why['description']?></p>
             </div>
 
             <!-- Titre de la page about us "Staff" -->

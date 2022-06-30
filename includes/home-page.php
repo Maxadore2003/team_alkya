@@ -50,7 +50,7 @@
     <!-- Description rapide   -->
     <div class='description'> 
         <h1><?php echo $data_description_title['description']?></h1>
-        <p class='homePageDescription'><?php echo $data_description_text['description']?></p>
+        <p class='text-center homePageDescription'><?php echo $data_description_text['description']?></p>
     </div>
 
     <!-- Les 4 staff importants -->

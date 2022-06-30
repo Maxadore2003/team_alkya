@@ -1,7 +1,11 @@
 div.about-us-desc-what p, div.about-us-desc-why p {
-    margin-top: 5%;
-    text-align: justify;
     font-size: 24px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+div.about-us-desc-why p {
+    margin-top: 4%;
 }
 
 div.images {
