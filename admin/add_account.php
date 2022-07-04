@@ -2,6 +2,8 @@
 
     include "../includes/database.php";
 
+    include "./header_admin.php"
+
     $user_edit_id = $_POST["id"];
     $user_edit_name = $_POST["name"];
     $user_edit_firstname = $_POST["firstname"];

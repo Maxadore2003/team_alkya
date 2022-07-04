@@ -2,6 +2,8 @@
 
     include "../includes/database.php";
 
+    include "./header_admin.php"
+
     $player_add_id = $_POST["id"];
     $player_add_name = $_POST["name"];
     $player_add_firstname = $_POST["firstname"];

@@ -2,6 +2,8 @@
 
     include "../includes/database.php";
 
+    include "./header_admin.php"
+
     $team_edit_id = $_POST["id"];
     $team_edit_name = $_POST["name"];
     $team_edit_global = $_POST["global-image"];

@@ -2,6 +2,8 @@
 
     include "../includes/database.php";
 
+    include "./header_admin.php"
+
     $sponsors_partners_add_id = $_POST["id"];
     $sponsors_partners_add_name = $_POST["name"];
     $sponsors_partners_add_image = $_POST["image"];

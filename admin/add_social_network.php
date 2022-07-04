@@ -2,6 +2,8 @@
 
     include "../includes/database.php";
 
+    include "./header_admin.php"
+
     $network_add_id = $_POST["id"];
     $network_add_name = $_POST["name"];
     $network_add_image = $_POST["image"];
