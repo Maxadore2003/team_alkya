@@ -45,12 +45,12 @@
             else {
             ?>
             <div class="illustration text-center">
-                <img src="./img/<?php echo $data_article["image"]; ?>" alt="Article, News, Alkya, team esport, structure esport, <?php echo $data_article["image"]?>">
+                <img src="./img/<?php echo htmlspecialchars($data_article["image"], ENT_QUOTES); ?>" alt="Article, News, Alkya, team esport, structure esport, <?php echo htmlspecialchars($data_article["image"], ENT_QUOTES)?>">
             </div>
             
             <div class="article-description text-center">
-                <h2><?php echo $data_article["title"]; ?></h2>
-                <p><?php echo $data_article["description"]; ?></p>
+                <h2><?php echo htmlspecialchars($data_article["title"], ENT_QUOTES); ?></h2>
+                <p><?php echo htmlspecialchars($data_article["description"], ENT_QUOTES); ?></p>
             </div>
             <?php
             }

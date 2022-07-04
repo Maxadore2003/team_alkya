@@ -10,8 +10,8 @@
     <div class="social-networks">
 
     <?php while ($data_social_network = $request_social_network->fetch()) { ?>
-            <a href=<?php echo $data_social_network['link'] ?> target="_blank">
-                <img src="./img/<?php echo $data_social_network['image'] ?>" alt="reseaux sociaux, Alkya, team esport, structure esport, <?php echo $data_social_network['name'] ?>" width="50">
+            <a href=<?php echo htmlspecialchars($data_social_network['link'], ENT_QUOTES) ?> target="_blank">
+                <img src="./img/<?php echo htmlspecialchars($data_social_network['image'], ENT_QUOTES) ?>" alt="reseaux sociaux, Alkya, team esport, structure esport, <?php echo htmlspecialchars($data_social_network['name'], ENT_QUOTES) ?>" width="50">
             </a>
         <?php } ?>
     </div>

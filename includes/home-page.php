@@ -49,8 +49,8 @@
 <div>
     <!-- Description rapide   -->
     <div class='description'> 
-        <h1><?php echo $data_description_title['description']?></h1>
-        <p class='text-center homePageDescription'><?php echo $data_description_text['description']?></p>
+        <h1><?php echo htmlspecialchars($data_description_title['description'], ENT_QUOTES)?></h1>
+        <p class='text-center homePageDescription'><?php echo htmlspecialchars($data_description_text['description'], ENT_QUOTES)?></p>
     </div>
 
     <!-- Les 4 staff importants -->
@@ -58,7 +58,7 @@
         <?php
             while($data_staff_image = $request_staff_image -> fetch() and $staff_count < 4 ) {?>
             <div class='staffImage'>
-                <img src='img/<?php echo $data_staff_image['image']?>' alt='staff, Alkya, team esport, structure esport, <?php echo $data_staff_image['image']?>'>
+                <img src='img/<?php echo htmlspecialchars($data_staff_image['image'], ENT_QUOTES)?>' alt='staff, Alkya, team esport, structure esport, <?php echo htmlspecialchars($data_staff_image['image'], ENT_QUOTES)?>'>
             </div>
         <?php
             $staff_count += 1;
@@ -68,7 +68,7 @@
 
     <!-- Caroussel des jeux -->
     <div class="game">
-        <h2 class='gameTitle text-center'><?php echo $data_game_title['description']?></h2>
+        <h2 class='gameTitle text-center'><?php echo htmlspecialchars($data_game_title['description'], ENT_QUOTES)?></h2>
         <div class="slideshow-content d-flex">
             <div class="buttons">
                 <button onclick='removeSlidesIndex()' id='left' class="nav-button">
@@ -81,7 +81,7 @@
                 while ($data_games = $request_games->fetch()) {
             ?>
             <div class="gameImage text-center">
-                <a href="./teams_sheet.php?game=<?php echo $data_games['id'] ?>"><img src="img/<?php echo $data_games['global-image'] ?>" alt="jeux, Alkya, team esport, structure esport, <?php echo $data_games['global-image'] ?>"></img></a>
+                <a href="./teams_sheet.php?game=<?php echo htmlspecialchars($data_games['id'], ENT_QUOTES) ?>"><img src="img/<?php echo htmlspecialchars($data_games['global-image'], ENT_QUOTES) ?>" alt="jeux, Alkya, team esport, structure esport, <?php echo htmlspecialchars($data_games['global-image'], ENT_QUOTES) ?>"></img></a>
             </div>
             <?php 
             }
@@ -95,19 +95,19 @@
             </div>
         </div>
         <div class='gameButton text-center'>
-            <a class='linkTeam' href="./teams.php"><?php echo $data_game_button['description']?></a>
+            <a class='linkTeam' href="./teams.php"><?php echo htmlspecialchars($data_game_button['description'], ENT_QUOTES)?></a>
         </div>
     </div>
 
     <!-- Les 2 dernières actualités -->
     <div class="actuality">
-        <h2 class='actualityTitle text-center'><?php echo $data_actuality_title['description']?></h2>
+        <h2 class='actualityTitle text-center'><?php echo htmlspecialchars($data_actuality_title['description'], ENT_QUOTES)?></h2>
         <div class="actualityDetails text-center d-flex">
             <?php
                 while($data_actuality = $request_actuality -> fetch() and $actuality_count < 2) {?>
                     <div class='actualityDiv text-center'>
-                        <a href="./article.php?id=<?php echo $data_actuality["id"] ?>"><img src='img/<?php echo $data_actuality['image']?>' alt='staff, Alkya, team esport, structure esport, <?php echo $data_actuality['image']?>'></a>
-                        <h3 class='actualitySmallTitle'><?php echo $data_actuality['title']?></h3>
+                        <a href="./article.php?id=<?php echo htmlspecialchars($data_actuality["id"], ENT_QUOTES) ?>"><img src='img/<?php echo htmlspecialchars($data_actuality['image'], ENT_QUOTES)?>' alt='staff, Alkya, team esport, structure esport, <?php echo htmlspecialchars($data_actuality['image'], ENT_QUOTES)?>'></a>
+                        <h3 class='actualitySmallTitle'><?php echo htmlspecialchars($data_actuality['title'], ENT_QUOTES)?></h3>
                     </div>
                     <?php
                     $actuality_count += 1;
@@ -115,7 +115,7 @@
             ?>
         </div>
         <div class='actualityButton text-center'>
-            <a class='linkActuality' href="./news.php?page=0"><?php echo $data_actuality_button['description']?></a>
+            <a class='linkActuality' href="./news.php?page=0"><?php echo htmlspecialchars($data_actuality_button['description'], ENT_QUOTES)?></a>
         </div>
     </div>
 </div>

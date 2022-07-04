@@ -31,14 +31,14 @@
         <?php include "includes/header.php"; ?>
 
         <div class="title">
-            <h3><?php echo $data_teams_title['description'] ?></h3>
+            <h3><?php echo htmlspecialchars($data_teams_title['description'], ENT_QUOTES) ?></h3>
         </div>
 
         <div class="teams d-flex flex-wrap text-center">
             <?php while ($data_games = $request_games->fetch()) {
             ?>
-            <a class="team" href="./teams_sheet.php?game=<?php echo $data_games['id']?>" style="background-image: url(./img/<?php echo $data_games['team-image']?>)">
-                <img src="img/<?php echo $data_games['logo-image']?>" alt="Logo <?php echo $data_games['name']?>, Alkya, team esport, structure esport, <?php echo $data_games['logo-image']?>">
+            <a class="team" href="./teams_sheet.php?game=<?php echo htmlspecialchars($data_games['id'], ENT_QUOTES)?>" style="background-image: url(./img/<?php echo htmlspecialchars($data_games['team-image'], ENT_QUOTES)?>)">
+                <img src="img/<?php echo htmlspecialchars($data_games['logo-image'], ENT_QUOTES)?>" alt="Logo <?php echo htmlspecialchars($data_games['name'], ENT_QUOTES)?>, Alkya, team esport, structure esport, <?php echo htmlspecialchars($data_games['logo-image'], ENT_QUOTES)?>">
             </a>
             <?php
             }

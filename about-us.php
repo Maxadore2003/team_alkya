@@ -67,17 +67,17 @@
 
             <!-- Titre de la page about us "Qu'est ce que Alkya" -->
             <div class='about-us-what'> 
-                <h1><?php echo $data_about_us_what['description']?></h1>
+                <h1><?php echo htmlspecialchars($data_about_us_what['description'], ENT_QUOTES)?></h1>
             </div>
 
             <!-- Description de la page about us "Qu'est ce que Alkya" -->
             <div class='about-us-desc-what'> 
-                <p class="text-center"><?php echo $data_about_us_desc_what['description']?></p>
+                <p class="text-center"><?php echo htmlspecialchars($data_about_us_desc_what['description'], ENT_QUOTES)?></p>
             </div>
 
             <!-- Titre de la page about us "Pourquoi Alkya" -->
             <div class='about-us-why'> 
-                <h1><?php echo $data_about_us_why['description']?></h1>
+                <h1><?php echo htmlspecialchars($data_about_us_why['description'], ENT_QUOTES)?></h1>
             </div>
 
             <!-- Les 2 images de la page about us -->
@@ -85,7 +85,7 @@
                 <?php
                     while($data_about_us_images = $request_about_us_images -> fetch() and $about_us_images_count < 2 ) {?>
                     <div class='about-us-images'>
-                        <img src='img/<?php echo $data_about_us_images['image']?>' alt='a propos, Alkya, team esport, structure esport, <?php echo $data_about_us_images['image']?>'>
+                        <img src='img/<?php echo htmlspecialchars($data_about_us_images['image'], ENT_QUOTES)?>' alt='a propos, Alkya, team esport, structure esport, <?php echo htmlspecialchars($data_about_us_images['image'], ENT_QUOTES)?>'>
                     </div>
                 <?php
                     $about_us_images_count += 1;
@@ -95,12 +95,12 @@
 
             <!-- Description de la page about us "Pourquoi Alkya" -->
             <div class='about-us-desc-why'> 
-                <p class="text-center"><?php echo $data_about_us_desc_why['description']?></p>
+                <p class="text-center"><?php echo htmlspecialchars($data_about_us_desc_why['description'], ENT_QUOTES)?></p>
             </div>
 
             <!-- Titre de la page about us "Staff" -->
             <div class='staff-title'> 
-                <h1><?php echo $data_staff_title['description']?></h1>
+                <h1><?php echo htmlspecialchars($data_staff_title['description'], ENT_QUOTES)?></h1>
             </div>
 
             <!-- Les 4 staff importants -->
@@ -108,8 +108,8 @@
                 <?php
                     while($data_staff_images = $request_staff_images -> fetch() and $data_staff_title = $request_staff_title -> fetch()) {?>
                     <div class='staffImage'>
-                        <img src='img/<?php echo $data_staff_images['image']?>' alt='staff, Alkya, team esport, structure esport, <?php echo $data_staff_images['image']?>'>
-                        <p><?php echo $data_staff_title['title']?></p>
+                        <img src='img/<?php echo htmlspecialchars($data_staff_images['image'], ENT_QUOTES)?>' alt='staff, Alkya, team esport, structure esport, <?php echo htmlspecialchars($data_staff_images['image'], ENT_QUOTES)?>'>
+                        <p><?php echo htmlspecialchars($data_staff_title['title'], ENT_QUOTES)?></p>
                     </div>
                 <?php
                     }

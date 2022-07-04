@@ -47,15 +47,15 @@
             
             <!-- Titre -->
             <div class='title'> 
-                <h1><?php echo $data_news_title['description']?></h1>
+                <h1><?php echo htmlspecialchars($data_news_title['description'], ENT_QUOTES)?></h1>
             </div>
 
             <div class='d-flex text-center flex-wrap news'>
                 <?php
                     while($data_news = $request_news -> fetch() and $news_count < 6 ) {?>
                     <div class='newsDetails'>
-                        <a href="./article.php?id=<?php echo $data_news["id"] ?>"><img src='img/<?php echo $data_news['image']?>' alt='actualité, Alkya, team esport, structure esport, <?php echo $data_news['image']?>'></a>
-                        <h2><?php echo $data_news["title"] ?></h2>
+                        <a href="./article.php?id=<?php echo htmlspecialchars($data_news["id"], ENT_QUOTES) ?>"><img src='img/<?php echo htmlspecialchars($data_news['image'], ENT_QUOTES)?>' alt='actualité, Alkya, team esport, structure esport, <?php echo htmlspecialchars($data_news['image'], ENT_QUOTES)?>'></a>
+                        <h2><?php echo htmlspecialchars($data_news["title"], ENT_QUOTES) ?></h2>
                     </div>
                 <?php
                     $news_count += 1;

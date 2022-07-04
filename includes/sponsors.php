@@ -26,13 +26,13 @@
 <div class="sponsorsPartners">
 
     <div class="sponsors text-center">
-        <h2 class="sponsorsTitle text-uppercase"><?php echo $data_sponsors_title['description']?></h2>
+        <h2 class="sponsorsTitle text-uppercase"><?php echo htmlspecialchars($data_sponsors_title['description'], ENT_QUOTES)?></h2>
         <div class="sponsorsImages d-flex flex-wrap align-content-center">
             <?php 
                 while($data_sponsors = $request_sponsors->fetch()) {
             ?>
             <div class="sponsorsCard" style="margin: auto;">
-                <a href="<?php echo $data_sponsors['link']?>" target="_blank"><img class="sonsorsImage" src="./img/<?php echo $data_sponsors['image']?>" alt="<?php echo $data_sponsors['name']?>"></a>
+                <a href="<?php echo htmlspecialchars($data_sponsors['link'], ENT_QUOTES)?>" target="_blank"><img class="sonsorsImage" src="./img/<?php echo htmlspecialchars($data_sponsors['image'], ENT_QUOTES)?>" alt="<?php echo htmlspecialchars($data_sponsors['name'], ENT_QUOTES)?>"></a>
             </div>
             <?php
                 }
@@ -41,13 +41,13 @@
     </div>
 
     <div class="partners text-center">
-        <h2 class="partnersTitle text-uppercase"><?php echo $data_partners_title['description']?></h2>
+        <h2 class="partnersTitle text-uppercase"><?php echo htmlspecialchars($data_partners_title['description'], ENT_QUOTES)?></h2>
         <div class="partnersImages d-flex flex-wrap align-content-center">
             <?php 
                 while($data_partners = $request_partners->fetch()) {
             ?>
                 <div class="partnersCard" style="margin: auto">
-                    <a href="<?php echo $data_partners['link']?>" target="_blank"><img class='partnersImage' src="./img/<?php echo $data_partners['image']?>" alt="<?php echo $data_partners['name']?>"></a>
+                    <a href="<?php echo htmlspecialchars($data_partners['link'], ENT_QUOTES)?>" target="_blank"><img class='partnersImage' src="./img/<?php echo htmlspecialchars($data_partners['image'], ENT_QUOTES)?>" alt="<?php echo htmlspecialchars($data_partners['name'], ENT_QUOTES)?>"></a>
                 </div>
             <?php
                 }

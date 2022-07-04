@@ -46,12 +46,12 @@
         <?php include "includes/header.php"; ?>
 
         <div class="illustration">
-            <img src="img/<?php echo $data_games['team-image'] ?>" alt="Game, Alkya, team esport, structure esport, <?php echo $data_games['team-image'] ?>">
-            <p><?php echo $data_teams_title['description'] ?></p>
+            <img src="img/<?php echo htmlspecialchars($data_games['team-image'], ENT_QUOTES) ?>" alt="Game, Alkya, team esport, structure esport, <?php echo htmlspecialchars($data_games['team-image'], ENT_QUOTES) ?>">
+            <p><?php echo htmlspecialchars($data_teams_title['description'], ENT_QUOTES) ?></p>
         </div>
         
         <div class="players-title text-right">
-            <p><?php echo $data_teams_player['description'] ?></p>
+            <p><?php echo htmlspecialchars($data_teams_player['description'], ENT_QUOTES) ?></p>
         </div>
         
         <div class="content">            
@@ -145,7 +145,7 @@
         </div>
             
         <div class="coach-title">
-            <p><?php echo $data_teams_coach['description'] ?></p>
+            <p><?php echo htmlspecialchars($data_teams_coach['description'], ENT_QUOTES) ?></p>
         </div>
 
         <div class="content">
