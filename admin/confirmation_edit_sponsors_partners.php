@@ -47,13 +47,13 @@
             <p class="ten"><?php echo htmlspecialchars($data_sponsors_partners['link'], ENT_QUOTES) ?></p>
         </div>
         
-        <form method='post' action="edit_sponsors_partners.php?id=<?php echo $data_sponsors_partners['id'] ?>">
+        <form method='post' action="edit_sponsors_partners.php?id=<?php echo htmlspecialchars($data_sponsors_partners['id'], ENT_QUOTES) ?>">
             <div class="account-management d-flex text-center">
-                <input class="five text-center" type="text" name="id" value="<?php echo $data_sponsors_partners['id'] ?>">
-                <input class="ten text-center" type="text" name="name" value="<?php echo $data_sponsors_partners['name'] ?>">
-                <input class="ten text-center" type="text" name="image" value="<?php echo $data_sponsors_partners['image'] ?>">
-                <input class="ten text-center" type="text" name="type" value="<?php echo $data_sponsors_partners['type'] ?>">
-                <input class="ten text-center" type="text" name="link" value="<?php echo $data_sponsors_partners['link'] ?>">
+                <input class="five text-center" type="text" name="id" value="<?php echo htmlspecialchars($data_sponsors_partners['id'], ENT_QUOTES) ?>">
+                <input class="ten text-center" type="text" name="name" value="<?php echo htmlspecialchars($data_sponsors_partners['name'], ENT_QUOTES) ?>">
+                <input class="ten text-center" type="text" name="image" value="<?php echo htmlspecialchars($data_sponsors_partners['image'], ENT_QUOTES) ?>">
+                <input class="ten text-center" type="text" name="type" value="<?php echo htmlspecialchars($data_sponsors_partners['type'], ENT_QUOTES) ?>">
+                <input class="ten text-center" type="text" name="link" value="<?php echo htmlspecialchars($data_sponsors_partners['link'], ENT_QUOTES) ?>">
             </div>
             <div class="submit text-center">
                 <input type="submit">

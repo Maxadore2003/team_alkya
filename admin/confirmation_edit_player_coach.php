@@ -20,7 +20,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <link rel="stylesheet" href="../css/header_admin.css">
         <link rel="stylesheet" href="../css/admin_account_management.css">
-        <title>Confirmation modification <?php echo $_GET["type"]?></title>
+        <title>Confirmation modification <?php echo htmlspecialchars( $_GET["type"], ENT_QUOTES) ?></title>
     </head>
 
     <body>
@@ -55,26 +55,26 @@
             ?>
         </div>
         
-        <form method='post' action="edit_player_coach.php?id=<?php echo $data_player['id'] ?>">
+        <form method='post' action="edit_player_coach.php?id=<?php echo htmlspecialchars($data_player['id'], ENT_QUOTES) ?>">
             <div class="account-management d-flex text-center">
-                <input class="text-center" type="text" name="id" value="<?php echo $data_player['id']?>">
-                <input class="text-center" type="text" name="name" value="<?php echo $data_player['name']?>">
-                <input class="text-center" type="text" name="firstname" value="<?php echo $data_player['firstname']?>">
-                <input class="text-center" type="text" name="nickname" value="<?php echo $data_player['nickname']?>">
-                <input class="text-center" type="text" name="nationality" value="<?php echo $data_player['nationality']?>">
-                <input class="text-center" type="date" name="birthday" value="<?php echo $data_player['birthday']?>">
-                <input class="text-center" type="text" name="city" value="<?php echo $data_player['city']?>">
-                <input class="text-center" type="text" name="size" value="<?php echo $data_player['size']?>">
-                <input class="text-center" type="text" name="weight" value="<?php echo $data_player['weight']?>">
-                <input class="text-center" type="date" name="team-arrival" value="<?php echo $data_player['team-arrival'] ?>">
-                <input class="text-center" type="text" name="game-id" value="<?php echo $data_player['game-id'] ?>">
-                <input class="text-center" type="text" name="image" value="<?php echo $data_player['image'] ?>">
-                <input class="text-center" type="text" name="twitter" value="<?php echo $data_player['twitter'] ?>">
-                <input class="text-center" type="text" name="instagram" value="<?php echo $data_player['instagram'] ?>">
-                <input class="text-center" type="text" name="twitch" value="<?php echo $data_player['twitch'] ?>">
+                <input class="text-center" type="text" name="id" value="<?php echo htmlspecialchars($data_player['id'], ENT_QUOTES)?>">
+                <input class="text-center" type="text" name="name" value="<?php echo htmlspecialchars($data_player['name'], ENT_QUOTES)?>">
+                <input class="text-center" type="text" name="firstname" value="<?php echo htmlspecialchars($data_player['firstname'], ENT_QUOTES)?>">
+                <input class="text-center" type="text" name="nickname" value="<?php echo htmlspecialchars($data_player['nickname'], ENT_QUOTES)?>">
+                <input class="text-center" type="text" name="nationality" value="<?php echo htmlspecialchars($data_player['nationality'], ENT_QUOTES)?>">
+                <input class="text-center" type="date" name="birthday" value="<?php echo htmlspecialchars($data_player['birthday'], ENT_QUOTES)?>">
+                <input class="text-center" type="text" name="city" value="<?php echo htmlspecialchars($data_player['city'], ENT_QUOTES)?>">
+                <input class="text-center" type="text" name="size" value="<?php echo htmlspecialchars($data_player['size'], ENT_QUOTES)?>">
+                <input class="text-center" type="text" name="weight" value="<?php echo htmlspecialchars($data_player['weight'], ENT_QUOTES)?>">
+                <input class="text-center" type="date" name="team-arrival" value="<?php echo htmlspecialchars($data_player['team-arrival'], ENT_QUOTES) ?>">
+                <input class="text-center" type="text" name="game-id" value="<?php echo htmlspecialchars($data_player['game-id'], ENT_QUOTES) ?>">
+                <input class="text-center" type="text" name="image" value="<?php echo htmlspecialchars($data_player['image'], ENT_QUOTES) ?>">
+                <input class="text-center" type="text" name="twitter" value="<?php echo htmlspecialchars($data_player['twitter'], ENT_QUOTES) ?>">
+                <input class="text-center" type="text" name="instagram" value="<?php echo htmlspecialchars($data_player['instagram'], ENT_QUOTES) ?>">
+                <input class="text-center" type="text" name="twitch" value="<?php echo htmlspecialchars($data_player['twitch'], ENT_QUOTES) ?>">
                 <?php
                 if($_GET['type'] == "player") {
-                    ?><input class="text-center" type="text" name="game-stats" value="<?php echo $data_player['game-stats'] ?>">
+                    ?><input class="text-center" type="text" name="game-stats" value="<?php echo htmlspecialchars($data_player['game-stats'], ENT_QUOTES) ?>">
                 <?php
                 }
                 ?>

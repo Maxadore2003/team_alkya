@@ -36,10 +36,10 @@
             while($data_users = $request_users -> fetch()){
         ?>
         <div class="account-management d-flex text-center">
-            <p><?php echo $data_users['id'] ?></p>
-            <p><?php echo $data_users['pseudo'] ?></p>
-            <a href='./confirmation_edit_account.php?id=<?php echo $data_users['id'] ?>'>Modifier</a>
-            <a href='./confirmation_delete_account.php?id=<?php echo $data_users['id'] ?>'>Supprimer</a>
+            <p><?php echo htmlspecialchars($data_users['id'], ENT_QUOTES) ?></p>
+            <p><?php echo htmlspecialchars($data_users['pseudo'], ENT_QUOTES) ?></p>
+            <a href='./confirmation_edit_account.php?id=<?php echo htmlspecialchars($data_users['id'], ENT_QUOTES) ?>'>Modifier</a>
+            <a href='./confirmation_delete_account.php?id=<?php echo htmlspecialchars($data_users['id'], ENT_QUOTES) ?>'>Supprimer</a>
         </div>
         <?php
             }

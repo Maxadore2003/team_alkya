@@ -20,7 +20,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <link rel="stylesheet" href="../css/header_admin.css">
         <link rel="stylesheet" href="../css/admin_account_management.css">
-        <title>Confirmation suppression <?php echo $data_news['type'] ?></title>
+        <title>Confirmation suppression <?php echo htmlspecialchars($data_news['type'], ENT_QUOTES) ?></title>
     </head>
 
     <body>
@@ -36,18 +36,18 @@
         </div>
 
         <div class="account-management d-flex text-center">
-            <p class="five"><?php echo $data_sponsors_partners['id'] ?></p>
-            <p class="ten"><?php echo $data_sponsors_partners['name'] ?></p>
-            <p class="ten"><?php echo $data_sponsors_partners['image'] ?></p>
-            <p class="ten"><?php echo $data_sponsors_partners['type'] ?></p>
-            <p class="ten"><?php echo $data_sponsors_partners['link'] ?></p>
+            <p class="five"><?php echo htmlspecialchars($data_sponsors_partners['id'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_sponsors_partners['name'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_sponsors_partners['image'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_sponsors_partners['type'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_sponsors_partners['link'], ENT_QUOTES) ?></p>
         </div>
 
         <div class="confirmation text-center">
-            <p>Êtes vous sur de vouloir supprimer ce <?php echo $data_sponsors_partners['type'] ?>. Il sera impossible de le récupérer.</p>
+            <p>Êtes vous sur de vouloir supprimer ce <?php echo htmlspecialchars($data_sponsors_partners['type'], ENT_QUOTES) ?>. Il sera impossible de le récupérer.</p>
         </div>
         <div class="account-management d-flex text-center">
-            <a class="yes" href="./delete_sponsors_partners.php?&id=<?php echo $_GET["id"] ?>">Oui</a>
+            <a class="yes" href="./delete_sponsors_partners.php?&id=<?php echo htmlspecialchars($_GET["id"], ENT_QUOTES) ?>">Oui</a>
             <a class="no" href="./website_content_management.php">Non</a>
         </div>
 

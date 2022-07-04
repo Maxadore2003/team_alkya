@@ -37,18 +37,18 @@
         </div>
 
         <div class="account-management d-flex text-center">
-            <p class="five"><?php echo $data_team['id'] ?></p>
-            <p class="ten"><?php echo $data_team['name'] ?></p>
-            <p class="ten"><?php echo $data_team['global-image'] ?></p>
-            <p class="ten"><?php echo $data_team['logo-image'] ?></p>
-            <p class="ten"><?php echo $data_team['team-image'] ?></p>
+            <p class="five"><?php echo htmlspecialchars($data_team['id'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_team['name'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_team['global-image'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_team['logo-image'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_team['team-image'], ENT_QUOTES) ?></p>
         </div>
 
         <div class="confirmation text-center">
             <p>Êtes vous sur de vouloir supprimer cette équipe. Il sera impossible de la récupérer.</p>
         </div>
         <div class="account-management d-flex text-center">
-            <a class="yes" href="./delete_team.php?&id=<?php echo $_GET["id"] ?>">Oui</a>
+            <a class="yes" href="./delete_team.php?&id=<?php echo htmlspecialchars($_GET["id"], ENT_QUOTES) ?>">Oui</a>
             <a class="no" href="./website_content_management.php">Non</a>
         </div>
 

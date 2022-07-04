@@ -38,19 +38,19 @@
         </div>
 
         <div class="account-management d-flex text-center">
-            <p><?php echo $data_user['id'] ?></p>
-            <p><?php echo $data_user['pseudo'] ?></p>
-            <p><?php echo $data_user['name'] ?></p>
-            <p><?php echo $data_user['firstname'] ?></p>
-            <p><?php echo $data_user['password'] ?></p>
-            <p><?php echo $data_user['admin-level'] ?></p>
+            <p><?php echo htmlspecialchars($data_user['id'], ENT_QUOTES) ?></p>
+            <p><?php echo htmlspecialchars($data_user['pseudo'], ENT_QUOTES) ?></p>
+            <p><?php echo htmlspecialchars($data_user['name'], ENT_QUOTES) ?></p>
+            <p><?php echo htmlspecialchars($data_user['firstname'], ENT_QUOTES) ?></p>
+            <p><?php echo htmlspecialchars($data_user['password'], ENT_QUOTES) ?></p>
+            <p><?php echo htmlspecialchars($data_user['admin-level'], ENT_QUOTES) ?></p>
         </div>
 
         <div class="confirmation text-center">
             <p>Êtes vous sur de vouloir supprimer ce compte. Il sera impossible de le récupérer.</p>
         </div>
         <div class="account-management d-flex text-center">
-            <a class="yes" href="./delete_account.php?&id=<?php echo $_GET["id"] ?>">Oui</a>
+            <a class="yes" href="./delete_account.php?&id=<?php echo htmlspecialchars($_GET["id"], ENT_QUOTES) ?>">Oui</a>
             <a class="no" href="./admin_account_management.php">Non</a>
         </div>
 

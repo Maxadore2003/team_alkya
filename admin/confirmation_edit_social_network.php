@@ -45,12 +45,12 @@
             <p class="ten"><?php echo htmlspecialchars($data_social_network['link'], ENT_QUOTES) ?></p>
         </div>
         
-        <form method='post' action="edit_social_network.php?id=<?php echo $data_social_network['id'] ?>">
+        <form method='post' action="edit_social_network.php?id=<?php echo htmlspecialchars($data_social_network['id'], ENT_QUOTES) ?>">
             <div class="account-management d-flex text-center">
-                <input class="five text-center" type="text" name="id" value="<?php echo $data_social_network['id'] ?>">
-                <input class="ten text-center" type="text" name="name" value="<?php echo $data_social_network['name'] ?>">
-                <input class="ten text-center" type="text" name="image" value="<?php echo $data_social_network['image'] ?>">
-                <input class="ten text-center" type="text" name="link" value="<?php echo $data_social_network['link'] ?>">
+                <input class="five text-center" type="text" name="id" value="<?php echo htmlspecialchars($data_social_network['id'], ENT_QUOTES) ?>">
+                <input class="ten text-center" type="text" name="name" value="<?php echo htmlspecialchars($data_social_network['name'], ENT_QUOTES) ?>">
+                <input class="ten text-center" type="text" name="image" value="<?php echo htmlspecialchars($data_social_network['image'], ENT_QUOTES) ?>">
+                <input class="ten text-center" type="text" name="link" value="<?php echo htmlspecialchars($data_social_network['link'], ENT_QUOTES) ?>">
             </div>
             <div class="submit text-center">
                 <input type="submit">

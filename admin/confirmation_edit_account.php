@@ -56,14 +56,14 @@
             <p><?php echo htmlspecialchars($data_user['admin-level'], ENT_QUOTES) ?></p>
         </div>
         
-        <form method='post' action="edit_account.php?id=<?php echo $data_user['id'] ?>">
+        <form method='post' action="edit_account.php?id=<?php echo htmlspecialchars($data_user['id'], ENT_QUOTES) ?>">
             <div class="account-management d-flex text-center">
-                <input class="text-center" type="text" name="id" value="<?php echo $data_user['id'] ?>">
-                <input class="text-center" type="text" name="pseudo" value="<?php echo $data_user['pseudo'] ?>">
-                <input class="text-center" type="text" name="name" value="<?php echo $data_user['name'] ?>">
-                <input class="text-center" type="text" name="firstname" value="<?php echo $data_user['firstname'] ?>">
-                <input class="text-center" type="password" name="password" value="<?php echo $data_user['password'] ?>">
-                <input class="text-center" type="text" name="admin-level" value="<?php echo $data_user['admin-level'] ?>">
+                <input class="text-center" type="text" name="id" value="<?php echo htmlspecialchars($data_user['id'], ENT_QUOTES) ?>">
+                <input class="text-center" type="text" name="pseudo" value="<?php echo htmlspecialchars($data_user['pseudo'], ENT_QUOTES) ?>">
+                <input class="text-center" type="text" name="name" value="<?php echo htmlspecialchars($data_user['name'], ENT_QUOTES) ?>">
+                <input class="text-center" type="text" name="firstname" value="<?php echo htmlspecialchars($data_user['firstname'], ENT_QUOTES) ?>">
+                <input class="text-center" type="password" name="password" value="<?php echo htmlspecialchars($data_user['password'], ENT_QUOTES) ?>">
+                <input class="text-center" type="text" name="admin-level" value="<?php echo htmlspecialchars($data_user['admin-level'], ENT_QUOTES) ?>">
             </div>
             <div class="submit text-center">
                 <input type="submit">

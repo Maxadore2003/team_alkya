@@ -45,17 +45,17 @@
             while($data_team = $request_team -> fetch()){
         ?>
         <div class="account-management d-flex text-center">
-            <p class="five"><?php echo $data_team['id'] ?></p>
-            <p class="ten"><?php echo $data_team['name'] ?></p>
-            <p class="ten"><?php echo $data_team['global-image'] ?></p>
-            <p class="ten"><?php echo $data_team['logo-image'] ?></p>
-            <p class="ten"><?php echo $data_team['team-image'] ?></p>
+            <p class="five"><?php echo htmlspecialchars($data_team['id'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_team['name'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_team['global-image'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_team['logo-image'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_team['team-image'], ENT_QUOTES) ?></p>
             <?php
             if($_GET['mode'] == "edit") {
-                ?><a class="ten" href='./confirmation_edit_team.php?id=<?php echo $data_team['id'] ?>'>Modifier</a><?php
+                ?><a class="ten" href='./confirmation_edit_team.php?id=<?php echo htmlspecialchars($data_team['id'], ENT_QUOTES) ?>'>Modifier</a><?php
             }
             else {
-                ?><a class="ten" href='./confirmation_delete_team.php?id=<?php echo $data_team['id'] ?>'>Supprimer</a><?php
+                ?><a class="ten" href='./confirmation_delete_team.php?id=<?php echo htmlspecialchars($data_team['id'], ENT_QUOTES) ?>'>Supprimer</a><?php
             }
             ?>
         </div>

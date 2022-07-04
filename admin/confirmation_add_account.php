@@ -45,7 +45,7 @@
         
         <form method='post' action="add_account.php">
             <div class="account-management d-flex text-center">
-                <input class="text-center" type="text" name="id" value=<?php echo $count_users ?>>
+                <input class="text-center" type="text" name="id" value=<?php echo htmlspecialchars($count_users, ENT_QUOTES) ?>>
                 <input class="text-center" type="text" name="pseudo">
                 <input class="text-center" type="text" name="name">
                 <input class="text-center" type="text" name="firstname">

@@ -39,7 +39,7 @@
         
         <form method='post' action="add_social_network.php">
             <div class="account-management d-flex text-center">
-                <input class="text-center" type="text" name="id" value=<?php echo $count_network ?>>
+                <input class="text-center" type="text" name="id" value=<?php echo htmlspecialchars($count_network, ENT_QUOTES) ?>>
                 <input class="text-center" type="text" name="name">
                 <input class="text-center" type="text" name="image">
                 <input class="text-center" type="text" name="link">

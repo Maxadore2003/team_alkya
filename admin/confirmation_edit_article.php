@@ -47,13 +47,13 @@
             <p class="five"><?php echo htmlspecialchars($data_news['date'], ENT_QUOTES) ?></p>
         </div>
         
-        <form method='post' action="edit_article.php?id=<?php echo $data_news['id'] ?>">
+        <form method='post' action="edit_article.php?id=<?php echo htmlspecialchars($data_news['id'], ENT_QUOTES) ?>">
             <div class="account-management d-flex text-center">
-                <input class="five text-center" type="text" name="id" value="<?php echo $data_news['id'] ?>">
-                <input class="ten text-center" type="text" name="title" value="<?php echo $data_news['title'] ?>">
-                <input class="ten text-center" type="text" name="image" value="<?php echo $data_news['image'] ?>">
-                <input class="twenty text-center" type="text" name="description" value="<?php echo $data_news['description'] ?>">
-                <input class="five text-center" type="date" name="date" value="<?php echo $data_news['date'] ?>">
+                <input class="five text-center" type="text" name="id" value="<?php echo htmlspecialchars($data_news['id'], ENT_QUOTES) ?>">
+                <input class="ten text-center" type="text" name="title" value="<?php echo htmlspecialchars($data_news['title'], ENT_QUOTES) ?>">
+                <input class="ten text-center" type="text" name="image" value="<?php echo htmlspecialchars($data_news['image'], ENT_QUOTES) ?>">
+                <input class="twenty text-center" type="text" name="description" value="<?php echo htmlspecialchars($data_news['description'], ENT_QUOTES) ?>">
+                <input class="five text-center" type="date" name="date" value="<?php echo htmlspecialchars($data_news['date'], ENT_QUOTES) ?>">
             </div>
             <div class="submit text-center">
                 <input type="submit">

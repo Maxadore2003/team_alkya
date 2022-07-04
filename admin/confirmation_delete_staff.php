@@ -37,18 +37,18 @@
         </div>
 
         <div class="account-management d-flex text-center">
-            <p class="five"><?php echo $data_staff['id'] ?></p>
-            <p class="ten"><?php echo $data_staff['firstname'] ?></p>
-            <p class="ten"><?php echo $data_staff['name'] ?></p>
-            <p class="ten"><?php echo $data_staff['image'] ?></p>
-            <p class="ten"><?php echo $data_staff['title'] ?></p>
+            <p class="five"><?php echo htmlspecialchars($data_staff['id'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_staff['firstname'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_staff['name'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_staff['image'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_staff['title'], ENT_QUOTES) ?></p>
         </div>
 
         <div class="confirmation text-center">
             <p>Êtes vous sur de vouloir supprimer ce membre du staff. Il sera impossible de le récupérer.</p>
         </div>
         <div class="account-management d-flex text-center">
-            <a class="yes" href="./delete_staff.php?&id=<?php echo $_GET["id"] ?>">Oui</a>
+            <a class="yes" href="./delete_staff.php?&id=<?php echo htmlspecialchars($_GET["id"], ENT_QUOTES) ?>">Oui</a>
             <a class="no" href="./website_content_management.php">Non</a>
         </div>
 

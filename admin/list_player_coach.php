@@ -27,7 +27,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <link rel="stylesheet" href="../css/header_admin.css">
         <link rel="stylesheet" href="../css/admin_account_management.css">
-        <title>Gestion <?php echo $_GET["type"]?></title>
+        <title>Gestion <?php echo htmlspecialchars($_GET["type"], ENT_QUOTES)?></title>
     </head>
 
     <body>
@@ -38,7 +38,7 @@
             <b>Les ID des jeux sont : </b>
             <?php 
             while ($data_game = $request_game->fetch()) {
-                ?><p><?php echo $data_game["id"]?> : <?php echo $data_game["name"]?></p><?php
+                ?><p><?php echo htmlspecialchars($data_game["id"], ENT_QUOTES)?> : <?php echo htmlspecialchars($data_game["name"], ENT_QUOTES)?></p><?php
             }
             ?>
             <b>La taille se fait en cm</b> <br>
@@ -79,31 +79,31 @@
             while($data_player_coach = $request_player_coach -> fetch()){
         ?>
         <div class="account-management d-flex text-center">
-            <p class="text-center"><?php echo $data_player_coach['id'] ?></p>
-            <p class="five text-center"><?php echo $data_player_coach['name'] ?></p>
-            <p class="five text-center"><?php echo $data_player_coach['firstname'] ?></p>
-            <p class="text-center"><?php echo $data_player_coach['nickname'] ?></p>
-            <p class="text-center"><?php echo $data_player_coach['nationality'] ?></p>
-            <p class="five text-center"><?php echo $data_player_coach['birthday'] ?></p>
-            <p class="text-center"><?php echo $data_player_coach['city'] ?></p>
-            <p class="text-center"><?php echo $data_player_coach['size'] / 100 ?> m</p>
-            <p class="text-center"><?php echo $data_player_coach['weight'] ?> kg</p>
-            <p class="five text-center"><?php echo $data_player_coach['team-arrival'] ?></p>
-            <p class="text-center"><?php echo $data_player_coach['game-id'] ?></p>
-            <p class="text-center"><?php echo $data_player_coach['image'] ?></p>
-            <p class="text-center"><?php echo $data_player_coach['twitter'] ?></p>
-            <p class="text-center"><?php echo $data_player_coach['instagram'] ?></p>
-            <p class="text-center"><?php echo $data_player_coach['twitch'] ?></p>
+            <p class="text-center"><?php echo htmlspecialchars($data_player_coach['id'], ENT_QUOTES) ?></p>
+            <p class="five text-center"><?php echo htmlspecialchars($data_player_coach['name'], ENT_QUOTES) ?></p>
+            <p class="five text-center"><?php echo htmlspecialchars($data_player_coach['firstname'], ENT_QUOTES) ?></p>
+            <p class="text-center"><?php echo htmlspecialchars($data_player_coach['nickname'], ENT_QUOTES) ?></p>
+            <p class="text-center"><?php echo htmlspecialchars($data_player_coach['nationality'], ENT_QUOTES) ?></p>
+            <p class="five text-center"><?php echo htmlspecialchars($data_player_coach['birthday'], ENT_QUOTES) ?></p>
+            <p class="text-center"><?php echo htmlspecialchars($data_player_coach['city'], ENT_QUOTES) ?></p>
+            <p class="text-center"><?php echo htmlspecialchars($data_player_coach['size'], ENT_QUOTES) / 100 ?> m</p>
+            <p class="text-center"><?php echo htmlspecialchars($data_player_coach['weight'], ENT_QUOTES) ?> kg</p>
+            <p class="five text-center"><?php echo htmlspecialchars($data_player_coach['team-arrival'], ENT_QUOTES) ?></p>
+            <p class="text-center"><?php echo htmlspecialchars($data_player_coach['game-id'], ENT_QUOTES) ?></p>
+            <p class="text-center"><?php echo htmlspecialchars($data_player_coach['image'], ENT_QUOTES) ?></p>
+            <p class="text-center"><?php echo htmlspecialchars($data_player_coach['twitter'], ENT_QUOTES) ?></p>
+            <p class="text-center"><?php echo htmlspecialchars($data_player_coach['instagram'], ENT_QUOTES) ?></p>
+            <p class="text-center"><?php echo htmlspecialchars($data_player_coach['twitch'], ENT_QUOTES) ?></p>
             <?php
             if($_GET['type'] == "player") {
-                ?><p class="five text-center"><?php echo $data_player_coach['game-stats'] ?></p>
+                ?><p class="five text-center"><?php echo htmlspecialchars($data_player_coach['game-stats'], ENT_QUOTES) ?></p>
             <?php
             }
             if($_GET['mode'] == "edit") {
-                ?><a class="text-center" href='./confirmation_edit_player_coach.php?id=<?php echo $data_player_coach['id'] ?>&type=<?php echo $_GET["type"]?>'>Modifier</a><?php
+                ?><a class="text-center" href='./confirmation_edit_player_coach.php?id=<?php echo htmlspecialchars($data_player_coach['id'], ENT_QUOTES) ?>&type=<?php echo htmlspecialchars($_GET["type"], ENT_QUOTES)?>'>Modifier</a><?php
             }
             else {
-                ?><a class="text-center" href='./confirmation_delete_player_coach.php?id=<?php echo $data_player_coach['id'] ?>&type=<?php echo $_GET["type"]?>'>Supprimer</a><?php
+                ?><a class="text-center" href='./confirmation_delete_player_coach.php?id=<?php echo htmlspecialchars($data_player_coach['id'], ENT_QUOTES) ?>&type=<?php echo htmlspecialchars($_GET["type"], ENT_QUOTES)?>'>Supprimer</a><?php
             }
             ?>
         </div>

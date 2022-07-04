@@ -34,7 +34,7 @@
             <b>Les ID des jeux sont : </b>
             <?php 
             while ($data_game = $request_game->fetch()) {
-                ?><p><?php echo $data_game["id"]?> : <?php echo $data_game["name"]?></p><?php
+                ?><p><?php echo htmlspecialchars($data_game["id"], ENT_QUOTES)?> : <?php echo htmlspecialchars($data_game["name"], ENT_QUOTES)?></p><?php
             }
             ?>
             <b>La taille se fait en cm</b> <br>
@@ -64,7 +64,7 @@
         
         <form method='post' action="add_player.php">
             <div class="account-management d-flex text-center">
-                <input class="text-center" type="text" name="id" value="<?php echo $count_player?>">
+                <input class="text-center" type="text" name="id" value="<?php echo htmlspecialchars($count_player, ENT_QUOTES)?>">
                 <input class="text-center" type="text" name="name">
                 <input class="text-center" type="text" name="firstname">
                 <input class="text-center" type="text" name="nickname">

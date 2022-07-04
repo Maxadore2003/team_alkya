@@ -40,7 +40,7 @@
         
         <form method='post' action="add_sponsors_partners.php">
             <div class="account-management d-flex text-center">
-                <input class="text-center" type="text" name="id" value=<?php echo $count_sponsors_partners ?>>
+                <input class="text-center" type="text" name="id" value=<?php echo htmlspecialchars($count_sponsors_partners, ENT_QUOTES) ?>>
                 <input class="text-center" type="text" name="name">
                 <input class="text-center" type="text" name="image">
                 <input class="text-center" type="text" name="type">

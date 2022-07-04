@@ -40,7 +40,7 @@
         
         <form method='post' action="./add_staff.php">
             <div class="account-management d-flex text-center">
-                <input class="five text-center" type="text" name="id" value="<?php echo $count_staff ?>">
+                <input class="five text-center" type="text" name="id" value="<?php echo htmlspecialchars($count_staff, ENT_QUOTES) ?>">
                 <input class="ten text-center" type="text" name="firstname">
                 <input class="ten text-center" type="text" name="name">
                 <input class="ten text-center" type="text" name="image">

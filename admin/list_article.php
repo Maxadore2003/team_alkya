@@ -45,17 +45,17 @@
             while($data_news = $request_news -> fetch()){
         ?>
         <div class="account-management d-flex text-center">
-            <p class="five"><?php echo $data_news['id'] ?></p>
-            <p class="ten"><?php echo $data_news['title'] ?></p>
-            <p class="ten"><?php echo $data_news['image'] ?></p>
-            <p class="twenty"><?php echo $data_news['description'] ?></p>
-            <p class="five"><?php echo $data_news['date'] ?></p>
+            <p class="five"><?php echo htmlspecialchars($data_news['id'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_news['title'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_news['image'], ENT_QUOTES) ?></p>
+            <p class="twenty"><?php echo htmlspecialchars($data_news['description'], ENT_QUOTES) ?></p>
+            <p class="five"><?php echo htmlspecialchars($data_news['date'], ENT_QUOTES) ?></p>
             <?php
             if($_GET['mode'] == "edit") {
-                ?><a class="five" href='./confirmation_edit_article.php?id=<?php echo $data_news['id'] ?>'>Modifier</a><?php
+                ?><a class="five" href='./confirmation_edit_article.php?id=<?php echo htmlspecialchars($data_news['id'], ENT_QUOTES) ?>'>Modifier</a><?php
             }
             else {
-                ?><a class="five" href='./confirmation_delete_article.php?id=<?php echo $data_news['id'] ?>'>Supprimer</a><?php
+                ?><a class="five" href='./confirmation_delete_article.php?id=<?php echo htmlspecialchars($data_news['id'], ENT_QUOTES) ?>'>Supprimer</a><?php
             }
             ?>
         </div>

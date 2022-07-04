@@ -40,7 +40,7 @@
         
         <form method='post' action="./add_team.php">
             <div class="account-management d-flex text-center">
-                <input class="five text-center" type="text" name="id" value="<?php echo $count_team ?>">
+                <input class="five text-center" type="text" name="id" value="<?php echo htmlspecialchars($count_team, ENT_QUOTES) ?>">
                 <input class="ten text-center" type="text" name="name">
                 <input class="ten text-center" type="text" name="global-image">
                 <input class="ten text-center" type="text" name="logo-image">

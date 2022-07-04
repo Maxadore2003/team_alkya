@@ -47,13 +47,13 @@
             <p class="ten"><?php echo htmlspecialchars($data_staff['title'], ENT_QUOTES) ?></p>
         </div>
         
-        <form method='post' action="edit_staff.php?id=<?php echo $data_staff['id'] ?>">
+        <form method='post' action="edit_staff.php?id=<?php echo htmlspecialchars($data_staff['id'], ENT_QUOTES) ?>">
             <div class="account-management d-flex text-center">
-                <input class="five text-center" type="text" name="id" value="<?php echo $data_staff['id'] ?>">
-                <input class="ten text-center" type="text" name="firstname" value="<?php echo $data_staff['firstname'] ?>">
-                <input class="ten text-center" type="text" name="name" value="<?php echo $data_staff['name'] ?>">
-                <input class="ten text-center" type="text" name="image" value="<?php echo $data_staff['image'] ?>">
-                <input class="ten text-center" type="text" name="title" value="<?php echo $data_staff['title'] ?>">
+                <input class="five text-center" type="text" name="id" value="<?php echo htmlspecialchars($data_staff['id'], ENT_QUOTES) ?>">
+                <input class="ten text-center" type="text" name="firstname" value="<?php echo htmlspecialchars($data_staff['firstname'], ENT_QUOTES) ?>">
+                <input class="ten text-center" type="text" name="name" value="<?php echo htmlspecialchars($data_staff['name'], ENT_QUOTES) ?>">
+                <input class="ten text-center" type="text" name="image" value="<?php echo htmlspecialchars($data_staff['image'], ENT_QUOTES) ?>">
+                <input class="ten text-center" type="text" name="title" value="<?php echo htmlspecialchars($data_staff['title'], ENT_QUOTES) ?>">
             </div>
             <div class="submit text-center">
                 <input type="submit">

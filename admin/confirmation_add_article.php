@@ -40,7 +40,7 @@
         
         <form method='post' action="add_article.php">
             <div class="account-management d-flex text-center">
-                <input class="text-center" type="text" name="id" value=<?php echo $count_news ?>>
+                <input class="text-center" type="text" name="id" value=<?php echo htmlspecialchars($count_news, ENT_QUOTES) ?>>
                 <input class="text-center" type="text" name="title">
                 <input class="text-center" type="text" name="image">
                 <input class="text-center" type="text" name="description">
