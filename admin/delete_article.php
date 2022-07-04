@@ -2,7 +2,7 @@
 
     include '../includes/database.php';
 
-    include "./header_admin.php"
+    include "./header_admin.php";
 
     // Demander à la base de donnée tous les utilisateurs
     $delete_news = $db->prepare("DELETE FROM `actuality` WHERE `id`= :id");

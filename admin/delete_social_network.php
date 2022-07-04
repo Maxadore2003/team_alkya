@@ -2,7 +2,7 @@
 
     include '../includes/database.php';
 
-    include "./header_admin.php"
+    include "./header_admin.php";
 
     // Demander à la base de supprimer le réseau social avec l'id correspondant
     $delete_social_network = $db->prepare("DELETE FROM `social-network` WHERE `id`= :id");

@@ -2,7 +2,7 @@
 
     include "../includes/database.php";
 
-    include "./header_admin.php"
+    include "./header_admin.php";
 
     $social_network_edit_id = $_POST["id"];
     $social_network_edit_name = $_POST["name"];

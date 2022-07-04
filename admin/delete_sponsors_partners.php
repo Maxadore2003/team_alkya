@@ -2,7 +2,7 @@
 
     include '../includes/database.php';
 
-    include "./header_admin.php"
+    include "./header_admin.php";
 
     // Demander à la base de supprimer le sponsors avec l'id correspondant
     $delete_sponsors_partners = $db->prepare("DELETE FROM `sponsors` WHERE `id`= :id");

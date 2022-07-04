@@ -2,7 +2,7 @@
 
     include "../includes/database.php";
 
-    include "./header_admin.php"
+    include "./header_admin.php";
 
     $news_edit_id = $_POST["id"];
     $news_edit_title = $_POST["title"];

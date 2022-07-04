@@ -2,7 +2,7 @@
 
     include "../includes/database.php";
 
-    include "./header_admin.php"
+    include "./header_admin.php";
 
     $network_add_id = $_POST["id"];
     $network_add_name = $_POST["name"];

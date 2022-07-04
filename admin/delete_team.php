@@ -2,7 +2,7 @@
 
     include '../includes/database.php';
 
-    include "./header_admin.php"
+    include "./header_admin.php";
 
     // supprime une equipe
     $delete_team = $db->prepare("DELETE FROM `game` WHERE `id`= :id");

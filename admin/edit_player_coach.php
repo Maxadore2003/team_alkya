@@ -2,7 +2,7 @@
 
     include "../includes/database.php";
 
-    include "./header_admin.php"
+    include "./header_admin.php";
 
     $player_coach_edit_id = $_POST["id"];
     $player_coach_edit_name = $_POST["name"];
