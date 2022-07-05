@@ -12,8 +12,14 @@
 
 
     // Demander à la base de donnée tous les utilisateurs
-    $update_news = $db->prepare("INSERT INTO `actuality` (`id`, `title`,`image`,`description`, `date`) VALUES ('$news_edit_id', '$news_edit_title', '$news_edit_image', '$news_edit_description', '$news_edit_date')");
-    $update_news->execute();
+    $update_news = $db->prepare("INSERT INTO `actuality` (`id`, `title`,`image`,`description`, `date`) VALUES (:id, :title, :image, :description, :date)");
+    $update_news->execute([
+        'id' => $news_edit_id,
+        'title' => $news_edit_title,
+        'image' => $news_edit_image,
+        'description' => $news_edit_description,
+        'date' => $news_edit_date,
+    ]);
 
     header("location: website_content_management.php");
     exit();

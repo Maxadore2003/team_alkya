@@ -12,8 +12,14 @@
 
 
     // Demander à la base de donnée tous les utilisateurs
-    $insert_team = $db->prepare("INSERT INTO `game` (`id`, `name`,`global-image`,`logo-image`, `team-image`) VALUES ('$team_add_id', '$team_add_name', '$team_add_global', '$team_add_logo', '$team_add_team')");
-    $insert_team->execute();
+    $insert_team = $db->prepare("INSERT INTO `game` (`id`, `name`,`global-image`,`logo-image`, `team-image`) VALUES (:id, :name, :global, :logo, :team)");
+    $insert_team->execute([
+        'id' => $team_add_id,
+        'name' => $team_add_name,
+        'global' => $team_add_global,
+        'logo' => $team_add_logo,
+        'team' => $team_add_team,
+    ]);
 
     header("location: website_content_management.php");
     exit();
