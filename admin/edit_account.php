@@ -13,9 +13,16 @@
 
 
     // Demander à la base de donnée tous les utilisateurs
-    $update_user = $db->prepare("UPDATE `users` SET `id`= '$user_edit_id', `name`= '$user_edit_name',`firstname`= '$user_edit_firstname',`pseudo`= '$user_edit_pseudo', `password`= '$user_edit_password', `admin-level`= '$user_edit_admin_level' WHERE `id` = :id");
-    $update_user->bindParam(":id", $_GET["id"], PDO::PARAM_INT);
-    $update_user->execute();
+    $update_user = $db->prepare("UPDATE `users` SET `id`= :new_id, `name`= :name, `firstname`= :firstname, `pseudo`= :pseudo, `password`= :password, `admin-level`= :admin_level WHERE `id` = :id");
+    $update_user->execute([
+        'new_id' => $user_edit_id,
+        'pseudo' => $user_edit_pseudo,
+        'name' => $user_edit_name,
+        'firstname' => $user_edit_firstname,
+        'password' => $user_edit_password,
+        'admin_level' => $user_edit_admin_level,
+        'id' => $_GET['id'],
+    ]);
 
     header("location: admin_account_management.php");
     exit();

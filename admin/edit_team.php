@@ -12,9 +12,15 @@
 
 
     // Demander à la base de donnée tous les utilisateurs
-    $update_team = $db->prepare("UPDATE `game` SET `id`= '$team_edit_id', `name`= '$team_edit_name',`global-image`= '$team_edit_global',`logo-image`= '$team_edit_logo', `team-image`= '$team_edit_team' WHERE `id` = :id");
-    $update_team->bindParam(":id", $_GET["id"], PDO::PARAM_INT);
-    $update_team->execute();
+    $update_team = $db->prepare("UPDATE `game` SET `id`= :new_id, `name`= :name, `global-image`= :global, `logo-image`= :logo, `team-image`= :team WHERE `id` = :id");
+    $update_team->execute([
+        'new_id' => $team_edit_id,
+        'name' => $team_edit_name,
+        'global' => $team_edit_global,
+        'logo' => $team_edit_logo,
+        'team' => $team_edit_team,
+        'id' => $_GET['id'],
+    ]);
 
     header("location: website_content_management.php");
     exit();
