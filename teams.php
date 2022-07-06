@@ -46,6 +46,7 @@
 
         </div>
 
+        <?php include "includes/sponsors.php"; ?>
         <?php include "includes/footer.php"; ?>
         
     </body>
