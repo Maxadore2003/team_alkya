@@ -16,7 +16,7 @@
         <?php include "header_admin.php"; ?>
 
         <p>Bienvenue dans la partie Admin</p>
-        <p>Ici, vous pouvez modifier tout le contenue du site internet et modifier les accès des administrateurs. Vous pouvez également voir tous les utilisateurs dans comptes.</p>
+        <p>Ici, vous pouvez modifier tout le contenu du site internet et les accès des administrateurs. Vous pouvez également voir tous les utilisateurs dans comptes utilisateurs.</p>
 
     </body>
 

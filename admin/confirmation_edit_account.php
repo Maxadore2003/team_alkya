@@ -29,7 +29,7 @@
 
         <div class="text-center">
             <p>
-                Le Niveau d'administration est soit 1 pour les utilisateurs lambda soit 2 pour les administrateurs
+                Le niveau d'administration est soit 1 pour les utilisateurs lambda soit 2 pour les administrateurs
             </p>
             <div class="text-center">
                 <a href="https://www.graphorama.net/Caracteres-speciaux-codes-ASCII-et-HTML-Alt-codes.html">Les caractères ASCII</a>

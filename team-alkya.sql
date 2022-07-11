@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1:3308
--- Généré le : mar. 28 juin 2022 à 07:48
--- Version du serveur : 5.7.36
--- Version de PHP : 7.4.26
+-- Hôte : localhost
+-- Généré le : lun. 11 juil. 2022 à 11:10
+-- Version du serveur : 10.4.21-MariaDB
+-- Version de PHP : 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -27,14 +27,11 @@ SET time_zone = "+00:00";
 -- Structure de la table `about-us`
 --
 
-DROP TABLE IF EXISTS `about-us`;
-CREATE TABLE IF NOT EXISTS `about-us` (
-  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+CREATE TABLE `about-us` (
+  `id` int(10) UNSIGNED NOT NULL,
   `name` char(50) NOT NULL,
-  `image` char(100) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `name` (`name`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+  `image` char(100) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `about-us`
@@ -50,14 +47,12 @@ INSERT INTO `about-us` (`id`, `name`, `image`) VALUES
 -- Structure de la table `actuality`
 --
 
-DROP TABLE IF EXISTS `actuality`;
-CREATE TABLE IF NOT EXISTS `actuality` (
+CREATE TABLE `actuality` (
   `id` int(10) UNSIGNED NOT NULL,
   `title` char(100) NOT NULL,
   `image` char(100) NOT NULL,
   `description` text NOT NULL,
-  `date` date NOT NULL,
-  PRIMARY KEY (`id`)
+  `date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -80,14 +75,12 @@ INSERT INTO `actuality` (`id`, `title`, `image`, `description`, `date`) VALUES
 -- Structure de la table `game`
 --
 
-DROP TABLE IF EXISTS `game`;
-CREATE TABLE IF NOT EXISTS `game` (
+CREATE TABLE `game` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` char(30) NOT NULL,
   `global-image` char(30) NOT NULL,
   `logo-image` char(30) NOT NULL,
-  `team-image` char(30) NOT NULL,
-  PRIMARY KEY (`id`)
+  `team-image` char(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -104,8 +97,7 @@ INSERT INTO `game` (`id`, `name`, `global-image`, `logo-image`, `team-image`) VA
 -- Structure de la table `player`
 --
 
-DROP TABLE IF EXISTS `player`;
-CREATE TABLE IF NOT EXISTS `player` (
+CREATE TABLE `player` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` char(30) NOT NULL,
   `firstname` char(30) NOT NULL,
@@ -122,8 +114,7 @@ CREATE TABLE IF NOT EXISTS `player` (
   `twitter` char(100) NOT NULL,
   `instagram` char(100) NOT NULL,
   `twitch` char(100) NOT NULL,
-  `game-stats` char(100) NOT NULL,
-  PRIMARY KEY (`id`)
+  `game-stats` char(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -140,13 +131,11 @@ INSERT INTO `player` (`id`, `name`, `firstname`, `nickname`, `nationality`, `bir
 -- Structure de la table `social-network`
 --
 
-DROP TABLE IF EXISTS `social-network`;
-CREATE TABLE IF NOT EXISTS `social-network` (
+CREATE TABLE `social-network` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` char(30) NOT NULL,
   `image` char(100) NOT NULL,
-  `link` text NOT NULL,
-  PRIMARY KEY (`id`)
+  `link` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -164,14 +153,12 @@ INSERT INTO `social-network` (`id`, `name`, `image`, `link`) VALUES
 -- Structure de la table `sponsors`
 --
 
-DROP TABLE IF EXISTS `sponsors`;
-CREATE TABLE IF NOT EXISTS `sponsors` (
+CREATE TABLE `sponsors` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` char(30) NOT NULL,
   `image` char(30) NOT NULL,
   `type` char(11) NOT NULL DEFAULT 'sponsors',
-  `link` text NOT NULL,
-  PRIMARY KEY (`id`)
+  `link` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -188,15 +175,12 @@ INSERT INTO `sponsors` (`id`, `name`, `image`, `type`, `link`) VALUES
 -- Structure de la table `staff`
 --
 
-DROP TABLE IF EXISTS `staff`;
-CREATE TABLE IF NOT EXISTS `staff` (
+CREATE TABLE `staff` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` char(30) NOT NULL,
   `firstname` char(30) NOT NULL,
   `image` char(30) NOT NULL,
-  `title` char(50) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`)
+  `title` char(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -215,14 +199,12 @@ INSERT INTO `staff` (`id`, `name`, `firstname`, `image`, `title`) VALUES
 -- Structure de la table `text`
 --
 
-DROP TABLE IF EXISTS `text`;
-CREATE TABLE IF NOT EXISTS `text` (
+CREATE TABLE `text` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` char(30) NOT NULL,
   `description` text NOT NULL,
   `type` char(30) NOT NULL,
-  `link` char(100) NOT NULL,
-  PRIMARY KEY (`id`)
+  `link` char(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -234,11 +216,11 @@ INSERT INTO `text` (`id`, `name`, `description`, `type`, `link`) VALUES
 (1, 'description-home-page', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'description', ''),
 (2, 'game-home-page', 'nos équipes', 'title', ''),
 (3, 'game-home-page', 'toutes nos équipes', 'button', ''),
-(4, 'actuality-home-page', 'dernières actualitées', 'title', ''),
+(4, 'actuality-home-page', 'dernières actualités', 'title', ''),
 (5, 'actuality-home-page', 'en savoir plus', 'button', ''),
 (6, 'sponsors', 'sponsors majeurs', 'title', ''),
 (7, 'partenaires', 'partenaires officiels', 'title', ''),
-(8, 'actuality', 'actualitées', 'title', ''),
+(8, 'actuality', 'actualités', 'title', ''),
 (9, 'about-us-what', 'qu\'est ce que alkya ?', 'title', ''),
 (10, 'about-us-desc-what', 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.', 'description', ''),
 (11, 'about-us-why', 'Pourquoi Alkya ?', 'title', ''),
@@ -255,16 +237,13 @@ INSERT INTO `text` (`id`, `name`, `description`, `type`, `link`) VALUES
 -- Structure de la table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
+CREATE TABLE `users` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` char(30) NOT NULL,
   `firstname` char(30) NOT NULL,
   `pseudo` char(30) NOT NULL,
   `password` char(30) NOT NULL,
-  `admin-level` int(11) NOT NULL DEFAULT '1',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `pseudo` (`pseudo`)
+  `admin-level` int(11) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -273,7 +252,79 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`id`, `name`, `firstname`, `pseudo`, `password`, `admin-level`) VALUES
 (0, 'admin', 'admin', 'admin', 'admin', 2),
-(1, 'ManTh3Bus', 'Ilan', 'ManTh3Bus', '', 1);
+(1, 'ManTh3Bus', 'Ilan', 'ManTh3Bus', '', 1),
+(2, 'Max', 'Max', 'Max', '2003', 2);
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `about-us`
+--
+ALTER TABLE `about-us`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `name` (`name`);
+
+--
+-- Index pour la table `actuality`
+--
+ALTER TABLE `actuality`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `game`
+--
+ALTER TABLE `game`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `player`
+--
+ALTER TABLE `player`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `social-network`
+--
+ALTER TABLE `social-network`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `sponsors`
+--
+ALTER TABLE `sponsors`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `staff`
+--
+ALTER TABLE `staff`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`);
+
+--
+-- Index pour la table `text`
+--
+ALTER TABLE `text`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `pseudo` (`pseudo`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `about-us`
+--
+ALTER TABLE `about-us`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
