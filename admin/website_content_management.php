@@ -33,7 +33,21 @@
                 </div>
                 <div class="team d-flex text-center">
                     <div class="text">
-                        <p>Équipe</p>
+                        <p>Jeux</p>
+                    </div>
+                    <div>
+                        <a href="./confirmation_add_game.php">Ajouter</a>
+                    </div>
+                    <div>
+                        <a href="./list_game.php?mode=edit">Modifier</a>
+                    </div>
+                    <div>
+                        <a href="./list_game.php?mode=delete">Supprimer</a>
+                    </div>
+                </div>
+                <div class="team d-flex text-center">
+                    <div class="text">
+                        <p>Equipes</p>
                     </div>
                     <div>
                         <a href="./confirmation_add_team.php">Ajouter</a>

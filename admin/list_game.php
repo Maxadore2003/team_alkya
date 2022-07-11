@@ -2,11 +2,9 @@
 
     include '../includes/database.php';
 
-    // Demander à la base de donnée tous les team
-    $request_team = $db->prepare("SELECT * FROM `team` WHERE `id` = :id");
-    $request_team->bindParam(":id", $_GET["id"], PDO::PARAM_INT);
+    // Demander à la base de donnée tous les utilisateurs
+    $request_team = $db->prepare("SELECT * FROM `game`");
     $request_team->execute();
-    $data_team = $request_team -> fetch()
 ?>
 
 
@@ -20,36 +18,48 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <link rel="stylesheet" href="../css/header_admin.css">
         <link rel="stylesheet" href="../css/admin_account_management.css">
-        <title>Confirmation suppression Equipe</title>
+        <title>Gestion Jeux</title>
     </head>
 
     <body>
 
         <?php include "header_admin.php"; ?>
 
-
         <div class="account-management d-flex text-center">
             <p class="five">ID</p>
-            <p class="ten">Game-ID</p>
-            <p class="ten">Name</p>
-            <p class="ten">Image</p>
+            <p class="ten">Nom</p>
+            <p class="ten">Logo</p>
+            <p class="ten">Image Bannière</p>
+            <?php
+            if($_GET['mode'] == "edit") {
+                ?><p class="ten">Modifier</p><?php
+            }
+            else {
+                ?><p class="ten">Supprimer</p><?php
+            }
+            ?>
         </div>
 
+        <?php
+            while($data_team = $request_team -> fetch()){
+        ?>
         <div class="account-management d-flex text-center">
             <p class="five"><?php echo htmlspecialchars($data_team['id'], ENT_QUOTES) ?></p>
-            <p class="ten"><?php echo htmlspecialchars($data_team['game-id'], ENT_QUOTES) ?></p>
             <p class="ten"><?php echo htmlspecialchars($data_team['name'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_team['logo'], ENT_QUOTES) ?></p>
             <p class="ten"><?php echo htmlspecialchars($data_team['image'], ENT_QUOTES) ?></p>
+            <?php
+            if($_GET['mode'] == "edit") {
+                ?><a class="ten" href='./confirmation_edit_game.php?id=<?php echo htmlspecialchars($data_team['id'], ENT_QUOTES) ?>'>Modifier</a><?php
+            }
+            else {
+                ?><a class="ten" href='./confirmation_delete_game.php?id=<?php echo htmlspecialchars($data_team['id'], ENT_QUOTES) ?>'>Supprimer</a><?php
+            }
+            ?>
         </div>
-
-        <div class="confirmation text-center">
-            <p>Êtes vous sur de vouloir supprimer cette équipe. Il sera impossible de la récupérer.</p>
-        </div>
-        <div class="account-management d-flex text-center">
-            <a class="yes" href="./delete_team.php?&id=<?php echo htmlspecialchars($_GET["id"], ENT_QUOTES) ?>">Oui</a>
-            <a class="no" href="./website_content_management.php">Non</a>
-        </div>
-
+        <?php
+            }
+        ?>
     </body>
 
 </html>

@@ -18,7 +18,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <link rel="stylesheet" href="../css/header_admin.css">
         <link rel="stylesheet" href="../css/admin_account_management.css">
-        <title>Ajouter une Equipe</title>
+        <title>Ajouter un Jeu</title>
     </head>
 
     <body>
@@ -31,16 +31,16 @@
 
         <div class="account-management d-flex text-center">
             <p class="five">ID</p>
-            <p class="ten">Game-ID</p>
-            <p class="ten">Name</p>
-            <p class="ten">Image</p>
+            <p class="ten">Nom</p>
+            <p class="ten">Logo</p>
+            <p class="ten">Image Bannière</p>
         </div>
         
-        <form method='post' action="./add_team.php">
+        <form method='post' action="./add_game.php">
             <div class="account-management d-flex text-center">
                 <input class="five text-center" type="text" name="id" value="<?php echo htmlspecialchars($count_game, ENT_QUOTES) ?>">
-                <input class="ten text-center" type="text" name="game-id">
                 <input class="ten text-center" type="text" name="name">
+                <input class="ten text-center" type="text" name="logo">
                 <input class="ten text-center" type="text" name="image">
             </div>
             <div class="submit text-center">

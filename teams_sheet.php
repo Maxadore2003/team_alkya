@@ -2,11 +2,6 @@
 
     include './includes/database.php';
 
-    // Demander à la base de donnée le titre de teams
-    $request_teams_title = $db->prepare("SELECT `description` FROM `text` WHERE `name` = 'teams-sheet-title' AND `type` = 'title'");
-    $request_teams_title->execute();
-    $data_teams_title = $request_teams_title->fetch();
-
     // Demander à la base de donnée le titre de la partie Player
     $request_teams_player = $db->prepare("SELECT `description` FROM `text` WHERE `name` = 'teams-sheet-player' AND `type` = 'title'");
     $request_teams_player->execute();
@@ -17,8 +12,8 @@
     $request_teams_coach->execute();
     $data_teams_coach = $request_teams_coach->fetch();
 
-    // Demander à la base de donnée toutes les données des jeux
-    $request_games = $db->prepare("SELECT * FROM `game` WHERE `id` = :game");
+    // Demander à la base de donnée toutes les données de la team
+    $request_games = $db->prepare("SELECT * FROM `team` WHERE `id` = :game");
     $request_games->bindParam(":game", $_GET["game"], PDO::PARAM_INT);
     $request_games->execute();
     $data_games = $request_games->fetch();
@@ -46,12 +41,12 @@
         <?php include "includes/header.php"; ?>
 
         <div class="illustration">
-            <img src="img/<?php echo htmlspecialchars($data_games['team-image'], ENT_QUOTES) ?>" alt="Game, Alkya, team esport, structure esport, <?php echo htmlspecialchars($data_games['team-image'], ENT_QUOTES) ?>">
-            <p><?php echo htmlspecialchars($data_teams_title['description'], ENT_QUOTES) ?></p>
+            <img src="img/<?php echo htmlspecialchars($data_games['image'], ENT_QUOTES) ?>" alt="Team, Alkya, team esport, structure esport, <?php echo htmlspecialchars($data_games['image'], ENT_QUOTES) ?>">
+            <p><?php echo htmlspecialchars($data_games['name'], ENT_QUOTES) ?></p>
         </div>
         
         <div class="players-title text-right">
-            <p><?php echo htmlspecialchars($data_teams_player['description'], ENT_QUOTES) ?></p>
+            <p><?php echo htmlspecialchars($data_teams_player['description'], ENT_QUOTES)?></p>
         </div>
         
         <div class="content">            

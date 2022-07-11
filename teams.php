@@ -2,8 +2,22 @@
 
     include 'includes/database.php';
     // Demander à la base de donnée toutes les données des jeux
-    $request_games = $db->prepare("SELECT * FROM `game`");
-    $request_games->execute();
+    if (isset($_GET['game'])) {
+        $game_id = $_GET['game'];
+        $request_games = $db->prepare("SELECT * FROM `team` WHERE `game-id` = :gameId");
+        $request_games->execute([
+            'gameId' => (int)$game_id,
+        ]);
+    }
+    else {
+        $request_games = $db->prepare("SELECT * FROM `team`");
+        $request_games->execute();
+    }
+
+
+    // Demander à la base de donnée le titre de teams
+    $request_game_button = $db->prepare("SELECT * FROM `game`");
+    $request_game_button->execute();
     
     // Demander à la base de donnée le titre de teams
     $request_teams_title = $db->prepare("SELECT `description` FROM `text` WHERE `name` = 'teams' AND `type` = 'title'");
@@ -34,11 +48,27 @@
             <h3><?php echo htmlspecialchars($data_teams_title['description'], ENT_QUOTES) ?></h3>
         </div>
 
+        <div class='button-game d-flex'>
+            <a href="./teams.php">All</a>
+            <?php while ($data_game_button = $request_game_button->fetch()) {
+            ?>
+            <a href="./teams.php?game=<?php echo $data_game_button['id'] ?>"><?php echo $data_game_button['name'] ?></a>
+            <?php
+            }
+            ?>
+        </div>
+
         <div class="teams d-flex flex-wrap text-center">
             <?php while ($data_games = $request_games->fetch()) {
+                // demander a la base de donnée le jeu par rapport a la team
+                $request_game = $db->prepare("SELECT * FROM `game` WHERE `id` = :gameId");
+                $request_game->execute([
+                    'gameId' => $data_games['game-id'],
+                ]);
+                $data_game = $request_game->fetch();
             ?>
-            <a class="team" href="./teams_sheet.php?game=<?php echo htmlspecialchars($data_games['id'], ENT_QUOTES)?>" style="background-image: url(./img/<?php echo htmlspecialchars($data_games['team-image'], ENT_QUOTES)?>)">
-                <img src="img/<?php echo htmlspecialchars($data_games['logo-image'], ENT_QUOTES)?>" alt="Logo <?php echo htmlspecialchars($data_games['name'], ENT_QUOTES)?>, Alkya, team esport, structure esport, <?php echo htmlspecialchars($data_games['logo-image'], ENT_QUOTES)?>">
+            <a class="team" href="./teams_sheet.php?game=<?php echo htmlspecialchars($data_games['id'], ENT_QUOTES)?>" style="background-image: url(./img/<?php echo htmlspecialchars($data_games['image'], ENT_QUOTES)?>)">
+                <img src="img/<?php echo htmlspecialchars($data_game['logo'], ENT_QUOTES)?>" alt="Logo <?php echo htmlspecialchars($data_game['name'], ENT_QUOTES)?>, Alkya, team esport, structure esport, <?php echo htmlspecialchars($data_game['logo'], ENT_QUOTES)?>">
             </a>
             <?php
             }

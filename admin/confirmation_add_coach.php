@@ -7,7 +7,7 @@
     $count_coach = $request_coach->rowCount();
 
     // Demander à la base de donnée tous les jeux et leur ID
-    $request_game = $db->prepare("SELECT * FROM `game`");
+    $request_game = $db->prepare("SELECT * FROM `team`");
     $request_game->execute();
 
 ?>
@@ -34,7 +34,15 @@
             <b>Les ID des jeux sont : </b>
             <?php 
             while ($data_game = $request_game->fetch()) {
-                ?><p><?php echo htmlspecialchars($data_game["id"], ENT_QUOTES)?> : <?php echo htmlspecialchars($data_game["name"], ENT_QUOTES)?></p><?php
+                
+                // Demander à la base de donnée tous les jeux et leur ID
+                $request_type = $db->prepare("SELECT * FROM `game` WHERE `id` = :game_id");
+                $request_type->execute([
+                    "game_id" -> $data_game['game-id']
+                ]);
+                $data_type = $request_type->fetch();
+
+                ?><p><?php echo htmlspecialchars($data_game["id"], ENT_QUOTES)?> : <?php echo htmlspecialchars($data_type["name"], ENT_QUOTES)?> : <?php echo htmlspecialchars($data_game["name"], ENT_QUOTES)?></p><?php
             }
             ?>
             <b>La taille se fait en cm</b>  <br>

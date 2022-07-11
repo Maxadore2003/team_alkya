@@ -79,12 +79,20 @@
 
             <?php 
                 while ($data_games = $request_games->fetch()) {
+                    // // demande a la base de donnée
+                    // $request_team = $db->prepare("SELECT * FROM `team` WHERE `game-id` = :sql");
+                    // $request_team->execute([
+                    //     'sql' ->  data_games['id'],
+                    // ]);
+                    // echo ($request_team->rowCount());
             ?>
             <div class="gameImage text-center">
-                <a href="./teams_sheet.php?game=<?php echo htmlspecialchars($data_games['id'], ENT_QUOTES) ?>"><img src="img/<?php echo htmlspecialchars($data_games['global-image'], ENT_QUOTES) ?>" alt="jeux, Alkya, team esport, structure esport, <?php echo htmlspecialchars($data_games['global-image'], ENT_QUOTES) ?>"></img></a>
+                <a href="./teams.php?game=<?php echo htmlspecialchars($data_games['id'], ENT_QUOTES) ?>">
+                    <img src="img/<?php echo htmlspecialchars($data_games['image'], ENT_QUOTES) ?>" alt="jeux, Alkya, team esport, structure esport, <?php echo htmlspecialchars($data_games['image'], ENT_QUOTES) ?>"></img>
+                </a>
             </div>
             <?php 
-            }
+                }
             ?>
 
 

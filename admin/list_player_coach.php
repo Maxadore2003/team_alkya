@@ -12,7 +12,7 @@
     $request_player_coach->execute();
 
     // Demander à la base de donnée tous les jeux et leur ID
-    $request_game = $db->prepare("SELECT * FROM `game`");
+    $request_game = $db->prepare("SELECT * FROM `team`");
     $request_game->execute();
 ?>
 

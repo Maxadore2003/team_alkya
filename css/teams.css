@@ -53,3 +53,11 @@ div.teams a.logo-rocket-league {
 div.teams a img {
     max-width: 118px;
 }
+
+div.button-game a {
+    border: solid black 1px;
+    margin: 0 2% 0 2%;
+    padding: 0.5% 1% 0.5% 1%;
+    text-decoration: none;
+    color: black;
+}
