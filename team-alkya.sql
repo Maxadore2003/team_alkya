@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1
--- Généré le : lun. 11 juil. 2022 à 13:29
--- Version du serveur : 10.4.22-MariaDB
--- Version de PHP : 7.3.33
+-- Hôte : localhost
+-- Généré le : mar. 12 juil. 2022 à 10:22
+-- Version du serveur : 10.4.21-MariaDB
+-- Version de PHP : 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -239,11 +239,11 @@ INSERT INTO `text` (`id`, `name`, `description`, `type`, `link`) VALUES
 (1, 'description-home-page', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'description', ''),
 (2, 'game-home-page', 'nos équipes', 'title', ''),
 (3, 'game-home-page', 'toutes nos équipes', 'button', ''),
-(4, 'actuality-home-page', 'dernières actualitées', 'title', ''),
+(4, 'actuality-home-page', 'dernières actualités', 'title', ''),
 (5, 'actuality-home-page', 'en savoir plus', 'button', ''),
 (6, 'sponsors', 'sponsors majeurs', 'title', ''),
 (7, 'partenaires', 'partenaires officiels', 'title', ''),
-(8, 'actuality', 'actualitées', 'title', ''),
+(8, 'actuality', 'actualités', 'title', ''),
 (9, 'about-us-what', 'qu\'est ce que alkya ?', 'title', ''),
 (10, 'about-us-desc-what', 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.', 'description', ''),
 (11, 'about-us-why', 'Pourquoi Alkya ?', 'title', ''),
