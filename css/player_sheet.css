@@ -1,34 +1,35 @@
 
-div.martin-rekkles-larsson {
+div.people {
     align-items: center;
     margin-top: 5%;
 }
 
-div.martin-rekkles-larsson div.image {
+div.people div.image {
     margin-left: 5%;
 }
 
-div.martin-rekkles-larsson div.presentation {
+div.people div.presentation {
     margin-left: 3%;
 }
 
-div.martin-rekkles-larsson div.presentation h1 {
+div.people div.presentation h1 {
     font-size: 96px;
 }
 
-div.martin-rekkles-larsson div.presentation p {
+div.people div.presentation p {
     font-size: 36px;
     color: #136782;
 }
 
-div.martin-rekkles-larsson div.presentation div.place-of-birth {
+div.people div.presentation div.place-of-birth {
     align-items: center;
 }
 
-div.martin-rekkles-larsson div.presentation div.place-of-birth img {
+div.people div.presentation div.place-of-birth img {
     width: 5%;
     height: 5%;
     margin-left: 2%;
+    border-radius: 15%;
 }
 
 div.career div.career-button {
@@ -57,11 +58,11 @@ div.career div.content div.image img {
     height: 750px;
 }
 
-div.career div.content div.rekkles div.flex {
+div.career div.content div.player div.flex {
     position: relative;
 }
 
-div.career div.content div.rekkles div.flex::before {
+div.career div.content div.player div.flex::before {
     content: "";
     position: absolute;
     background-color: #135066;
@@ -70,49 +71,49 @@ div.career div.content div.rekkles div.flex::before {
     bottom: 0;
 }
 
-div.career div.content div.rekkles h2 {
+div.career div.content div.player h2 {
     font-size: 96px;
     color: #136782;
 }
 
-div.career div.content div.rekkles h3 {
+div.career div.content div.player h3 {
     font-size: 64px;
     color: #136782;
 }
 
-div.career div.content div.rekkles div {
+div.career div.content div.player div {
     margin: 25px;
     justify-content: space-evenly;
 }
 
-div.career div.content div.rekkles div {
+div.career div.content div.player div {
     align-items: center;
 }
 
-div.career div.content div.rekkles div img {
+div.career div.content div.player div img {
     width: 100px;
 }
 
-div.career div.content div.rekkles div div img.illustration {
+div.career div.content div.player div div img.illustration {
     width: 175px;
     height: 175px;
 }
 
-div.career div.content div.rekkles div img.arrow {
+div.career div.content div.player div img.arrow {
     width: 75px;
     height: 75px;
 }
 
-div.career div.content div.rekkles div div.dates {
+div.career div.content div.player div div.dates {
     justify-content: space-around;
 }
 
-div.career div.content div.rekkles div div.dates p {
+div.career div.content div.player div div.dates p {
     color: #136782;
     font-size: 36px;
 }
 
-div.career div.content div.rekkles div.palmares h4 {
+div.career div.content div.player div.palmares h4 {
     font-size: 64px;
     color: #136782;
 }
@@ -141,6 +142,10 @@ div.networks div.images {
     margin-top: 5%;
 }
 
-div.networks div.images img {
-    width: 5%;
+div.networks div.images div.network {
+    width: 20%;
+}
+
+div.networks div.images div.network a img{
+    width: 30%;
 }

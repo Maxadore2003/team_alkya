@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost
--- Généré le : mar. 12 juil. 2022 à 10:22
--- Version du serveur : 10.4.21-MariaDB
--- Version de PHP : 7.4.29
+-- Hôte : 127.0.0.1
+-- Généré le : mar. 12 juil. 2022 à 17:25
+-- Version du serveur : 10.4.22-MariaDB
+-- Version de PHP : 7.3.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -79,16 +79,17 @@ CREATE TABLE `game` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` char(30) NOT NULL,
   `logo` char(30) NOT NULL,
-  `image` char(50) NOT NULL
+  `image` char(50) NOT NULL,
+  `stats` char(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `game`
 --
 
-INSERT INTO `game` (`id`, `name`, `logo`, `image`) VALUES
-(0, 'League of Legends', 'logo-lol.png', 'lol.png'),
-(1, 'Valorant', 'logo-valorant.png', 'valorant.png');
+INSERT INTO `game` (`id`, `name`, `logo`, `image`, `stats`) VALUES
+(0, 'League of Legends', 'logo-lol.png', 'lol.png', 'https://euw.op.gg/summoners/euw/'),
+(1, 'Valorant', 'logo-valorant.png', 'valorant.png', 'https://valorant.op.gg/profile/');
 
 -- --------------------------------------------------------
 
@@ -121,10 +122,11 @@ CREATE TABLE `player` (
 --
 
 INSERT INTO `player` (`id`, `name`, `firstname`, `nickname`, `nationality`, `birthday`, `city`, `size`, `weight`, `team-arrival`, `game-id`, `image`, `type`, `twitter`, `instagram`, `twitch`, `game-stats`) VALUES
-(0, 'Callewaert', 'Ilan', 'ManTh3Bus', 'France', '2004-02-10', 'Meaux', 180, 77, '2021-06-10', 1, 'ilan-callewaert.jpg', 'player', 'mantheboss77', 'manth3bus', 'manth3bus', 'steam76561198988805219'),
-(1, 'Callewaert', 'Ilan', 'ManTh3Bus', 'France', '2004-02-10', 'Meaux', 180, 77, '2022-06-12', 1, 'ilan-callewaert.png', 'coach', '', '', '', ''),
-(2, 'Callewaert', 'Ilan', 'ManTh3Bus', 'France', '2004-02-10', 'Meaux', 180, 77, '2021-06-10', 0, 'ilan-callewaert.jpg', 'player', 'mantheboss77', 'manth3bus', 'manth3bus', 'steam76561198988805219'),
-(3, 'Callewaert', 'Ilan', 'ManTh3Bus', 'France', '2004-02-10', 'Meaux', 180, 77, '2021-06-10', 0, 'ilan-callewaert.jpg', 'player', 'mantheboss77', 'manth3bus', 'manth3bus', 'steam76561198988805219');
+(0, 'Callewaert', 'Ilan', 'ManTh3Bus', 'France', '2004-02-10', 'Meaux', 180, 77, '2021-06-10', 1, 'ilan-callewaert.jpg', 'player', 'mantheboss77', 'manth3bus', 'manth3bus', 'name=ManTh3Bus&tagLine=EUW'),
+(1, 'Callewaert', 'Ilan', 'ManTh3Bus', 'France', '2004-02-10', 'Meaux', 180, 77, '2022-06-12', 1, 'ilan-callewaert.jpg', 'coach', '', '', '', ''),
+(2, 'Callewaert', 'Ilan', 'ManTh3Bus', 'France', '2004-02-10', 'Meaux', 180, 77, '2021-06-10', 1, 'ilan-callewaert.jpg', 'player', 'mantheboss77', 'manth3bus', 'manth3bus', 'name=ManTh3Bus&tagLine=EUW'),
+(3, 'Callewaert', 'Ilan', 'ManTh3Bus', 'France', '2004-02-10', 'Meaux', 180, 77, '2021-06-10', 0, 'ilan-callewaert.jpg', 'player', 'mantheboss77', 'manth3bus', 'manth3bus', 'ManTh3Bus'),
+(4, 'Callewaert', 'Ilan', 'ManTh3Bus', 'France', '2004-02-10', 'Meaux', 180, 77, '2022-06-12', 0, 'ilan-callewaert.jpg', 'coach', '', '', '', '');
 
 -- --------------------------------------------------------
 

@@ -65,7 +65,7 @@
                     while ($data_player = $request_player->fetch()) {
                 ?>
                     <div class="player" style="background-image: url(./img/<?php echo htmlspecialchars($data_player['image'], ENT_QUOTES)?>);">
-                        <a href="./player_sheet.php?test=test">
+                        <a href="./player_sheet.php?player=<?php echo htmlspecialchars($data_player['id'], ENT_QUOTES)?>">
                             <div class="flag">
                                 <img class="flag" id="" src="./img/<?php echo htmlspecialchars($data_player['nationality'], ENT_QUOTES)?>.png" alt="Drapeau, Alkya, team esport, structure esport">
                             </div>
@@ -97,7 +97,7 @@
                     while ($data_coach = $request_coach->fetch()) {
                 ?>
                     <div class="coach" style="background-image: url(./img/<?php echo htmlspecialchars($data_coach['image'], ENT_QUOTES)?>);">
-                        <a href="./player_sheet.php?test=test">
+                    <a href="./player_sheet.php?player=<?php echo htmlspecialchars($data_coach['id'], ENT_QUOTES)?>">
                             <div class="flag">
                                 <img class="flag" id="" src="./img/<?php echo htmlspecialchars($data_coach['nationality'], ENT_QUOTES)?>.png" alt="Drapeau, Alkya, team esport, structure esport">
                             </div>

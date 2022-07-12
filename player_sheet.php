@@ -1,3 +1,58 @@
+<?php
+
+    include './includes/database.php';
+    
+    // Demander à la base de donnée tous les joueurs de la team
+    $request_player = $db->prepare("SELECT * FROM `player` WHERE `id` = :player");
+    $request_player->bindParam(":player", $_GET["player"], PDO::PARAM_INT);
+    $request_player->execute();
+    $data_player = $request_player->fetch();
+
+    // Demander à la base de donnée tous les joueurs de la team
+    $request_game = $db->prepare("SELECT * FROM `game` WHERE `id` = :game");
+    $request_game->bindParam(":game", $data_player["game-id"], PDO::PARAM_INT);
+    $request_game->execute();
+    $data_game = $request_game->fetch();
+
+    function day($date) {
+        return $date[8] * 10 + $date[9];
+    };
+
+    function year($date) {
+        return $date[0] * 1000 + $date[1] * 100 + $date[2] * 10 + $date[3];
+    };
+
+    function month($date) {
+        $month = $date[5] * 10 + $date[6];
+        switch ($month) {
+            case 1:
+                return 'Janvier';
+            case 2:
+                return 'Février';
+            case 3:
+                return 'Mars';
+            case 4:
+                return 'Avril';
+            case 5:
+                return 'Mai';
+            case 6:
+                return 'Juin';
+            case 7:
+                return 'Juillet';
+            case 8:
+                return 'Août';
+            case 9:
+                return 'Septembre';
+            case 10:
+                return 'Octobre';
+            case 11:
+                return 'Novembre';
+            case 12:
+                return 'Décembre';
+        }
+    };
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -17,37 +72,41 @@
 
         <?php include "includes/header.php"; ?>
 
-        <div class="martin-rekkles-larsson text-uppercase d-flex">
+        <div class="people text-uppercase d-flex">
             <div class="image">
-                <img src="img/martin-larsson.png" alt="Martin Larsson">
+                <img src="img/<?php echo htmlspecialchars($data_player['image'], ENT_QUOTES)?>" alt="<?php echo htmlspecialchars($data_player['firstname'], ENT_QUOTES)?> <?php echo htmlspecialchars($data_player['name'], ENT_QUOTES)?>">
             </div>
             <div class="presentation">
-                <h1>martin "rekkles" larsson</h1>
-                <p>ne le 20 septembre 1996</p>
+                <h1><?php echo htmlspecialchars($data_player['firstname'], ENT_QUOTES)?> "<?php echo htmlspecialchars($data_player['nickname'], ENT_QUOTES)?>" <?php echo htmlspecialchars($data_player['name'], ENT_QUOTES)?></h1>
+                <p>
+                    né le <?php echo day($data_player['birthday']) ?> 
+                    <?php echo month($data_player['birthday']) ?> 
+                    <?php echo year($data_player['birthday']) ?> 
+                </p>
                 <div class="place-of-birth d-flex">
-                    <p>a älvägen, suede</p>
-                    <img src="img/flag.png" alt="Drapeau">
+                    <p>à <?php echo htmlspecialchars($data_player['city'], ENT_QUOTES)?>, <?php echo htmlspecialchars($data_player['nationality'], ENT_QUOTES)?></p>
+                    <img src="img/<?php echo htmlspecialchars($data_player['nationality'], ENT_QUOTES)?>.png" alt="Drapeau <?php echo htmlspecialchars($data_player['nationality'], ENT_QUOTES)?>">
                 </div>
-                <p>taille 1m80</p>
-                <p>poids 75kg</p>
-                <p>arrivee au club novembre 2021</p>
-                <p>jeu league of legends</p>
+                <p>taille <?php echo htmlspecialchars($data_player['size'][0], ENT_QUOTES)?>m<?php echo htmlspecialchars($data_player['size'][1], ENT_QUOTES)?><?php echo htmlspecialchars($data_player['size'][2], ENT_QUOTES)?></p>
+                <p>poids <?php echo htmlspecialchars($data_player['weight'], ENT_QUOTES)?>kg</p>
+                <p>arrivee au club <?php echo month($data_player['team-arrival']) ?> <?php echo year($data_player['team-arrival'])?></p>
+                <p>jeu <?php echo htmlspecialchars($data_game['name'], ENT_QUOTES)?></p>
             </div>
         </div>
 
-        <div class="career text-uppercase">
+        <!-- <div class="career text-uppercase">
             <div class="career-button d-flex">
-                <a href="#rekkles">
+                <a href="#player">
                     <img src="img/logo-career.png" alt="Logo Carrière">
                 </a>
                 <p>carriere du joueur</p>
             </div>
             <div class="content d-flex">
-                <div class="rekkles" id="rekkles">
+                <div class="player" id="player">
                     <div class="flex d-flex">
-                        <h2>"rekkles"</h2>
+                        <h2>"<?php echo htmlspecialchars($data_player['nickname'], ENT_QUOTES)?>"</h2>
                         <div>
-                            <img src="img/flag.png" alt="Drapeau">
+                            <img src="img/<?php echo htmlspecialchars($data_player['nationality'], ENT_QUOTES)?>.png" alt="Drapeau <?php echo htmlspecialchars($data_player['nationality'], ENT_QUOTES)?>">
                         </div>
                     </div>
                     <div>
@@ -73,17 +132,25 @@
                     <img src="img/player.png" alt="Joueur">
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="networks text-uppercase">
             <div class="title">
-                <h5 class="text-center">ses reseaux</h5>
+                <h5 class="text-center">ses réseaux</h5>
             </div>
-            <div class="images d-flex">
-                <img src="img/twitter-color.png" alt="Logo Twitter">
-                <img src="img/instagram-color.png" alt="Logo Instagram">
-                <img src="img/twitch-color.png" alt="Logo Twitch">
-                <img src="img/logo-lol.png" alt="Logo LOL">
+            <div class="images d-flex text-center">
+                <div class="network text-center">
+                    <a href="https://twitter.com/<?php echo htmlspecialchars($data_player['twitter'], ENT_QUOTES)?>" target="_blank"><img src="img/twitter-color.png" alt="Logo Twitter"></a>
+                </div>
+                <div class="network text-center">
+                    <a href="https://www.instagram.com/<?php echo htmlspecialchars($data_player['instagram'], ENT_QUOTES)?>/" target="_blank"><img src="img/instagram-color.png" alt="Logo Instagram"></a>
+                </div>
+                <div class="network text-center">
+                    <a href="https://www.twitch.tv/<?php echo htmlspecialchars($data_player['twitch'], ENT_QUOTES)?>" target="_blank"><img src="img/twitch-color.png" alt="Logo Twitch"></a>
+                </div>
+                <div class="network text-center">
+                    <a href="<?php echo htmlspecialchars($data_game['stats'], ENT_QUOTES)?><?php echo htmlspecialchars($data_player['game-stats'], ENT_QUOTES)?>" target="_blank"><img src="img/<?php echo htmlspecialchars($data_game['logo'], ENT_QUOTES)?>" alt="Logo <?php echo htmlspecialchars($data_game['name'], ENT_QUOTES)?>"></a>
+                </div>
             </div>
         </div>
 
