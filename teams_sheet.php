@@ -18,6 +18,16 @@
     $request_games->execute();
     $data_games = $request_games->fetch();
 
+    // Demander à la base de donnée tous les joueurs de la team
+    $request_player = $db->prepare("SELECT * FROM `player` WHERE `game-id` = :game AND `type` = 'player'");
+    $request_player->bindParam(":game", $_GET["game"], PDO::PARAM_INT);
+    $request_player->execute();
+
+    // Demander à la base de donnée tous les coachs de la team
+    $request_coach = $db->prepare("SELECT * FROM `player` WHERE `game-id` = :game AND `type` = 'coach'");
+    $request_coach->bindParam(":game", $_GET["game"], PDO::PARAM_INT);
+    $request_coach->execute();
+
 ?>
 
 <!DOCTYPE html>
@@ -49,93 +59,31 @@
             <p><?php echo htmlspecialchars($data_teams_player['description'], ENT_QUOTES)?></p>
         </div>
         
-        <div class="content">            
+        <div class="content">
             <div class="players d-flex flex-wrap">
-                <div class="player" style="background-image: url(./img/martin-larsson.png);">
-                    <a href="./player_sheet.php?test=test">
-                        <div class="flag">
-                            <img class="" id="" src="./img/flag.png" alt="Drapeau">
-                        </div>
-                        <div class="description d-flex">
-                            <div class="name">
-                                <p class="firstname">Martin</p>
-                                <p class="nickname">"Rekless"</p>
-                                <p class="name">Larsson</p>
+                <?php 
+                    while ($data_player = $request_player->fetch()) {
+                ?>
+                    <div class="player" style="background-image: url(./img/<?php echo htmlspecialchars($data_player['image'], ENT_QUOTES)?>);">
+                        <a href="./player_sheet.php?test=test">
+                            <div class="flag">
+                                <img class="flag" id="" src="./img/<?php echo htmlspecialchars($data_player['nationality'], ENT_QUOTES)?>.png" alt="Drapeau, Alkya, team esport, structure esport">
                             </div>
-                            <div class="poste">
-                                <img class="" id="" src="./img/lol-jungle.png" alt="Texte Martin Larsson">
+                            <div class="description d-flex">
+                                <div class="name">
+                                    <p class="firstname"><?php echo htmlspecialchars($data_player['firstname'], ENT_QUOTES)?></p>
+                                    <p class="nickname">"<?php echo htmlspecialchars($data_player['nickname'], ENT_QUOTES)?>"</p>
+                                    <p class="name"><?php echo htmlspecialchars($data_player['name'], ENT_QUOTES)?></p>
+                                </div>
+                                <div class="poste">
+                                    <!-- <img class="" id="" src="./img/lol-jungle.png" alt="Texte Martin Larsson"> -->
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-
-                
-                <div class="player" style="background-image: url(./img/martin-larsson.png);">
-                    <div class="flag">
-                        <img class="" id="" src="./img/flag.png" alt="Drapeau">
+                        </a>
                     </div>
-                    <div class="description d-flex">
-                        <div class="name">
-                            <p class="firstname">Martin</p>
-                            <p class="nickname">"Rekless"</p>
-                            <p class="name">Larsson</p>
-                        </div>
-                        <div class="poste">
-                            <img class="" id="" src="./img/lol-jungle.png" alt="Texte Martin Larsson">
-                        </div>
-                    </div>
-                </div>
-
-                
-                <div class="player" style="background-image: url(./img/martin-larsson.png);">
-                    <div class="flag">
-                        <img class="" id="" src="./img/flag.png" alt="Drapeau">
-                    </div>
-                    <div class="description d-flex">
-                        <div class="name">
-                            <p class="firstname">Martin</p>
-                            <p class="nickname">"Rekless"</p>
-                            <p class="name">Larsson</p>
-                        </div>
-                        <div class="poste">
-                            <img class="" id="" src="./img/lol-jungle.png" alt="Texte Martin Larsson">
-                        </div>
-                    </div>
-                </div>
-
-                
-                <div class="player" style="background-image: url(./img/martin-larsson.png);">
-                    <div class="flag">
-                        <img class="" id="" src="./img/flag.png" alt="Drapeau">
-                    </div>
-                    <div class="description d-flex">
-                        <div class="name">
-                            <p class="firstname">Martin</p>
-                            <p class="nickname">"Rekless"</p>
-                            <p class="name">Larsson</p>
-                        </div>
-                        <div class="poste">
-                            <img class="" id="" src="./img/lol-jungle.png" alt="Texte Martin Larsson">
-                        </div>
-                    </div>
-                </div>
-
-                
-                <div class="player" style="background-image: url(./img/martin-larsson.png);">
-                    <div class="flag">
-                        <img class="" id="" src="./img/flag.png" alt="Drapeau">
-                    </div>
-                    <div class="description d-flex">
-                        <div class="name">
-                            <p class="firstname">Martin</p>
-                            <p class="nickname">"Rekless"</p>
-                            <p class="name">Larsson</p>
-                        </div>
-                        <div class="poste">
-                            <img class="" id="" src="./img/lol-jungle.png" alt="Texte Martin Larsson">
-                        </div>
-                    </div>
-                </div>
+                <?php
+                    }
+                ?>
             </div>
         </div>
             
@@ -145,66 +93,26 @@
 
         <div class="content">
             <div class="coachs d-flex flex-wrap">
-                <div class="coach" style="background-image: url(./img/martin-larsson.png);">
-                    <div class="flag">
-                        <img class="" id="" src="./img/flag.png" alt="Drapeau">
+                <?php 
+                    while ($data_coach = $request_coach->fetch()) {
+                ?>
+                    <div class="coach" style="background-image: url(./img/<?php echo htmlspecialchars($data_coach['image'], ENT_QUOTES)?>);">
+                        <a href="./player_sheet.php?test=test">
+                            <div class="flag">
+                                <img class="flag" id="" src="./img/<?php echo htmlspecialchars($data_coach['nationality'], ENT_QUOTES)?>.png" alt="Drapeau">
+                            </div>
+                            <div class="description d-flex">
+                                <div class="name">
+                                    <p class="firstname"><?php echo htmlspecialchars($data_coach['firstname'], ENT_QUOTES)?></p>
+                                    <p class="nickname">"<?php echo htmlspecialchars($data_coach['nickname'], ENT_QUOTES)?>"</p>
+                                    <p class="name"><?php echo htmlspecialchars($data_coach['name'], ENT_QUOTES)?></p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                    <div class="description d-flex">
-                        <div class="name">
-                            <p class="firstname">Martin</p>
-                            <p class="nickname">"Rekless"</p>
-                            <p class="name">Larsson</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="coach" style="background-image: url(./img/martin-larsson.png);">
-                    <div class="flag">
-                        <img class="" id="" src="./img/flag.png" alt="Drapeau">
-                    </div>
-                    <div class="description d-flex">
-                        <div class="name">
-                            <p class="firstname">Martin</p>
-                            <p class="nickname">"Rekless"</p>
-                            <p class="name">Larsson</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="coach" style="background-image: url(./img/martin-larsson.png);">
-                    <div class="flag">
-                        <img class="" id="" src="./img/flag.png" alt="Drapeau">
-                    </div>
-                    <div class="description d-flex">
-                        <div class="name">
-                            <p class="firstname">Martin</p>
-                            <p class="nickname">"Rekless"</p>
-                            <p class="name">Larsson</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="coach" style="background-image: url(./img/martin-larsson.png);">
-                    <div class="flag">
-                        <img class="" id="" src="./img/flag.png" alt="Drapeau">
-                    </div>
-                    <div class="description d-flex">
-                        <div class="name">
-                            <p class="firstname">Martin</p>
-                            <p class="nickname">"Rekless"</p>
-                            <p class="name">Larsson</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="coach" style="background-image: url(./img/martin-larsson.png);">
-                    <div class="flag">
-                        <img class="" id="" src="./img/flag.png" alt="Drapeau">
-                    </div>
-                    <div class="description d-flex">
-                        <div class="name">
-                            <p class="firstname">Martin</p>
-                            <p class="nickname">"Rekless"</p>
-                            <p class="name">Larsson</p>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                    }
+                ?>
             </div>
         </div>
             

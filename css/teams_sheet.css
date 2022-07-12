@@ -67,6 +67,7 @@ div.player, div.coach {
     width: 23.3%;
     background: no-repeat;
     background-size: 100%;
+    border-radius: 15%;
 }
 
 div.player div.description, div.coach div.description{
@@ -86,6 +87,7 @@ div.name, div.poste {
 }
 
 div.flag img  {
+    border-radius: 25%;
     max-width: 67px;
 }
 
