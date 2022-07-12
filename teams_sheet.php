@@ -99,7 +99,7 @@
                     <div class="coach" style="background-image: url(./img/<?php echo htmlspecialchars($data_coach['image'], ENT_QUOTES)?>);">
                         <a href="./player_sheet.php?test=test">
                             <div class="flag">
-                                <img class="flag" id="" src="./img/<?php echo htmlspecialchars($data_coach['nationality'], ENT_QUOTES)?>.png" alt="Drapeau">
+                                <img class="flag" id="" src="./img/<?php echo htmlspecialchars($data_coach['nationality'], ENT_QUOTES)?>.png" alt="Drapeau, Alkya, team esport, structure esport">
                             </div>
                             <div class="description d-flex">
                                 <div class="name">
