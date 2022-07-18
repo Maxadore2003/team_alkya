@@ -33,7 +33,6 @@
             <p>Identifiant du compte</p>
             <p>Nom</p>
             <p>Prénom</p>
-            <p>Mot de passe</p>
             <p>Niveau d'administration</p>
         </div>
 
@@ -42,7 +41,6 @@
             <p><?php echo htmlspecialchars($data_user['pseudo'], ENT_QUOTES) ?></p>
             <p><?php echo htmlspecialchars($data_user['name'], ENT_QUOTES) ?></p>
             <p><?php echo htmlspecialchars($data_user['firstname'], ENT_QUOTES) ?></p>
-            <p><?php echo htmlspecialchars($data_user['password'], ENT_QUOTES) ?></p>
             <p><?php echo htmlspecialchars($data_user['admin-level'], ENT_QUOTES) ?></p>
         </div>
 

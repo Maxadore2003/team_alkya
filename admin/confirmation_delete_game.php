@@ -33,6 +33,7 @@
             <p class="ten">Nom</p>
             <p class="ten">Logo</p>
             <p class="ten">Image Bannière</p>
+            <p class="ten">Liens vers les statistiques</p>
         </div>
 
         <div class="account-management d-flex text-center">
@@ -40,6 +41,7 @@
             <p class="ten"><?php echo htmlspecialchars($data_game['name'], ENT_QUOTES) ?></p>
             <p class="ten"><?php echo htmlspecialchars($data_game['logo'], ENT_QUOTES) ?></p>
             <p class="ten"><?php echo htmlspecialchars($data_game['image'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_game['stats'], ENT_QUOTES) ?></p>
         </div>
 
         <div class="confirmation text-center">

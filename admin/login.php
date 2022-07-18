@@ -14,6 +14,13 @@
             ]);
             $result = $request->fetch();
 
+            // config.conf
+            // pepper=c1isvFdxMDdmjOlvxpecFw
+
+            // Faire le config.conf
+            // $option = getConfigVariable("pepper");
+
+
             $option = "c1isvFdxMDdmjOlvxpecFw";
             $peppered_password = hash_hmac("sha256", $password, $option);
             $hashed_password = $result['password'];
@@ -31,7 +38,7 @@
                     }
                 }
                 else {
-                    $ConnexionError = "Mot de Passe incorrect !";
+                    $ConnexionError = "Pseudo ou Mot de Passe incorrect !";
                     include 'connection.php';
                     exit();
                 }

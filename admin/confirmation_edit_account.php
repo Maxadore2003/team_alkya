@@ -43,7 +43,7 @@
             <p>Identifiant du compte</p>
             <p>Nom</p>
             <p>Prénom</p>
-            <p>Mot de passe</p>
+            <p>Nouveau Mot de passe</p>
             <p>Niveau d'administration</p>
         </div>
 
@@ -52,7 +52,7 @@
             <p><?php echo htmlspecialchars($data_user['pseudo'], ENT_QUOTES) ?></p>
             <p><?php echo htmlspecialchars($data_user['name'], ENT_QUOTES) ?></p>
             <p><?php echo htmlspecialchars($data_user['firstname'], ENT_QUOTES) ?></p>
-            <p><?php echo htmlspecialchars($data_user['password'], ENT_QUOTES) ?></p>
+            <p>*******</p>
             <p><?php echo htmlspecialchars($data_user['admin-level'], ENT_QUOTES) ?></p>
         </div>
         
@@ -62,7 +62,7 @@
                 <input class="text-center" type="text" name="pseudo" value="<?php echo htmlspecialchars($data_user['pseudo'], ENT_QUOTES) ?>">
                 <input class="text-center" type="text" name="name" value="<?php echo htmlspecialchars($data_user['name'], ENT_QUOTES) ?>">
                 <input class="text-center" type="text" name="firstname" value="<?php echo htmlspecialchars($data_user['firstname'], ENT_QUOTES) ?>">
-                <input class="text-center" type="password" name="password" value="<?php echo htmlspecialchars($data_user['password'], ENT_QUOTES) ?>">
+                <input class="text-center" type="password" name="password">
                 <input class="text-center" type="text" name="admin-level" value="<?php echo htmlspecialchars($data_user['admin-level'], ENT_QUOTES) ?>">
             </div>
             <div class="submit text-center">

@@ -8,15 +8,17 @@
     $team_edit_name = $_POST["name"];
     $team_edit_logo = $_POST["logo"];
     $team_edit_image = $_POST["image"];
+    $team_edit_stats = $_POST["stats"];
 
 
     // Demander à la base de donnée tous les utilisateurs
-    $update_team = $db->prepare("UPDATE `game` SET `id`= :new_id, `name`= :name, `logo`= :logo, `image`= :image WHERE `id` = :last_id");
+    $update_team = $db->prepare("UPDATE `game` SET `id`= :new_id, `name`= :name, `logo`= :logo, `image`= :image, `stats`= :stats WHERE `id` = :last_id");
     $update_team->execute([
         'new_id' => $team_edit_id,
         'name' => $team_edit_name,
         'logo' => $team_edit_logo,
         'image' => $team_edit_image,
+        'stats' => $team_edit_stats,
         'last_id' => $_GET['id'],
     ]);
 

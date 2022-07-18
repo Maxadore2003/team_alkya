@@ -36,6 +36,7 @@
             <p class="ten">Nom</p>
             <p class="ten">Logo</p>
             <p class="ten">Image Bannière</p>
+            <p class="ten">Liens vers les statistiques</p>
         </div>
 
         <div class="account-management d-flex text-center">
@@ -43,6 +44,7 @@
             <p class="ten"><?php echo htmlspecialchars($data_team['name'], ENT_QUOTES) ?></p>
             <p class="ten"><?php echo htmlspecialchars($data_team['logo'], ENT_QUOTES) ?></p>
             <p class="ten"><?php echo htmlspecialchars($data_team['image'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_team['stats'], ENT_QUOTES) ?></p>
         </div>
         
         <form method='post' action="edit_game.php?id=<?php echo htmlspecialchars($data_team['id'], ENT_QUOTES) ?>">
@@ -51,6 +53,7 @@
                 <input class="ten text-center" type="text" name="name" value="<?php echo  htmlspecialchars($data_team['name'], ENT_QUOTES) ?>">
                 <input class="ten text-center" type="text" name="logo" value="<?php echo  htmlspecialchars($data_team['logo'], ENT_QUOTES) ?>">
                 <input class="ten text-center" type="text" name="image" value="<?php echo  htmlspecialchars($data_team['image'], ENT_QUOTES) ?>">
+                <input class="ten text-center" type="text" name="stats" value="<?php echo  htmlspecialchars($data_team['stats'], ENT_QUOTES) ?>">
             </div>
             <div class="submit text-center">
                 <input type="submit">

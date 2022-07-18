@@ -30,6 +30,7 @@
             <p class="ten">Nom</p>
             <p class="ten">Logo</p>
             <p class="ten">Image Bannière</p>
+            <p class="ten">Liens vers les statistiques</p>
             <?php
             if($_GET['mode'] == "edit") {
                 ?><p class="ten">Modifier</p><?php
@@ -48,6 +49,7 @@
             <p class="ten"><?php echo htmlspecialchars($data_team['name'], ENT_QUOTES) ?></p>
             <p class="ten"><?php echo htmlspecialchars($data_team['logo'], ENT_QUOTES) ?></p>
             <p class="ten"><?php echo htmlspecialchars($data_team['image'], ENT_QUOTES) ?></p>
+            <p class="ten"><?php echo htmlspecialchars($data_team['stats'], ENT_QUOTES) ?></p>
             <?php
             if($_GET['mode'] == "edit") {
                 ?><a class="ten" href='./confirmation_edit_game.php?id=<?php echo htmlspecialchars($data_team['id'], ENT_QUOTES) ?>'>Modifier</a><?php

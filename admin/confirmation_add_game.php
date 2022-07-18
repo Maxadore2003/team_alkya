@@ -34,6 +34,7 @@
             <p class="ten">Nom</p>
             <p class="ten">Logo</p>
             <p class="ten">Image Bannière</p>
+            <p class="ten">Liens vers les statistiques</p>
         </div>
         
         <form method='post' action="./add_game.php">
@@ -42,6 +43,7 @@
                 <input class="ten text-center" type="text" name="name">
                 <input class="ten text-center" type="text" name="logo">
                 <input class="ten text-center" type="text" name="image">
+                <input class="ten text-center" type="text" name="stats">
             </div>
             <div class="submit text-center">
                 <input type="submit">
