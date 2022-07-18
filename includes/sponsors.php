@@ -1,3 +1,13 @@
+<?php
+
+    if (!$_SESSION['connected']) {
+        $connected = false;
+    }
+    else {
+        $connected = true;
+    }
+
+?>
 
 <?php
     include_once 'database.php';
@@ -26,7 +36,16 @@
 <div class="sponsorsPartners">
 
     <div class="sponsors text-center">
-        <h2 class="sponsorsTitle text-uppercase"><?php echo htmlspecialchars($data_sponsors_title['description'], ENT_QUOTES)?></h2>
+        <h2 class="sponsorsTitle text-uppercase">
+            <?php echo htmlspecialchars($data_sponsors_title['description'], ENT_QUOTES)?>
+            <?php
+                if ($connected == true) {
+            ?>
+            <a href="./admin/confirmation_text.php?name=sponsors&type=title"><img width="30px" src="./img/edit-logo.png" alt="logo crayon, Alkya, team esport, structure esport"></a>
+            <?php
+                }
+            ?>
+        </h2>
         <div class="sponsorsImages d-flex flex-wrap align-content-center">
             <?php 
                 while($data_sponsors = $request_sponsors->fetch()) {
@@ -41,7 +60,16 @@
     </div>
 
     <div class="partners text-center">
-        <h2 class="partnersTitle text-uppercase"><?php echo htmlspecialchars($data_partners_title['description'], ENT_QUOTES)?></h2>
+        <h2 class="partnersTitle text-uppercase">
+            <?php echo htmlspecialchars($data_partners_title['description'], ENT_QUOTES)?>
+            <?php
+                if ($connected == true) {
+            ?>
+            <a href="./admin/confirmation_text.php?name=partenaires&type=title"><img width="30px" src="./img/edit-logo.png" alt="logo crayon, Alkya, team esport, structure esport"></a>
+            <?php
+                }
+            ?>
+        </h2>
         <div class="partnersImages d-flex flex-wrap align-content-center">
             <?php 
                 while($data_partners = $request_partners->fetch()) {

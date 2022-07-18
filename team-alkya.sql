@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 12 juil. 2022 à 17:25
+-- Généré le : lun. 18 juil. 2022 à 17:43
 -- Version du serveur : 10.4.22-MariaDB
 -- Version de PHP : 7.3.33
 
@@ -237,7 +237,7 @@ CREATE TABLE `text` (
 --
 
 INSERT INTO `text` (`id`, `name`, `description`, `type`, `link`) VALUES
-(0, 'description-home-page', 'alkya', 'title', ''),
+(0, 'description-home-page', 'Alkya', 'title', ''),
 (1, 'description-home-page', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'description', ''),
 (2, 'game-home-page', 'nos équipes', 'title', ''),
 (3, 'game-home-page', 'toutes nos équipes', 'button', ''),
@@ -266,7 +266,7 @@ CREATE TABLE `users` (
   `name` char(30) NOT NULL,
   `firstname` char(30) NOT NULL,
   `pseudo` char(30) NOT NULL,
-  `password` char(30) NOT NULL,
+  `password` char(100) NOT NULL,
   `admin-level` int(11) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -275,8 +275,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `firstname`, `pseudo`, `password`, `admin-level`) VALUES
-(0, 'admin', 'admin', 'admin', 'admin', 2),
-(1, 'ManTh3Bus', 'Ilan', 'ManTh3Bus', '', 1);
+(0, 'admin', 'admin', 'admin', '$argon2id$v=19$m=65536,t=4,p=1$V29qVXF0ajJLRXhWWHF5TA$VeqtuAKYPYhGplQkiC6GygeUTRBUfmHTGtdM2Urfob8', 2);
 
 --
 -- Index pour les tables déchargées

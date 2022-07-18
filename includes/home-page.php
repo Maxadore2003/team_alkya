@@ -1,4 +1,17 @@
 <?php
+
+    session_start();
+
+    if (!$_SESSION['connected']) {
+        $connected = false;
+    }
+    else {
+        $connected = true;
+    }
+
+?>
+
+<?php
     include_once 'database.php';
 
     $staff_count = 0;
@@ -49,8 +62,26 @@
 <div>
     <!-- Description rapide   -->
     <div class='description'> 
-        <h1><?php echo htmlspecialchars($data_description_title['description'], ENT_QUOTES)?></h1>
-        <p class='text-center homePageDescription'><?php echo htmlspecialchars($data_description_text['description'], ENT_QUOTES)?></p>
+        <h1>
+            <?php echo htmlspecialchars($data_description_title['description'], ENT_QUOTES)?>
+        </h1>
+            <?php
+                if ($connected == true) {
+            ?>
+            <a href="./admin/confirmation_text.php?name=description-home-page&type=title"><img width="30px" src="./img/edit-logo.png" alt="logo crayon, Alkya, team esport, structure esport"></a>
+            <?php
+                }
+            ?>
+        <p class='text-center homePageDescription'>
+            <?php echo htmlspecialchars($data_description_text['description'], ENT_QUOTES)?>
+            <?php
+                if ($connected == true) {
+            ?>
+            <a href="./admin/confirmation_text.php?name=description-home-page&type=description"><img width="30px" src="./img/edit-logo.png" alt="logo crayon, Alkya, team esport, structure esport"></a>
+            <?php
+                }
+            ?>
+        </p>
     </div>
 
     <!-- Les 4 staff importants -->
@@ -68,7 +99,16 @@
 
     <!-- Caroussel des jeux -->
     <div class="game">
-        <h2 class='gameTitle text-center'><?php echo htmlspecialchars($data_game_title['description'], ENT_QUOTES)?></h2>
+        <h2 class='gameTitle text-center'>
+            <?php echo htmlspecialchars($data_game_title['description'], ENT_QUOTES)?>
+            <?php
+                if ($connected == true) {
+            ?>
+            <a href="./admin/confirmation_text.php?name=game-home-page&type=title"><img width="30px" src="./img/edit-logo.png" alt="logo crayon, Alkya, team esport, structure esport"></a>
+            <?php
+                }
+            ?>
+        </h2>
         <div class="slideshow-content d-flex">
             <div class="buttons">
                 <button onclick='removeSlidesIndex()' id='left' class="nav-button">
@@ -103,13 +143,31 @@
             </div>
         </div>
         <div class='gameButton text-center'>
-            <a class='linkTeam' href="./teams.php"><?php echo htmlspecialchars($data_game_button['description'], ENT_QUOTES)?></a>
+            <a class='linkTeam' href="./teams.php">
+                <?php echo htmlspecialchars($data_game_button['description'], ENT_QUOTES)?>
+                <?php
+                    if ($connected == true) {
+                ?>
+                <a href="./admin/confirmation_text.php?name=game-home-page&type=button"><img width="30px" src="./img/edit-logo.png" alt="logo crayon, Alkya, team esport, structure esport"></a>
+                <?php
+                    }
+                ?>
+            </a>
         </div>
     </div>
 
     <!-- Les 2 dernières actualités -->
     <div class="actuality">
-        <h2 class='actualityTitle text-center'><?php echo htmlspecialchars($data_actuality_title['description'], ENT_QUOTES)?></h2>
+        <h2 class='actualityTitle text-center'>
+            <?php echo htmlspecialchars($data_actuality_title['description'], ENT_QUOTES)?>
+            <?php
+                if ($connected == true) {
+            ?>
+            <a href="./admin/confirmation_text.php?name=actuality-home-page&type=title"><img width="30px" src="./img/edit-logo.png" alt="logo crayon, Alkya, team esport, structure esport"></a>
+            <?php
+                }
+            ?>
+        </h2>
         <div class="actualityDetails text-center d-flex">
             <?php
                 while($data_actuality = $request_actuality -> fetch() and $actuality_count < 2) {?>
@@ -123,7 +181,16 @@
             ?>
         </div>
         <div class='actualityButton text-center'>
-            <a class='linkActuality' href="./news.php?page=0"><?php echo htmlspecialchars($data_actuality_button['description'], ENT_QUOTES)?></a>
+            <a class='linkActuality' href="./news.php?page=0">
+                <?php echo htmlspecialchars($data_actuality_button['description'], ENT_QUOTES)?>
+                <?php
+                    if ($connected == true) {
+                ?>
+                <a href="./admin/confirmation_text.php?name=actuality-home-page&type=button"><img width="30px" src="./img/edit-logo.png" alt="logo crayon, Alkya, team esport, structure esport"></a>
+                <?php
+                    }
+                ?>
+            </a>
         </div>
     </div>
 </div>

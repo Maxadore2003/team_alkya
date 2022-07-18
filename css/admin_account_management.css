@@ -63,3 +63,7 @@ div.account-management a.no {
 div.confirmation {
     margin-top: 10%;
 }
+
+input.edit-text {
+    width: 1700px;
+}
