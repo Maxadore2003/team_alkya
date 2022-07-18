@@ -38,7 +38,7 @@
             }
             ?>
             <b>La taille se fait en cm</b> <br>
-            <b>Le poids se fait en kg</b>
+            <b>Le poids se fait en kg</b> <br>
             <a href="https://www.graphorama.net/Caracteres-speciaux-codes-ASCII-et-HTML-Alt-codes.html">Les caractères ASCII</a>
         </div>
 
