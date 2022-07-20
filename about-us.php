@@ -80,17 +80,44 @@
 
             <!-- Titre de la page about us "Qu'est ce que Alkya" -->
             <div class='about-us-what'> 
-                <h1><?php echo htmlspecialchars($data_about_us_what['description'], ENT_QUOTES)?></h1>
+                <h2>
+                    <?php echo htmlspecialchars($data_about_us_what['description'], ENT_QUOTES)?>
+                </h2>
+                <?php
+                    if ($connected == true) {
+                ?>
+                <a href="./admin/confirmation_text.php?name=about-us-what&type=title"><img width="30px" src="./img/edit-logo.png" alt="logo crayon, Alkya, team esport, structure esport"></a>
+                <?php
+                    }
+                ?>                
             </div>
 
             <!-- Description de la page about us "Qu'est ce que Alkya" -->
             <div class='about-us-desc-what'> 
-                <p class="text-center"><?php echo htmlspecialchars($data_about_us_desc_what['description'], ENT_QUOTES)?></p>
+                <p class="text-center">
+                    <?php echo htmlspecialchars($data_about_us_desc_what['description'], ENT_QUOTES)?>
+                    <?php
+                        if ($connected == true) {
+                    ?>
+                    <a href="./admin/confirmation_text.php?name=about-us-desc-what&type=description"><img width="30px" src="./img/edit-logo.png" alt="logo crayon, Alkya, team esport, structure esport"></a>
+                    <?php
+                        }
+                    ?>
+                </p>
             </div>
 
             <!-- Titre de la page about us "Pourquoi Alkya" -->
             <div class='about-us-why'> 
-                <h1><?php echo htmlspecialchars($data_about_us_why['description'], ENT_QUOTES)?></h1>
+                <h2>
+                    <?php echo htmlspecialchars($data_about_us_why['description'], ENT_QUOTES)?>
+                </h2>
+                <?php
+                    if ($connected == true) {
+                ?>
+                <a href="./admin/confirmation_text.php?name=about-us-why&type=title"><img width="30px" src="./img/edit-logo.png" alt="logo crayon, Alkya, team esport, structure esport"></a>
+                <?php
+                    }
+                ?>
             </div>
 
             <!-- Les 2 images de la page about us -->
@@ -108,15 +135,33 @@
 
             <!-- Description de la page about us "Pourquoi Alkya" -->
             <div class='about-us-desc-why'> 
-                <p class="text-center"><?php echo htmlspecialchars($data_about_us_desc_why['description'], ENT_QUOTES)?></p>
+                <p class="text-center">
+                    <?php echo htmlspecialchars($data_about_us_desc_why['description'], ENT_QUOTES)?>
+                    <?php
+                        if ($connected == true) {
+                    ?>
+                    <a href="./admin/confirmation_text.php?name=about-us-desc-why&type=description"><img width="30px" src="./img/edit-logo.png" alt="logo crayon, Alkya, team esport, structure esport"></a>
+                    <?php
+                        }
+                    ?>
+                </p>
             </div>
 
             <!-- Titre de la page about us "Staff" -->
             <div class='staff-title'> 
-                <h1><?php echo htmlspecialchars($data_staff_title['description'], ENT_QUOTES)?></h1>
+                <h2>
+                    <?php echo htmlspecialchars($data_staff_title['description'], ENT_QUOTES)?>
+                </h2>
+                <?php
+                    if ($connected == true) {
+                ?>
+                <a href="./admin/confirmation_text.php?name=staff&type=title"><img width="30px" src="./img/edit-logo.png" alt="logo crayon, Alkya, team esport, structure esport"></a>
+                <?php
+                    }
+                ?>
             </div>
 
-            <!-- Les 4 staff importants -->
+            <!-- Les staff -->
             <div class='d-flex flex-wrap text-center staff'>
                 <?php
                     while($data_staff_images = $request_staff_images -> fetch() and $data_staff_title = $request_staff_title -> fetch()) {?>

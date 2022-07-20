@@ -30,3 +30,11 @@ div.staffImage img {
     max-width: 183px;
     border-radius: 50%;
 }
+
+div.staff-title h2, div.about-us-what h2, div.about-us-why h2 {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 1%;
+    padding: 3%;
+    font-size: 60px;
+}

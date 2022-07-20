@@ -60,7 +60,16 @@
             
             <!-- Titre -->
             <div class='title'> 
-                <h1><?php echo htmlspecialchars($data_news_title['description'], ENT_QUOTES)?></h1>
+                <h1>
+                    <?php echo htmlspecialchars($data_news_title['description'], ENT_QUOTES)?>
+                </h1>
+                <?php
+                    if ($connected == true) {
+                ?>
+                <a href="./admin/confirmation_text.php?name=actuality&type=title"><img width="30px" src="./img/edit-logo.png" alt="logo crayon, Alkya, team esport, structure esport"></a>
+                <?php
+                    }
+                ?>
             </div>
 
             <div class='d-flex text-center flex-wrap news'>
