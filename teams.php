@@ -58,7 +58,16 @@
         <?php include "includes/header.php"; ?>
 
         <div class="title">
-            <h3><?php echo htmlspecialchars($data_teams_title['description'], ENT_QUOTES) ?></h3>
+            <h3>
+                <?php echo htmlspecialchars($data_teams_title['description'], ENT_QUOTES) ?>
+            </h3>
+            <?php
+                if ($connected == true) {
+            ?>
+            <a href="./admin/confirmation_text.php?name=teams&type=title"><img width="30px" src="./img/edit-logo.png" alt="logo crayon, Alkya, team esport, structure esport"></a>
+            <?php
+                }
+            ?>
         </div>
 
         <div class='button-game d-flex'>

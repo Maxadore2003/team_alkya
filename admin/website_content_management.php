@@ -101,20 +101,6 @@
                         <a href="./list_staff.php?mode=delete">Supprimer</a>
                     </div>
                 </div>
-                <div class="texts-zone d-flex text-center">
-                    <div>
-                        <p>Zone de Texte</p>
-                    </div>
-                    <div>
-                        <a href="#">Ajouter</a>
-                    </div>
-                    <div>
-                        <a href="#">Modifier</a>
-                    </div>
-                    <div>
-                        <a href="#">Supprimer</a>
-                    </div>
-                </div>
                 <div class="links-social-networks d-flex text-center">
                     <div class="text">
                         <p>Liens des Réseaux Sociaux</p>
@@ -143,9 +129,14 @@
                         <a href="./list_sponsors_partners.php?mode=delete">Supprimer</a>
                     </div>
                 </div>
+                <div class="texts-zone d-flex text-center">
+                    <div class="">
+                        <a href="http://localhost/team_alkya/">Zone de texte</a>
+                    </div>
+                </div>
             </div>
         </div>
         
     </body>
-
-</html>
+    
+    </html>

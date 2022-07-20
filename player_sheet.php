@@ -27,6 +27,11 @@
     $request_game->execute();
     $data_game = $request_game->fetch();
 
+    // Demander à la base de donnée le titre des reseaux
+    $request_network_title = $db->prepare("SELECT `description` FROM `text` WHERE `name` = 'player-sheet' AND `type` = 'title'");
+    $request_network_title->execute();
+    $data_network_title = $request_network_title->fetch();
+
     function day($date) {
         return $date[8] * 10 + $date[9];
     };
@@ -149,7 +154,16 @@
 
         <div class="networks text-uppercase">
             <div class="title">
-                <h5 class="text-center">ses réseaux</h5>
+                <h5 class="text-center">
+                    <?php echo htmlspecialchars($data_network_title['description'], ENT_QUOTES)?>
+                    <?php
+                        if ($connected == true) {
+                    ?>
+                    <a href="./admin/confirmation_text.php?name=player-sheet&type=title"><img width="30px" src="./img/edit-logo.png" alt="logo crayon, Alkya, team esport, structure esport"></a>
+                    <?php
+                        }
+                    ?>
+                </h5>
             </div>
             <div class="images d-flex text-center">
                 <div class="network text-center">

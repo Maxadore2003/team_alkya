@@ -69,7 +69,16 @@
         </div>
         
         <div class="players-title text-right">
-            <p><?php echo htmlspecialchars($data_teams_player['description'], ENT_QUOTES)?></p>
+            <p>
+                <?php echo htmlspecialchars($data_teams_player['description'], ENT_QUOTES)?>
+                <?php
+                    if ($connected == true) {
+                ?>
+                <a href="./admin/confirmation_text.php?name=teams-sheet-player&type=title"><img width="30px" src="./img/edit-logo.png" alt="logo crayon, Alkya, team esport, structure esport"></a>
+                <?php
+                    }
+                ?>
+            </p>
         </div>
         
         <div class="content">
@@ -101,7 +110,16 @@
         </div>
             
         <div class="coach-title">
-            <p><?php echo htmlspecialchars($data_teams_coach['description'], ENT_QUOTES) ?></p>
+            <p>
+                <?php echo htmlspecialchars($data_teams_coach['description'], ENT_QUOTES) ?>
+                <?php
+                    if ($connected == true) {
+                ?>
+                <a href="./admin/confirmation_text.php?name=teams-sheet-coach&type=title"><img width="30px" src="./img/edit-logo.png" alt="logo crayon, Alkya, team esport, structure esport"></a>
+                <?php
+                    }
+                ?>
+            </p>
         </div>
 
         <div class="content">
