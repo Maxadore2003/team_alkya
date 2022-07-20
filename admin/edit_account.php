@@ -11,6 +11,9 @@
     $user_edit_password = $_POST["password"];
     $user_edit_admin_level = $_POST["admin-level"];
 
+    $option = "c1isvFdxMDdmjOlvxpecFw";
+    $peppered_password = hash_hmac("sha256", $user_edit_password, $option);
+    $password = password_hash($peppered_password, PASSWORD_ARGON2ID);
 
     // Demander à la base de donnée tous les utilisateurs
     $update_user = $db->prepare("UPDATE `users` SET `id`= :new_id, `name`= :name, `firstname`= :firstname, `pseudo`= :pseudo, `password`= :password, `admin-level`= :admin_level WHERE `id` = :id");
@@ -19,7 +22,7 @@
         'pseudo' => $user_edit_pseudo,
         'name' => $user_edit_name,
         'firstname' => $user_edit_firstname,
-        'password' => $user_edit_password,
+        'password' => $password,
         'admin_level' => $user_edit_admin_level,
         'id' => $_GET['id'],
     ]);

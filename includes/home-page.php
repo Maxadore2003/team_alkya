@@ -2,11 +2,11 @@
 
     session_start();
 
-    if (!$_SESSION['connected']) {
-        $connected = false;
+    if (isset($_SESSION['connected'])) {
+        $connected = true;
     }
     else {
-        $connected = true;
+        $connected = false;
     }
 
 ?>

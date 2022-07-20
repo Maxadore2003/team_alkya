@@ -1,15 +1,4 @@
 <?php
-
-    if (!$_SESSION['connected']) {
-        $connected = false;
-    }
-    else {
-        $connected = true;
-    }
-
-?>
-
-<?php
     include_once 'database.php';
 
     // Demander à la base de donnée le titre de la partie sponsors

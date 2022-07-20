@@ -1,5 +1,18 @@
 <?php
 
+    session_start();
+
+    if (isset($_SESSION['connected'])) {
+        $connected = true;
+    }
+    else {
+        $connected = false;
+    }
+
+?>
+
+<?php
+
     include './includes/database.php';
     $request_article = $db->prepare("SELECT * FROM `actuality` WHERE `id` = :id");
     $request_article->bindParam(":id", $_GET["id"], PDO::PARAM_INT);
