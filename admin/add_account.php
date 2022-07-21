@@ -11,7 +11,7 @@
     $user_add_password = $_POST["password"];
     $user_add_admin_level = $_POST["admin-level"];
 
-    $option = "c1isvFdxMDdmjOlvxpecFw";
+    include_once "config.php";
     $peppered_password = hash_hmac("sha256", $user_add_password, $option);
     $password = password_hash($peppered_password, PASSWORD_ARGON2ID);
 

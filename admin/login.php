@@ -20,8 +20,7 @@
             // Faire le config.conf
             // $option = getConfigVariable("pepper");
 
-
-            $option = "c1isvFdxMDdmjOlvxpecFw";
+            include_once "config.php";
             $peppered_password = hash_hmac("sha256", $password, $option);
             $hashed_password = $result['password'];
 
