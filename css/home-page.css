@@ -88,3 +88,7 @@ div.slideshow-content button {
     background: none;
     border: 0;
 }
+
+div#twitch-embed {
+    text-align: center;
+}
