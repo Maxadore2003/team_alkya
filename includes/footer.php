@@ -3,6 +3,10 @@
     $request_social_network = $db->prepare("SELECT * FROM `social-network`");
     $request_social_network->execute();
 
+    $request_footer_link = $db->prepare("SELECT * FROM `text` WHERE `type` = 'button' AND `name` LIKE 'footer%'");
+    $request_footer_link->execute();
+
+    $count = 0;
 ?>
 
 <footer class="footer">
@@ -19,18 +23,43 @@
     <div class="about">
 
         <p class="text-about">About</p>
-        <a href="./news.php?page=0">Actus</a>
-        <a href="./teams.php">Teams</a>
-        <a href="./about-us.php">Qui sommes-nous ?</a>
+        <?php
+            while ($count < 3 and $data_footer_link = $request_footer_link->fetch()) {
+        ?>
+        <a href="./<?php echo htmlspecialchars($data_footer_link['link'], ENT_QUOTES) ?>">
+            <?php echo htmlspecialchars($data_footer_link['description'], ENT_QUOTES) ?>
+            <?php
+                if ($connected == true) {
+            ?>
+            <a href="./admin/confirmation_text.php?name=<?php echo htmlspecialchars($data_footer_link['name'], ENT_QUOTES) ?>&type=<?php echo htmlspecialchars($data_footer_link['type'], ENT_QUOTES) ?>"><img width="30px" src="./img/edit-logo.png" alt="logo crayon, Alkya, team esport, structure esport"></a>
+            <?php
+                }
+            ?>
+        </a>
+        <?php
+            $count += 1;
+            }
+        ?>
 
     </div>
 
     <div class="informations">
-
-        <a href="#">CGU</a>
-        <a href="#">Mentions légales</a>
-        <a href="#">Politique de confidentialité</a>
-
+        <?php
+            while ($data_footer_link = $request_footer_link->fetch()) {
+        ?>
+        <a href="./<?php echo htmlspecialchars($data_footer_link['link'], ENT_QUOTES) ?>">
+            <?php echo htmlspecialchars($data_footer_link['description'], ENT_QUOTES) ?>
+            <?php
+                if ($connected == true) {
+            ?>
+            <a href="./admin/confirmation_text.php?name=<?php echo htmlspecialchars($data_footer_link['name'], ENT_QUOTES) ?>&type=<?php echo htmlspecialchars($data_footer_link['type'], ENT_QUOTES) ?>"><img width="30px" src="./img/edit-logo.png" alt="logo crayon, Alkya, team esport, structure esport"></a>
+            <?php
+                }
+            ?>
+        </a>
+        <?php
+            }
+        ?>
     </div>
 
     <div class="logo-black-alkya">

@@ -1,18 +1,5 @@
 <?php
 
-    session_start();
-
-    if (isset($_SESSION['connected'])) {
-        $connected = true;
-    }
-    else {
-        $connected = false;
-    }
-
-?>
-
-<?php
-
     include 'includes/database.php';
     // Demander à la base de donnée toutes les données des jeux
     if (isset($_GET['game'])) {

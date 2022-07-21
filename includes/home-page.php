@@ -1,17 +1,4 @@
 <?php
-
-    session_start();
-
-    if (isset($_SESSION['connected'])) {
-        $connected = true;
-    }
-    else {
-        $connected = false;
-    }
-
-?>
-
-<?php
     include_once 'database.php';
 
     $staff_count = 0;
