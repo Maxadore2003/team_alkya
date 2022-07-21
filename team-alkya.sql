@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 18 juil. 2022 à 17:43
+-- Généré le : jeu. 21 juil. 2022 à 17:28
 -- Version du serveur : 10.4.22-MariaDB
 -- Version de PHP : 7.3.33
 
@@ -249,11 +249,21 @@ INSERT INTO `text` (`id`, `name`, `description`, `type`, `link`) VALUES
 (9, 'about-us-what', 'qu\'est ce que alkya ?', 'title', ''),
 (10, 'about-us-desc-what', 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.', 'description', ''),
 (11, 'about-us-why', 'Pourquoi Alkya ?', 'title', ''),
-(12, 'about-us-desc-why', 'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.', 'description', ''),
+(12, 'about-us-desc-why', 'They are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.', 'description', ''),
 (13, 'staff', 'staff', 'title', ''),
 (14, 'teams', 'nos équipes', 'title', ''),
 (15, 'teams-sheet-player', 'joueurs', 'title', ''),
-(16, 'teams-sheet-coach', 'coachs', 'title', '');
+(16, 'teams-sheet-coach', 'coachs', 'title', ''),
+(17, 'player-sheet', 'ses réseaux', 'title', ''),
+(18, 'header-1', 'ACTUS', 'button', 'news.php?page=0'),
+(19, 'header-2', 'ABOUT US', 'button', 'about-us.php'),
+(20, 'header-3', 'ÉQUIPES', 'button', 'teams.php'),
+(21, 'footer-1', 'Actus', 'button', 'news.php?page=0'),
+(22, 'footer-2', 'Teams', 'button', 'teams.php'),
+(23, 'footer-3', 'Qui sommes-nous ?', 'button', 'about-us.php'),
+(24, 'footer-4', 'CGU', 'button', '#'),
+(25, 'footer-5', 'Mentions Légales', 'button', '#'),
+(26, 'footer-6', 'Politique de confidentialité', 'button', '#');
 
 -- --------------------------------------------------------
 
@@ -275,7 +285,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `firstname`, `pseudo`, `password`, `admin-level`) VALUES
-(0, 'admin', 'admin', 'admin', '$argon2id$v=19$m=65536,t=4,p=1$V29qVXF0ajJLRXhWWHF5TA$VeqtuAKYPYhGplQkiC6GygeUTRBUfmHTGtdM2Urfob8', 2);
+(0, 'admin', 'admin', 'admin', '$argon2id$v=19$m=65536,t=4,p=1$eHJWT0NCdFRDUDVzQks4cQ$5xNVB5BCufXWhitDtr6Sm6VDFOS+2ug57m5IuP+Ehlo', 2);
 
 --
 -- Index pour les tables déchargées
