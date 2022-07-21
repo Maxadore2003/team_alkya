@@ -1,18 +1,5 @@
 <?php
 
-    session_start();
-
-    if (isset($_SESSION['connected'])) {
-        $connected = true;
-    }
-    else {
-        $connected = false;
-    }
-
-?>
-
-<?php
-
     include_once './includes/database.php';
 
     $request_header_link = $db->prepare("SELECT * FROM `text` WHERE `type` = 'button' AND `name` LIKE 'header%'");
