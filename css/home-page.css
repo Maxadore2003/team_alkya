@@ -81,7 +81,11 @@ div.slideshow-content div.buttons{
 }
 
 div.slideshow-content div.gameImage{
-    width: 90%;
+    width: 100%;
+}
+
+div.slideshow-content div.gameImage img {
+    width: 100%;
 }
 
 div.slideshow-content button {
@@ -89,6 +93,11 @@ div.slideshow-content button {
     border: 0;
 }
 
-div#twitch-embed {
-    text-align: center;
+div.twitter {
+    padding-left: 10%;
+}
+
+div.twitter, div.twitch {
+    margin-top: 2%;
+    margin-bottom: 2%;
 }

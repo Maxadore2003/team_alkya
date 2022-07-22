@@ -180,16 +180,21 @@
             </a>
         </div>
     </div>
-    <div id="twitch-embed">
+    <div id="twitch-embed" class="twitch">
         <script src="https://embed.twitch.tv/embed/v1.js"></script>
         <script type="text/javascript">
             new Twitch.Embed("twitch-embed", {
                 width: 1500,
-                height: 500,
-                channel: "teamalkya"
+                height: 800,
+                channel: "teamalkya",
+                theme: "dark",
             });
         </script>
     </div>
+    <div id="twitter-embed" class="twitter">
+        <a class="twitter-timeline" data-height="1000" data-theme="light" href="https://twitter.com/TeamAlkya?ref_src=twsrc%5Etfw">Tweets by TeamAlkya</a>
+    </div>
 </div>
 
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script src="js/carrousel-homepage.js"></script>
