@@ -14,13 +14,7 @@
             ]);
             $result = $request->fetch();
 
-            // config.conf
-            // pepper=c1isvFdxMDdmjOlvxpecFw
-
-            // Faire le config.conf
-            // $option = getConfigVariable("pepper");
-
-            include_once "config.php";
+            include "../includes/config.php";
             $peppered_password = hash_hmac("sha256", $password, $option);
             $hashed_password = $result['password'];
 

@@ -11,7 +11,7 @@
     $user_edit_password = $_POST["password"];
     $user_edit_admin_level = $_POST["admin-level"];
 
-    include_once "config.php";
+    include "../includes/config.php";
     $peppered_password = hash_hmac("sha256", $user_edit_password, $option);
     $password = password_hash($peppered_password, PASSWORD_ARGON2ID);
 
