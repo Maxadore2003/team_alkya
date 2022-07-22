@@ -27,7 +27,9 @@
                         header('Location: ./admin.php');
                     }
                     else {
-                        echo "Votre niveau d'administrateur n'est pas assez haut.";
+                        $ConnexionError = "Votre niveau d'administrateur n'est pas assez haut.";
+                        include 'connection.php';
+                        exit();
                     }
                 }
                 else {
